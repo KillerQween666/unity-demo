@@ -13,10 +13,24 @@
 
 ![image-20250916004407272](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250916004407272.png)
 
-![image-20250916004414820](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250916004414820.png)
+![image-20250916004414820](D:\桌面\image-20250916004414820.png)
 
 ![image-20250916004420608](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250916004420608.png)
 
 ## 项目使用
 
 下载源代码，使用 Unity 将文件夹作为项目打开启动项目 (unity版本：2022.3.61f1c1)
+
+## 项目更新（9.25）
+
+1、将原来关卡改为类似原版的1-9，新增6个植物和三个僵尸
+
+2、增加了选择卡片界面，不过为了演示植物将卡片槽改为了8个
+
+3、难度比起之前高了不少，有想挑战不丢车通关的可以尝试看看
+
+![image-20250925075426576](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250925075426576.png)
+
+![](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250925075430343.png
+
+![image-20250925075805535](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250925075805535.png)

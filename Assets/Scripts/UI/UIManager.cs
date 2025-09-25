@@ -15,10 +15,12 @@ public class UIManager : MonoBehaviour {
     public PrepareUI prepareUI;     // 准备界面UI
     public FailUI failUI;           // 失败界面UI
     public WinUI winUI;             // 胜利界面UI
-    public EndUI endUI;             // 结束界面UI
+    public FinalWaveUI finalWaveUI;             // 结束界面UI
     public FlagMeterUI flagMeterUI; // 旗帜进度条UI
     public GameEndUI gameEndUI;     // 游戏结束总界面UI
     public MenuUI menuUI;           // 菜单界面UI
+    public CardChooserUI CardChooserUI;
+    public HugeWaveUI hugeWaveUI;
 
     // 初始化单例
     private void Awake() {

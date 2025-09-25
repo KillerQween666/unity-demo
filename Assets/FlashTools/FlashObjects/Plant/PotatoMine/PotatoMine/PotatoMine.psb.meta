@@ -1,0 +1,796 @@
+fileFormatVersion: 2
+guid: 23d9b94de8973cb458674e9a00ceb4eb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: PotatoMine rock5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 280
+      width: 75
+      height: 41
+    spriteID: 30cf766e5beef9d4ebd012af76f90556
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 346, y: 280}
+    spritePosition: {x: 202, y: 5}
+  - name: PotatoMine rock3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 128
+      width: 74
+      height: 45
+    spriteID: b86c1ad4f8de6a84584edcf9e109e075
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 128}
+    spritePosition: {x: 325, y: 29}
+  - name: PotatoMine rock1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 234
+      width: 37
+      height: 38
+    spriteID: b941a0a3e9653524990c46e0f9ccc1fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 234}
+    spritePosition: {x: 103, y: 19}
+  - name: PotatoMine rock6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 825
+      width: 64
+      height: 45
+    spriteID: 8daf290d383028f42ad38738e9788943
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 825}
+    spritePosition: {x: 5, y: 24}
+  - name: anim light2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 505
+      width: 159
+      height: 127
+    spriteID: cf972b066fb7ea541999584cff99bd6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 505}
+    spritePosition: {x: 128, y: 161}
+  - name: anim light
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 825
+      width: 94
+      height: 94
+    spriteID: 354547bfeb246ca4d8aacd37f13355e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 825}
+    spritePosition: {x: 160, y: 194}
+  - name: PotatoMine stem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 927
+      width: 151
+      height: 57
+    spriteID: 22c2d07f92af547498944b60317ff055
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 927}
+    spritePosition: {x: 127, y: 154}
+  - name: PotatoMine rock5b
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 640
+      width: 73
+      height: 45
+    spriteID: d1d5ddc9342e8124fbfdf031984762a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 640}
+    spritePosition: {x: 49, y: 19}
+  - name: PotatoMine rock6b
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 693
+      width: 71
+      height: 46
+    spriteID: 091ddc4e2119a6648aa40e1fbdccd06a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 693}
+    spritePosition: {x: 284, y: 11}
+  - name: PotatoMine rock1b
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 878
+      width: 41
+      height: 39
+    spriteID: 1488a5e2fe54d4a45be85bc41c353514
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 878}
+    spritePosition: {x: 262, y: 6}
+  - name: PotatoMine rock3b
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 747
+      width: 71
+      height: 43
+    spriteID: 4b73f29cdd19b7543ab2280235746c62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 747}
+    spritePosition: {x: 152, y: 8}
+  - name: PotatoMine rock4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 181
+      width: 74
+      height: 45
+    spriteID: a9f554c3054a45247b78b0712d4d7448
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 181}
+    spritePosition: {x: 117, y: 15}
+  - name: blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 171
+      y: 505
+      width: 155
+      height: 82
+    spriteID: a9a6815e322a2ab488a02713639d3430
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 171, y: 505}
+    spritePosition: {x: 161, y: 48}
+  - name: blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 640
+      width: 172
+      height: 89
+    spriteID: 1596d603b29f16b4dae31d91c48af131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 640}
+    spritePosition: {x: 151, y: 44}
+  - name: anim eye
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 737
+      width: 147
+      height: 80
+    spriteID: f6ff532b5d2306246a1b403d97e09a56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 737}
+    spritePosition: {x: 171, y: 51}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 280
+      width: 334
+      height: 217
+    spriteID: e2ea86b21ef6e8d46b1170aa2a8c5afb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 280}
+    spritePosition: {x: 34, y: 7}
+  - name: PotatoMine rock2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 4
+      width: 100
+      height: 56
+    spriteID: edb0dee81a1c47841a0329fcc795b30e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 4}
+    spritePosition: {x: 13, y: 32}
+  - name: PotatoMine rock4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 68
+      width: 87
+      height: 52
+    spriteID: db6a71de47dff09489e775d02e1eb6f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 68}
+    spritePosition: {x: 298, y: 34}
+  - name: PotatoMine_mashed
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 395
+      height: 268
+    spriteID: b7adaaa9775a256448c2c2aece5da04a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 4, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: PotatoMine Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 7059ffb87086193459e6e348818d1ee8
+    layerID: 113
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: PotatoMine rock5
+    spriteName: PotatoMine rock5
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 30cf766e5beef9d4ebd012af76f90556
+    layerID: 93
+    mosaicPosition: {x: 346, y: 280}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock3
+    spriteName: PotatoMine rock3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b86c1ad4f8de6a84584edcf9e109e075
+    layerID: 86
+    mosaicPosition: {x: 407, y: 128}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock1
+    spriteName: PotatoMine rock1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b941a0a3e9653524990c46e0f9ccc1fb
+    layerID: 79
+    mosaicPosition: {x: 407, y: 234}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock6
+    spriteName: PotatoMine rock6
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8daf290d383028f42ad38738e9788943
+    layerID: 72
+    mosaicPosition: {x: 106, y: 825}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine Light
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: bed9db2a3ca0dc2469c6fa9a498905d6
+    layerID: 103
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: anim light2
+    spriteName: anim light2
+    isGroup: 0
+    parentIndex: 5
+    spriteID: cf972b066fb7ea541999584cff99bd6d
+    layerID: 102
+    mosaicPosition: {x: 4, y: 505}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim light
+    spriteName: anim light
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 354547bfeb246ca4d8aacd37f13355e2
+    layerID: 65
+    mosaicPosition: {x: 4, y: 825}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock5b
+    spriteName: PotatoMine rock5b
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d1d5ddc9342e8124fbfdf031984762a2
+    layerID: 58
+    mosaicPosition: {x: 184, y: 640}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock6b
+    spriteName: PotatoMine rock6b
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 091ddc4e2119a6648aa40e1fbdccd06a
+    layerID: 51
+    mosaicPosition: {x: 184, y: 693}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock1b
+    spriteName: PotatoMine rock1b
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1488a5e2fe54d4a45be85bc41c353514
+    layerID: 44
+    mosaicPosition: {x: 106, y: 878}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock3b
+    spriteName: PotatoMine rock3b
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4b73f29cdd19b7543ab2280235746c62
+    layerID: 37
+    mosaicPosition: {x: 184, y: 747}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock4
+    spriteName: PotatoMine rock4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a9f554c3054a45247b78b0712d4d7448
+    layerID: 30
+    mosaicPosition: {x: 407, y: 181}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine Eye
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 29dc7162562bb2b4aa8825466e085070
+    layerID: 107
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: blink2
+    spriteName: blink2
+    isGroup: 0
+    parentIndex: 13
+    spriteID: a9a6815e322a2ab488a02713639d3430
+    layerID: 106
+    mosaicPosition: {x: 171, y: 505}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: blink1
+    spriteName: blink1
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 1596d603b29f16b4dae31d91c48af131
+    layerID: 105
+    mosaicPosition: {x: 4, y: 640}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim eye
+    spriteName: anim eye
+    isGroup: 0
+    parentIndex: 13
+    spriteID: f6ff532b5d2306246a1b403d97e09a56
+    layerID: 23
+    mosaicPosition: {x: 4, y: 737}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine stem
+    spriteName: PotatoMine stem
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 22c2d07f92af547498944b60317ff055
+    layerID: 115
+    mosaicPosition: {x: 4, y: 927}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e2ea86b21ef6e8d46b1170aa2a8c5afb
+    layerID: 16
+    mosaicPosition: {x: 4, y: 280}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock2
+    spriteName: PotatoMine rock2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: edb0dee81a1c47841a0329fcc795b30e
+    layerID: 9
+    mosaicPosition: {x: 407, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine rock4
+    spriteName: PotatoMine rock4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: db6a71de47dff09489e775d02e1eb6f8
+    layerID: 2
+    mosaicPosition: {x: 407, y: 68}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PotatoMine Boom
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 8d4c9e74babadb7489457e2aa29f544b
+    layerID: 111
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: PotatoMine_mashed
+    spriteName: PotatoMine_mashed
+    isGroup: 0
+    parentIndex: 21
+    spriteID: b7adaaa9775a256448c2c2aece5da04a
+    layerID: 110
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

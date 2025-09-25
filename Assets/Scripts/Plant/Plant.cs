@@ -2,37 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// 植物状态：禁用（未激活/死亡）、启用（正常工作）
+// 植物状态枚举：定义植物的工作状态
 enum PlantState {
-    Disable,
-    Enable
+    Disable,  // 禁用（未激活、死亡或停止工作）
+    Enable    // 启用（正常生长、工作）
 }
 
+// 植物基类：封装所有植物的通用逻辑（状态管理、受击、渲染控制等）
 public class Plant : MonoBehaviour {
-    // 当前植物状态，默认禁用
-    PlantState plantState = PlantState.Disable;
-    // 植物类型，默认向日葵
-    public PlantType plantType = PlantType.sunFlower;
+    PlantState plantState = PlantState.Disable; // 当前植物状态（默认禁用）
+    public PlantType plantType = PlantType.sunFlower; // 该植物对应的类型
 
-    // 植物自身动画组件（如闪烁、发光）
-    public Animator animator;
-    // 子物体动画组件（如豌豆射手攻击时的头部或眨眼动作）
-    public Animator grandAnimator;
+    public Animator animator; // 植物自身动画组件（如整体动作、发光）
+    public Animator grandAnimator; // 子物体动画组件（如局部细节动作）
+    public Collider2D grandCollider2D; // 子物体碰撞体（如攻击判定区域）
 
-    // 植物生命值
-    public int HP = 100;
+    public int HP = 100; // 植物生命值
 
-    // 所有子物体的渲染器列表（用于受伤闪烁效果）
-    private List<SpriteRenderer> spriteList = new List<SpriteRenderer>();
+    protected List<SpriteRenderer> spriteList = new List<SpriteRenderer>(); // 所有渲染器列表（用于受击闪烁）
 
-    // 正常亮度和闪烁亮度（用于受伤效果）
-    private float originalBright = 1f;
-    private float flashBright = 2f;
+    // 亮度参数（控制受击/高亮效果）
+    protected float originalBright = 1f; // 正常显示亮度
+    protected float flashBright = 2f; // 闪烁/高亮时的亮度
 
-    // 植物影子对象
-    public GameObject shadow;
+    [HideInInspector]
+    public bool isBrighten = false; // 是否处于高亮状态（隐藏在Inspector，内部控制）
 
-    // 初始化：收集所有渲染器（包含未激活的子物体）
+    public GameObject shadow; // 植物的影子对象
+
+    // 初始化：收集所有子物体的渲染器（含未激活的）
     private void Start() {
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
@@ -40,71 +38,81 @@ public class Plant : MonoBehaviour {
         }
     }
 
-    // 每帧更新：根据状态执行对应逻辑
+    // 每帧更新：根据当前状态执行对应逻辑
     private void Update() {
         switch (plantState) {
             case PlantState.Disable:
-                DisableUpdate();
+                DisableUpdate(); // 禁用状态的更新
                 break;
             case PlantState.Enable:
-                EnableUpdate();
+                EnableUpdate(); // 启用状态的更新
                 break;
         }
     }
 
-    // 禁用状态的更新逻辑（默认空，子类可重写）
+    // 禁用状态更新逻辑（默认空实现，子类可扩展）
     void DisableUpdate() { }
 
-    // 启用状态的更新逻辑（虚方法，子类需重写实现具体功能）
+    // 启用状态更新逻辑（虚方法，子类需重写实现具体功能）
     protected virtual void EnableUpdate() { }
 
-    // 切换到禁用状态：停止工作、关闭碰撞体、隐藏影子
+    // 切换到禁用状态（停止工作、关闭交互）
     public void TransitionToDisable() {
         plantState = PlantState.Disable;
-        GetComponent<Collider2D>().enabled = false;
-        animator.enabled = false;
-        grandAnimator.enabled = false;
-        shadow.SetActive(false);
+        GetComponent<Collider2D>().enabled = false; // 关闭自身碰撞
+        animator.enabled = false; // 停止自身动画
+        if (grandAnimator != null) grandAnimator.enabled = false; // 停止子物体动画
+        if (grandCollider2D != null) grandCollider2D.enabled = false; // 关闭子物体碰撞
+        shadow.SetActive(false); // 隐藏影子
     }
 
-    // 切换到启用状态：开始工作、开启碰撞体、显示影子
+    // 切换到启用状态（开始工作、开启交互）
     public void TransitionToEnable() {
         plantState = PlantState.Enable;
-        GetComponent<Collider2D>().enabled = true;
-        animator.enabled = true;
-        grandAnimator.enabled = true;
-        shadow.SetActive(true);
+        GetComponent<Collider2D>().enabled = true; // 开启自身碰撞
+        animator.enabled = true; // 启动自身动画
+        if (grandAnimator != null) grandAnimator.enabled = true; // 启动子物体动画
+        if (grandCollider2D != null) grandCollider2D.enabled = true; // 开启子物体碰撞
+        shadow.SetActive(true); // 显示影子
     }
 
-    // 受到伤害处理：扣血、触发闪烁动画，血量为0时执行死亡
-    public void TakeDamage(int damage) {
+    // 受击处理（扣血、闪烁，血量为0时死亡）
+    public virtual void TakeDamage(int damage) {
         HP -= damage;
-        animator.SetTrigger("flashTrigger");
+        if (!isBrighten) StartCoroutine(PlayFlash()); // 未高亮时播放受击闪烁
 
         if (HP <= 0) {
-            AudioManager.Instance.PlayClip(Config.eatFinish);
-            Dead();
+            AudioManager.Instance.PlayClip(Config.eatFinish); // 播放被吃掉的音效
+            Dead(); // 执行死亡逻辑
         }
     }
 
-    // 播放受伤闪烁效果（亮度增强）
+    // 播放高亮效果（增强亮度）
     public void PlayBright() {
         foreach (var sprite in spriteList) {
             sprite.material.SetFloat("_Brightness", flashBright);
         }
     }
 
-    // 结束闪烁效果（恢复正常亮度）
+    // 结束高亮效果（恢复正常亮度）
     public void StopBright() {
         foreach (var sprite in spriteList) {
             sprite.material.SetFloat("_Brightness", originalBright);
         }
     }
 
-    // 死亡逻辑：直接销毁植物对象
-    private void Dead() {
+    // 受击闪烁效果协程
+    public IEnumerator PlayFlash() {
+        spriteList.ForEach(s => s.material.SetFloat("_Brightness", flashBright)); // 提亮
+        yield return new WaitForSeconds(0.15f); // 持续0.15秒
+        spriteList.ForEach(s => s.material.SetFloat("_Brightness", originalBright)); // 恢复
+    }
+
+    // 死亡逻辑（默认销毁对象，子类可重写）
+    public virtual void Dead() {
         Destroy(gameObject);
     }
 
+    // 植物专属功能方法（虚方法，子类实现具体能力）
     public virtual void PlantFun() { }
 }

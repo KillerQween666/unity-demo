@@ -5,9 +5,10 @@ using UnityEngine;
 // 配置类，存储项目中所有音频资源的路径常量（集中管理，方便统一修改和调用）
 public class Config : MonoBehaviour {
 
-    // 背景音乐路径
+    // 背景音乐路径 (1)
     public const string bgm1 = "Audio/Music/bgm1";
-
+    // 背景音乐路径 (3)
+    public const string bgm3 = "Audio/Music/bgm3";
     // 音效路径：阳光收集音效
     public const string sunClick = "Audio/Sound/points";
     // 音效路径：游戏胜利音效
@@ -50,6 +51,8 @@ public class Config : MonoBehaviour {
     public const string eatPlant2 = "Audio/Sound/chomp2";
     // 音效路径：僵尸吃植物音效（3）
     public const string eatPlant3 = "Audio/Sound/chompsoft";
+    // 音效路径：大嘴花吃僵尸音效
+    public const string eatZombie = "Audio/Sound/bigchomp";
     // 音效路径：僵尸吃完植物音效
     public const string eatFinish = "Audio/Sound/gulp";
     // 音效路径：小车移动音效
@@ -60,4 +63,32 @@ public class Config : MonoBehaviour {
     public const string pause = "Audio/Sound/pause";
     // 音效路径：按钮点击音效
     public const string buttonClick = "Audio/Sound/buttonclick";
+    // 音效路径：僵尸叫喊音效（1）
+    public const string groan = "Audio/Sound/groan";
+    // 音效路径：僵尸叫喊音效（2）
+    public const string groan2 = "Audio/Sound/groan2";
+    // 音效路径：僵尸叫喊音效（3）
+    public const string groan3 = "Audio/Sound/groan3";
+    // 音效路径：僵尸叫喊音效（4）
+    public const string groan4 = "Audio/Sound/groan4";
+    // 音效路径：僵尸叫喊音效（5）
+    public const string groan5 = "Audio/Sound/groan5";
+    // 音效路径：僵尸叫喊音效（6）
+    public const string groan6 = "Audio/Sound/groan6";
+    // 音效路径：土豆雷出土音效
+    public const string potatoRise = "Audio/Sound/dirt_rise";
+    // 音效路径：土豆雷爆炸音效
+    public const string potatoBoom = "Audio/Sound/Potato_mine";
+    // 音效路径：樱桃炸弹即将爆炸音效
+    public const string reverseBoom = "Audio/Sound/Reverse_explosion";
+    // 音效路径：樱桃炸弹爆炸音效
+    public const string cherryBombBoom = "Audio/Sound/cherrybomb";
+    // 音效路径：寒冰射手冰冻音效
+    public const string Frozen = "Audio/Sound/frozen";
+    // 音效路径：铁通受击音效（1）
+    public const string bucket = "Audio/Sound/shieldhit";
+    // 音效路径：铁桶受击音效（2）
+    public const string bucket2 = "Audio/Sound/shieldhit2";
+    // 音效路径： 撑杆跳僵尸跳跃音效
+    public const string jump = "Audio/Sound/polevault";
 }

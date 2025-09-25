@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: a7bfdfe0601589c4089dec871d2963bb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: CherryBomb leaf1tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 308
+      width: 30
+      height: 63
+    spriteID: b689f2926028f8e48b2051d76f02a159
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 308}
+    spritePosition: {x: 59, y: 155}
+  - name: CherryBomb leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 126
+      y: 308
+      width: 67
+      height: 68
+    spriteID: 66ba8b76ce5eac64c927548c89273942
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 126, y: 308}
+    spritePosition: {x: 81, y: 153}
+  - name: CherryBomb leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 183
+      y: 4
+      width: 54
+      height: 64
+    spriteID: 4684a0990a7dd2740aee2ff9cc65ea58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 183, y: 4}
+    spritePosition: {x: 97, y: 193}
+  - name: CherryBomb leaf2tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 128
+      width: 17
+      height: 24
+    spriteID: 3fcd18030674827419cce08f19681d5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 128}
+    spritePosition: {x: 90, y: 224}
+  - name: CherryBomb leaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 243
+      width: 74
+      height: 44
+    spriteID: fe9847d4f7762a747b4c041f9d0335e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 243}
+    spritePosition: {x: 134, y: 187}
+  - name: CherryBomb rightmouth1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 183
+      y: 128
+      width: 30
+      height: 27
+    spriteID: 73b0167d4e3e1a7478fff454735b18f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 183, y: 128}
+    spritePosition: {x: 247, y: 42}
+  - name: CherryBomb righteye21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 413
+      width: 51
+      height: 37
+    spriteID: d13f7becfd4af1b4193702d0db738ea3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 413}
+    spritePosition: {x: 198, y: 53}
+  - name: CherryBomb righteye11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 413
+      width: 38
+      height: 38
+    spriteID: 8e932b3ba65a2b74eb7fc254f6ce9c5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 413}
+    spritePosition: {x: 261, y: 67}
+  - name: CherryBomb right1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 163
+      width: 151
+      height: 137
+    spriteID: e2c0bbb255de25943b0de2521e20bc3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 163}
+    spritePosition: {x: 169, y: 12}
+  - name: CherryBomb rightstem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 308
+      width: 114
+      height: 97
+    spriteID: 0eb88e9533dd6dd498bab632fb05c83a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 308}
+    spritePosition: {x: 127, y: 93}
+  - name: CherryBomb leftmouth1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 413
+      width: 80
+      height: 40
+    spriteID: 64729ca0cbd1d50469fea610bea280ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 413}
+    spritePosition: {x: 22, y: 19}
+  - name: CherryBomb lefteye21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 183
+      y: 76
+      width: 67
+      height: 44
+    spriteID: e93ee35e7e628734899abc2a9164905b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 183, y: 76}
+    spritePosition: {x: 72, y: 51}
+  - name: CherryBomb lefteye11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 151
+      y: 413
+      width: 44
+      height: 34
+    spriteID: 4aec0bfe02cc434458ab6ab61b2b6c87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 151, y: 413}
+    spritePosition: {x: 20, y: 72}
+  - name: CherryBomb left1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 171
+      height: 151
+    spriteID: d1151c2b46891b841bfc5fd58553641a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: CherryBomb leftstem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 163
+      y: 163
+      width: 62
+      height: 72
+    spriteID: bb9481e9c4f6e0240bf99e60bf8ac266
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 163, y: 163}
+    spritePosition: {x: 78, y: 129}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: CherryBomb
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 6398b8d7cd912a047a18ed956e3596f3
+    layerID: 109
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: CherryBomb leaf1tip
+    spriteName: CherryBomb leaf1tip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b689f2926028f8e48b2051d76f02a159
+    layerID: 100
+    mosaicPosition: {x: 201, y: 308}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leaf1
+    spriteName: CherryBomb leaf1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 66ba8b76ce5eac64c927548c89273942
+    layerID: 93
+    mosaicPosition: {x: 126, y: 308}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leaf2
+    spriteName: CherryBomb leaf2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4684a0990a7dd2740aee2ff9cc65ea58
+    layerID: 86
+    mosaicPosition: {x: 183, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leaf2tip
+    spriteName: CherryBomb leaf2tip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 3fcd18030674827419cce08f19681d5d
+    layerID: 79
+    mosaicPosition: {x: 221, y: 128}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leaf3
+    spriteName: CherryBomb leaf3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: fe9847d4f7762a747b4c041f9d0335e7
+    layerID: 72
+    mosaicPosition: {x: 163, y: 243}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb rightmouth1
+    spriteName: CherryBomb rightmouth1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 73b0167d4e3e1a7478fff454735b18f8
+    layerID: 65
+    mosaicPosition: {x: 183, y: 128}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb righteye21
+    spriteName: CherryBomb righteye21
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d13f7becfd4af1b4193702d0db738ea3
+    layerID: 58
+    mosaicPosition: {x: 92, y: 413}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb righteye11
+    spriteName: CherryBomb righteye11
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8e932b3ba65a2b74eb7fc254f6ce9c5e
+    layerID: 51
+    mosaicPosition: {x: 203, y: 413}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb right1
+    spriteName: CherryBomb right1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e2c0bbb255de25943b0de2521e20bc3f
+    layerID: 44
+    mosaicPosition: {x: 4, y: 163}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb rightstem
+    spriteName: CherryBomb rightstem
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0eb88e9533dd6dd498bab632fb05c83a
+    layerID: 37
+    mosaicPosition: {x: 4, y: 308}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leftmouth1
+    spriteName: CherryBomb leftmouth1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 64729ca0cbd1d50469fea610bea280ca
+    layerID: 30
+    mosaicPosition: {x: 4, y: 413}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb lefteye21
+    spriteName: CherryBomb lefteye21
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e93ee35e7e628734899abc2a9164905b
+    layerID: 23
+    mosaicPosition: {x: 183, y: 76}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb lefteye11
+    spriteName: CherryBomb lefteye11
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4aec0bfe02cc434458ab6ab61b2b6c87
+    layerID: 16
+    mosaicPosition: {x: 151, y: 413}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb left1
+    spriteName: CherryBomb left1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d1151c2b46891b841bfc5fd58553641a
+    layerID: 9
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CherryBomb leftstem
+    spriteName: CherryBomb leftstem
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bb9481e9c4f6e0240bf99e60bf8ac266
+    layerID: 2
+    mosaicPosition: {x: 163, y: 163}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

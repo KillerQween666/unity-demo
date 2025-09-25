@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: 14c064ca616c498479ac84412051bb8a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Chomper topjaw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 247
+      y: 4
+      width: 243
+      height: 173
+    spriteID: 30d53e361da03c94d90828fa92d84507
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 247, y: 4}
+    spritePosition: {x: 69, y: 206}
+  - name: Chomper spike1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 247
+      y: 245
+      width: 60
+      height: 43
+    spriteID: 072857712d79ad24f8407606907b84ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 247, y: 245}
+    spritePosition: {x: 52, y: 270}
+  - name: Chomper spike2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 918
+      width: 60
+      height: 45
+    spriteID: 0ef8bda949554fa4aba5764b170d29a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 918}
+    spritePosition: {x: 76, y: 305}
+  - name: Chomper spike3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 971
+      width: 53
+      height: 49
+    spriteID: cf59c34f948c00e49a488469c878c0ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 971}
+    spritePosition: {x: 120, y: 339}
+  - name: Chomper spike4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 421
+      width: 44
+      height: 53
+    spriteID: 43e3a37f7d80b4244bfb0cac7c6f7d34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 421}
+    spritePosition: {x: 171, y: 353}
+  - name: Chomper groundleaf2tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 865
+      width: 73
+      height: 45
+    spriteID: da677f2968ad3cc43bcad5448fd319bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 865}
+    spritePosition: {x: 234, y: 20}
+  - name: Chomper groundleaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 681
+      width: 108
+      height: 70
+    spriteID: a16406ad16aa7eb49aa78065f615a23e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 681}
+    spritePosition: {x: 151, y: 16}
+  - name: Zombie outerarm lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 762
+      width: 92
+      height: 89
+    spriteID: 2ef410f326417bd43ad84afacdac2fa4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 762}
+    spritePosition: {x: 166, y: 146}
+  - name: Zombie outerarm hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 859
+      width: 91
+      height: 88
+    spriteID: c6c6696f7ad233c479a52abcbb884bc6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 859}
+    spritePosition: {x: 224, y: 110}
+  - name: Chomper bottomlip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 210
+      width: 235
+      height: 140
+    spriteID: 11653630dc1e1a04cb6edc9c986c44e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 210}
+    spritePosition: {x: 102, y: 103}
+  - name: Chomper underjaw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 235
+      height: 198
+    spriteID: 8aebc0c7660bd3a408974de62a1cf7bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 66, y: 67}
+  - name: Chomper tongue
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 508
+      width: 88
+      height: 64
+    spriteID: 642d4890242a0004dba08e0e74348e47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 508}
+    spritePosition: {x: 100, y: 165}
+  - name: Chomper insidemouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 358
+      width: 178
+      height: 142
+    spriteID: 77ceb37d80967f142909c8832c126770
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 358}
+    spritePosition: {x: 126, y: 104}
+  - name: Chomper Headleaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 811
+      width: 72
+      height: 46
+    spriteID: 7fed3b0ca64a2a940875d8babd381268
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 811}
+    spritePosition: {x: 17, y: 187}
+  - name: Chomper Headleaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 596
+      width: 55
+      height: 69
+    spriteID: a93c7d33b2b1a154ab766eeb2ce35597
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 596}
+    spritePosition: {x: 38, y: 206}
+  - name: Chomper Headleaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 971
+      width: 43
+      height: 46
+    spriteID: d02af95742bffd7419a249aad87ce72b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 971}
+    spritePosition: {x: 54, y: 237}
+  - name: Chomper Headleaf4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 358
+      width: 43
+      height: 55
+    spriteID: f81f502785bf2054191821720a30802c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 358}
+    spritePosition: {x: 51, y: 158}
+  - name: Chomper groundleaf1tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 759
+      width: 79
+      height: 44
+    spriteID: a0c217020317dad4cb5a81091c497794
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 759}
+    spritePosition: {x: 3, y: 13}
+  - name: Chomper groundleaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 681
+      width: 115
+      height: 73
+    spriteID: c106abd95255ecb4e9f147c9cff03065
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 681}
+    spritePosition: {x: 50, y: 12}
+  - name: Chomper stomach
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 596
+      width: 123
+      height: 77
+    spriteID: 6101c55cffc2ff6488bc4272284946bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 596}
+    spritePosition: {x: 68, y: 94}
+  - name: Chomper stem1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 198
+      y: 596
+      width: 39
+      height: 50
+    spriteID: f00e774ef67adf04d8018b7d1b6759f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 198, y: 596}
+    spritePosition: {x: 42, y: 154}
+  - name: Chomper stem2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 508
+      width: 127
+      height: 80
+    spriteID: 6ad3c2b058d54364a9102540f28e9d1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 508}
+    spritePosition: {x: 46, y: 83}
+  - name: Chomper stem3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 195
+      y: 918
+      width: 36
+      height: 27
+    spriteID: c353ce9afb0bb524fbcc11b98d87523f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 195, y: 918}
+    spritePosition: {x: 138, y: 63}
+  - name: Chomper groundleaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 955
+      width: 113
+      height: 49
+    spriteID: 7ec2161058e4b7849879dd5ec5e4a4d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 955}
+    spritePosition: {x: 50, y: 50}
+  - name: Chomper groundleaf4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 247
+      y: 185
+      width: 124
+      height: 52
+    spriteID: 35c3c30dde0abbe4788d979a0922b3f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 247, y: 185}
+    spritePosition: {x: 161, y: 45}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Chomper
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3a608c07de0c2e14c8eb79454b39b3aa
+    layerID: 179
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Chomper topjaw
+    spriteName: Chomper topjaw
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 30d53e361da03c94d90828fa92d84507
+    layerID: 149
+    mosaicPosition: {x: 247, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper spike1
+    spriteName: Chomper spike1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 072857712d79ad24f8407606907b84ee
+    layerID: 142
+    mosaicPosition: {x: 247, y: 245}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper spike2
+    spriteName: Chomper spike2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0ef8bda949554fa4aba5764b170d29a8
+    layerID: 135
+    mosaicPosition: {x: 127, y: 918}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper spike3
+    spriteName: Chomper spike3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cf59c34f948c00e49a488469c878c0ae
+    layerID: 128
+    mosaicPosition: {x: 127, y: 971}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper spike4
+    spriteName: Chomper spike4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 43e3a37f7d80b4244bfb0cac7c6f7d34
+    layerID: 121
+    mosaicPosition: {x: 190, y: 421}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf2tip
+    spriteName: Chomper groundleaf2tip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: da677f2968ad3cc43bcad5448fd319bf
+    layerID: 114
+    mosaicPosition: {x: 127, y: 865}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf2
+    spriteName: Chomper groundleaf2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a16406ad16aa7eb49aa78065f615a23e
+    layerID: 107
+    mosaicPosition: {x: 127, y: 681}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie Hand
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 0f1740c81a12ef642b54b7b86c3b8eb6
+    layerID: 176
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Zombie outerarm lower
+    spriteName: Zombie outerarm lower
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 2ef410f326417bd43ad84afacdac2fa4
+    layerID: 175
+    mosaicPosition: {x: 4, y: 762}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie outerarm hand
+    spriteName: Zombie outerarm hand
+    isGroup: 0
+    parentIndex: 8
+    spriteID: c6c6696f7ad233c479a52abcbb884bc6
+    layerID: 174
+    mosaicPosition: {x: 4, y: 859}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper bottomlip
+    spriteName: Chomper bottomlip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 11653630dc1e1a04cb6edc9c986c44e2
+    layerID: 100
+    mosaicPosition: {x: 4, y: 210}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper underjaw
+    spriteName: Chomper underjaw
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8aebc0c7660bd3a408974de62a1cf7bd
+    layerID: 93
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper tongue
+    spriteName: Chomper tongue
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 642d4890242a0004dba08e0e74348e47
+    layerID: 86
+    mosaicPosition: {x: 139, y: 508}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper insidemouth
+    spriteName: Chomper insidemouth
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 77ceb37d80967f142909c8832c126770
+    layerID: 79
+    mosaicPosition: {x: 4, y: 358}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper Headleaf1
+    spriteName: Chomper Headleaf1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7fed3b0ca64a2a940875d8babd381268
+    layerID: 72
+    mosaicPosition: {x: 127, y: 811}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper Headleaf2
+    spriteName: Chomper Headleaf2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a93c7d33b2b1a154ab766eeb2ce35597
+    layerID: 65
+    mosaicPosition: {x: 135, y: 596}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper Headleaf3
+    spriteName: Chomper Headleaf3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d02af95742bffd7419a249aad87ce72b
+    layerID: 58
+    mosaicPosition: {x: 188, y: 971}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper Headleaf4
+    spriteName: Chomper Headleaf4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f81f502785bf2054191821720a30802c
+    layerID: 51
+    mosaicPosition: {x: 190, y: 358}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf1tip
+    spriteName: Chomper groundleaf1tip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a0c217020317dad4cb5a81091c497794
+    layerID: 44
+    mosaicPosition: {x: 127, y: 759}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf1
+    spriteName: Chomper groundleaf1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c106abd95255ecb4e9f147c9cff03065
+    layerID: 37
+    mosaicPosition: {x: 4, y: 681}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper swallow
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: b53d23d7cf4cdf2478447bd8e3aafeea
+    layerID: 177
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Chomper stomach
+    spriteName: Chomper stomach
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 6101c55cffc2ff6488bc4272284946bb
+    layerID: 172
+    mosaicPosition: {x: 4, y: 596}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper stem1
+    spriteName: Chomper stem1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f00e774ef67adf04d8018b7d1b6759f4
+    layerID: 30
+    mosaicPosition: {x: 198, y: 596}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper stem2
+    spriteName: Chomper stem2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6ad3c2b058d54364a9102540f28e9d1e
+    layerID: 23
+    mosaicPosition: {x: 4, y: 508}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper stem3
+    spriteName: Chomper stem3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c353ce9afb0bb524fbcc11b98d87523f
+    layerID: 16
+    mosaicPosition: {x: 195, y: 918}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf3
+    spriteName: Chomper groundleaf3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7ec2161058e4b7849879dd5ec5e4a4d5
+    layerID: 9
+    mosaicPosition: {x: 4, y: 955}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chomper groundleaf4
+    spriteName: Chomper groundleaf4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 35c3c30dde0abbe4788d979a0922b3f8
+    layerID: 2
+    mosaicPosition: {x: 247, y: 185}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

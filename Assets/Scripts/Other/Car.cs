@@ -50,8 +50,10 @@ public class Car : MonoBehaviour {
 
     // 小车移动逻辑：播放动画、音效，标记为移动状态
     void CarMove() {
+        if (isMove == true) return;
+        isMove = true; // 标记小车为移动状态，触发Update中的移动逻辑
+
         swf.Play(true); // 播放SWF动画（参数true表示循环播放，根据需求调整）
         AudioManager.Instance.PlayClip(Config.carMove); // 播放小车移动音效
-        isMove = true; // 标记小车为移动状态，触发Update中的移动逻辑
     }
 }

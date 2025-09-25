@@ -7,15 +7,19 @@ using UnityEngine.UI;
 // 旗帜进度条UI（控制游戏时间和进度显示）
 public class FlagMeterUI : MonoBehaviour {
 
-    public Image[] flagMeter;       // 进度条背景图片组
+    public GameObject flagMeterImage;
     public Image filgMeterMask;     // 进度遮罩（控制显示比例）
     public Image filgMeterHead;     // 进度条头部图标
+
     public Transform endPosition;   // 头部图标的终点位置
     public float gameTime = 10;     // 游戏总时长（秒）
     private float gameTimer;        // 计时器
 
     private bool isGameStart = false; // 游戏是否开始
     private bool isGameEnd = false;   // 游戏是否结束
+    private bool isHugeWave = false;
+
+    private int setSpeed;
 
     private void Start() {
         Hide(); // 初始隐藏
@@ -27,10 +31,28 @@ public class FlagMeterUI : MonoBehaviour {
             // 更新进度遮罩比例（随时间减少）
             filgMeterMask.fillAmount = (gameTime - gameTimer) / gameTime;
 
+            if (gameTimer > gameTime * 0.25 && setSpeed == 0) {
+                setSpeed++;
+                ZombieManager.Instance.setSpawnZombieSpeed(1.5f);
+            }
+
+            if (gameTimer > gameTime * 0.45 && isHugeWave == false) {
+                isHugeWave = true;
+
+                UIManager.Instance.hugeWaveUI.Show();
+            }
+
+            if (gameTimer > gameTime * 0.75 && setSpeed == 1) {
+                setSpeed++;
+                ZombieManager.Instance.setSpawnZombieSpeed(0.5f);
+            }
+
             // 时间到，显示结束界面
-            if (gameTimer > gameTime) {
-                UIManager.Instance.endUI.Show();
+            if (gameTimer > gameTime && isGameEnd == false) {
                 isGameEnd = true;
+   
+                UIManager.Instance.finalWaveUI.Show();
+                
             }
         }
     }
@@ -45,15 +67,11 @@ public class FlagMeterUI : MonoBehaviour {
 
     // 显示进度条（激活背景图片）
     void Show() {
-        foreach (Image image in flagMeter) {
-            image.gameObject.SetActive(true);
-        }
+        flagMeterImage.SetActive(true);
     }
 
     // 隐藏进度条（禁用背景图片）
     void Hide() {
-        foreach (Image image in flagMeter) {
-            image.gameObject.SetActive(false);
-        }
+        flagMeterImage.SetActive(false);
     }
 }
