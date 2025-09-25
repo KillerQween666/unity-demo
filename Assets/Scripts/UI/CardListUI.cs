@@ -34,6 +34,7 @@ public class CardListUI : MonoBehaviour {
     public void OnClick() {
         // 取消选中的植物
         if (HandManager.Instance.currentPlant != null) {
+            CardManager.Instance.GetCardByPlantType(HandManager.Instance.currentPlant.plantType).CancelPlant();
             AudioManager.Instance.PlayClip(Random.value > 0.5f ? Config.tap : Config.tap2);
             Destroy(HandManager.Instance.currentPlant.gameObject);
             HandManager.Instance.currentPlant = null;
