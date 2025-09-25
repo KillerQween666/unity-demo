@@ -1,65 +1,149 @@
+using FTRuntime;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.SocialPlatforms;
 
-// 对象池管理器，通过对象池复用高频创建/销毁的对象（子弹、阳光、粒子、音频源），减少性能消耗
+// 对象池管理器：通过复用高频创建/销毁的对象（子弹、阳光、粒子、音频源等）减少性能消耗，优化内存使用
 public class ObjectPoolManager : MonoBehaviour {
 
-    // 单例实例，全局唯一访问点（外部通过此获取/回收对象）
+    // 单例实例：全局唯一访问点，外部通过此获取或回收对象
     public static ObjectPoolManager Instance { get; private set; }
 
-    // 各类对象的预制体（在Inspector赋值，用于创建对象池初始实例）
-    public GameObject peaBulletPartical;  // 豌豆子弹粒子效果预制体
-    public GameObject peaBullet;          // 豌豆子弹预制体
-    public GameObject sun;                // 阳光预制体
-    public GameObject headEmissionPartical;// 头部发射粒子效果预制体
-    public GameObject handEmissionPartical;// 手部发射粒子效果预制体
-    private GameObject audioSource;       // 音频源对象（动态创建，无需预制体）
+    // 各类可复用对象的预制体（需在Inspector面板赋值，用于初始化对象池）
+    public GameObject peaBulletPartical;         // 豌豆子弹命中粒子效果预制体
+    public GameObject snowPeaBulletPartical;     // 寒冰豌豆子弹命中粒子效果预制体
+    public GameObject peaBullet;                 // 豌豆子弹预制体
+    public GameObject snowPeaBullet;             // 寒冰豌豆子弹预制体
+    public GameObject sun;                       // 阳光预制体
+    public GameObject headEmissionPartical;      // 头部发射粒子效果预制体（emission：发射）
+    public GameObject handEmissionPartical;      // 手部发射粒子效果预制体（emission：发射）
+    public GameObject poleHeadEmissionPartical;  // 撑杆僵尸头部发射粒子预制体
+    public GameObject poleHandEmissionPartical;  // 撑杆僵尸手部发射粒子预制体
+    public GameObject coneEmissionPartical;      // 路障僵尸发射粒子预制体
+    public GameObject bucketEmissionPartical;    // 铁桶僵尸发射粒子预制体
+    public GameObject flagEmissionPartical;      // 旗帜僵尸发射粒子预制体
+    public GameObject potatoBoomPartical;        // 土豆地雷爆炸粒子预制体
+    public GameObject wallnutHurtSmallPartical;  // 坚果墙轻伤粒子预制体
+    public GameObject wallnutHurtLargePartical;  // 坚果墙重伤粒子预制体
+    public GameObject zombieBoomSwf;             // 僵尸被炸飞动画预制体
+    public GameObject cherryBombBoomPartical;    // 樱桃炸弹爆炸粒子预制体
 
-    // 各类对象对应的对象池（管理对象的创建、复用、销毁）
+    // 各类对象对应的对象池（管理对象的创建、复用、销毁全生命周期）
     private ObjectPool<GameObject> peaBulletParticalPool;
+    private ObjectPool<GameObject> snowPeaBulletParticalPool;
     private ObjectPool<GameObject> peaBulletPool;
+    private ObjectPool<GameObject> snowPeaBulletPool;
     private ObjectPool<GameObject> sunPool;
-    private ObjectPool<GameObject> headEmissionParticalPool;
-    private ObjectPool<GameObject> handEmissionParticalPool;
-    private ObjectPool<GameObject> sourcePool; // 音频源对象池
+    private ObjectPool<GameObject> headEmissionParticalPool;      // 头部发射粒子池
+    private ObjectPool<GameObject> handEmissionParticalPool;      // 手部发射粒子池
+    private ObjectPool<GameObject> sourcePool;                    // 音频源对象池
+    private ObjectPool<GameObject> poleHeadEmissionParticalPool;  // 撑杆僵尸头部发射粒子池
+    private ObjectPool<GameObject> poleHandEmissionParticalPool;  // 撑杆僵尸手部发射粒子池
+    private ObjectPool<GameObject> coneEmissionParticalPool;      // 路障僵尸发射粒子池
+    private ObjectPool<GameObject> bucketEmissionParticalPool;    // 铁桶僵尸发射粒子池
+    private ObjectPool<GameObject> flagEmissionParticalPool;      // 旗帜僵尸发射粒子池
+    private ObjectPool<GameObject> potatoBoomParticalPool;        // 土豆地雷爆炸粒子池
+    private ObjectPool<GameObject> wallnutHurtSmallParticalPool;  // 坚果墙轻伤粒子池
+    private ObjectPool<GameObject> wallnutHurtLargeParticalPool;  // 坚果墙重伤粒子池
+    private ObjectPool<GameObject> zombieBoomSwfPool;             // 僵尸被炸飞动画池
+    private ObjectPool<GameObject> cherryBombBoomParticalPool;    // 樱桃炸弹爆炸粒子池
 
-    // 初始化单例
+    private Color crozeColor = new Color(0.4f, 0.5568f, 1);  // 特殊发射粒子颜色（如冰冻效果）
+
+    // 初始化单例，确保全局唯一实例
     private void Awake() {
         Instance = this;
     }
 
-    // 游戏启动时初始化所有对象池（设置创建、获取、回收、销毁的回调逻辑）
+    // 游戏启动时初始化所有对象池，配置创建、获取、回收、销毁的回调逻辑
     private void Start() {
-        // 豌豆子弹粒子池：初始10个，最大300个，超出最大数量则销毁对象
+        // 豌豆子弹粒子池：初始10个实例，最大300个，超出最大数量则销毁对象
         peaBulletParticalPool = new ObjectPool<GameObject>(
-            CreatePeaBulletPartical,  // 创建对象的方法
-            ActionOnGet,               // 从池获取对象时的回调
-            ActionOnRelease,           // 回收对象到池时的回调
-            ActionOnDestroy,           // 对象超出池最大数量时的销毁回调
-            true, 10, 300              // 允许集合收缩、初始容量、最大容量
+            CreatePeaBulletPartical,  // 创建新对象的方法
+            ActionOnGet,               // 从池获取对象时的回调（激活对象）
+            ActionOnRelease,           // 回收对象到池时的回调（禁用对象）
+            ActionOnDestroy,           // 对象超出池最大容量时的销毁回调
+            true, 10, 300              // 允许池自动收缩、初始容量、最大容量
         );
 
-        // 豌豆子弹池：同上，获取时额外重置子弹状态
+        // 寒冰豌豆子弹粒子池：配置同普通豌豆粒子池
+        snowPeaBulletParticalPool = new ObjectPool<GameObject>(
+            CreateSnowPeaBulletPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 樱桃炸弹爆炸粒子池：基础对象池配置
+        cherryBombBoomParticalPool = new ObjectPool<GameObject>(
+            CreateCherryBombBoomPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 土豆地雷爆炸粒子池：基础对象池配置
+        potatoBoomParticalPool = new ObjectPool<GameObject>(
+            CreatePotatoBoomPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 坚果墙轻伤粒子池：基础对象池配置
+        wallnutHurtSmallParticalPool = new ObjectPool<GameObject>(
+            CreateWallnutHurtSmallPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 坚果墙重伤粒子池：基础对象池配置
+        wallnutHurtLargeParticalPool = new ObjectPool<GameObject>(
+            CreateWallnutHurtLargePartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 豌豆子弹池：获取时需额外重置子弹状态（避免复用旧状态）
         peaBulletPool = new ObjectPool<GameObject>(
             CreatePeaBullet,
+            ActionOnGetPeaBullet,  // 子弹专属获取回调（重置计时器等）
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 寒冰豌豆子弹池：配置同普通豌豆子弹池
+        snowPeaBulletPool = new ObjectPool<GameObject>(
+            CreateSnowPeaBullet,
             ActionOnGetPeaBullet,
             ActionOnRelease,
             ActionOnDestroy,
             true, 10, 300
         );
 
-        // 阳光池：同上，获取时额外重置阳光状态
+        // 阳光池：获取时需重置阳光状态（生命周期、点击状态等）
         sunPool = new ObjectPool<GameObject>(
             CreateSun,
-            ActionOnGetSun,
+            ActionOnGetSun,  // 阳光专属获取回调
             ActionOnRelease,
             ActionOnDestroy,
             true, 10, 300
         );
 
-        // 头部粒子池：基础对象池逻辑
+        // 头部发射粒子池：基础对象池配置
         headEmissionParticalPool = new ObjectPool<GameObject>(
             CreateHeadEmissionPartical,
             ActionOnGet,
@@ -68,7 +152,7 @@ public class ObjectPoolManager : MonoBehaviour {
             true, 10, 300
         );
 
-        // 手部粒子池：基础对象池逻辑
+        // 手部发射粒子池：基础对象池配置
         handEmissionParticalPool = new ObjectPool<GameObject>(
             CreateHandEmissionPartical,
             ActionOnGet,
@@ -77,7 +161,7 @@ public class ObjectPoolManager : MonoBehaviour {
             true, 10, 300
         );
 
-        // 音频源池：基础对象池逻辑
+        // 音频源池：基础对象池配置（动态创建音频源）
         sourcePool = new ObjectPool<GameObject>(
             CreateSource,
             ActionOnGet,
@@ -85,16 +169,101 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnDestroy,
             true, 10, 300
         );
+
+        // 撑杆僵尸头部发射粒子池：基础对象池配置
+        poleHeadEmissionParticalPool = new ObjectPool<GameObject>(
+            CreatePoleHeadEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 撑杆僵尸手部发射粒子池：基础对象池配置
+        poleHandEmissionParticalPool = new ObjectPool<GameObject>(
+            CreatePoleHandEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 路障僵尸发射粒子池：基础对象池配置
+        coneEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateConeEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 铁桶僵尸发射粒子池：基础对象池配置
+        bucketEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateBucketEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        // 旗帜僵尸发射粒子池：初始容量2（出现频率低），最大300
+        flagEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateFlagEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 2, 300
+        );
+
+        // 僵尸被炸飞动画池：基础对象池配置
+        zombieBoomSwfPool = new ObjectPool<GameObject>(
+            CreateZombieBoomSwf,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
     }
 
-    // 创建豌豆子弹实例（对象池调用，生成新子弹）
+    // 创建豌豆子弹实例（对象池调用，通过预制体生成新子弹）
     GameObject CreatePeaBullet() {
         return Instantiate(peaBullet);
     }
 
-    // 创建豌豆子弹粒子实例
+    // 创建寒冰豌豆子弹实例
+    GameObject CreateSnowPeaBullet() {
+        return Instantiate(snowPeaBullet);
+    }
+
+    // 创建土豆地雷爆炸粒子实例
+    GameObject CreatePotatoBoomPartical() {
+        return Instantiate(potatoBoomPartical);
+    }
+
+    // 创建樱桃炸弹爆炸粒子实例
+    GameObject CreateCherryBombBoomPartical() {
+        return Instantiate(cherryBombBoomPartical);
+    }
+
+    // 创建坚果墙轻伤粒子实例
+    GameObject CreateWallnutHurtSmallPartical() {
+        return Instantiate(wallnutHurtSmallPartical);
+    }
+
+    // 创建坚果墙重伤粒子实例
+    GameObject CreateWallnutHurtLargePartical() {
+        return Instantiate(wallnutHurtLargePartical);
+    }
+
+    // 创建豌豆子弹命中粒子实例
     GameObject CreatePeaBulletPartical() {
         return Instantiate(peaBulletPartical);
+    }
+
+    // 创建寒冰豌豆子弹命中粒子实例
+    GameObject CreateSnowPeaBulletPartical() {
+        return Instantiate(snowPeaBulletPartical);
     }
 
     // 创建阳光实例
@@ -102,172 +271,635 @@ public class ObjectPoolManager : MonoBehaviour {
         return Instantiate(sun);
     }
 
-    // 创建头部粒子实例
+    // 创建头部发射粒子实例（emission：发射）
     GameObject CreateHeadEmissionPartical() {
         return Instantiate(headEmissionPartical);
     }
 
-    // 创建手部粒子实例
+    // 创建手部发射粒子实例（emission：发射）
     GameObject CreateHandEmissionPartical() {
         return Instantiate(handEmissionPartical);
     }
 
+    // 创建撑杆僵尸头部发射粒子实例
+    GameObject CreatePoleHeadEmissionPartical() {
+        return Instantiate(poleHeadEmissionPartical);
+    }
+
+    // 创建撑杆僵尸手部发射粒子实例
+    GameObject CreatePoleHandEmissionPartical() {
+        return Instantiate(poleHandEmissionPartical);
+    }
+
+    // 创建路障僵尸发射粒子实例
+    GameObject CreateConeEmissionPartical() {
+        return Instantiate(coneEmissionPartical);
+    }
+
+    // 创建铁桶僵尸发射粒子实例
+    GameObject CreateBucketEmissionPartical() {
+        return Instantiate(bucketEmissionPartical);
+    }
+
+    // 创建旗帜僵尸发射粒子实例
+    GameObject CreateFlagEmissionPartical() {
+        return Instantiate(flagEmissionPartical);
+    }
+
+    // 创建僵尸被炸飞动画实例
+    GameObject CreateZombieBoomSwf() {
+        return Instantiate(zombieBoomSwf);
+    }
+
     // 创建音频源实例（动态添加AudioSource组件，无需预制体）
     GameObject CreateSource() {
-        GameObject obj = new GameObject("AudioSource"); // 命名对象，方便调试
-        obj.AddComponent<AudioSource>();                // 给对象添加音频源组件
+        GameObject obj = new GameObject("AudioSource"); // 命名对象便于调试
+        obj.AddComponent<AudioSource>();                // 为对象添加音频播放组件
         return obj;
     }
 
-    // 基础获取回调：从池里拿对象时，激活对象
+    // 基础获取回调：从池里获取对象时激活对象（通用逻辑）
     void ActionOnGet(GameObject obj) {
         obj.SetActive(true);
     }
 
-    // 豌豆子弹获取回调：激活对象前，重置子弹状态（避免复用旧状态）
+    // 豌豆子弹获取回调：从池获取子弹时，重置状态避免复用旧数据
     void ActionOnGetPeaBullet(GameObject obj) {
         PeaBullet peaBullet = obj.GetComponent<PeaBullet>();
-        peaBullet.liveTimer = 0;    // 重置生命周期计时器
-        peaBullet.isAttack = false; // 重置攻击状态
-        peaBullet.isRelease = false;// 重置回收状态
-        obj.SetActive(true);        // 激活对象
+        peaBullet.liveTimer = 0;    // 重置生命周期计时器（防止刚取出就超时消失）
+        peaBullet.isAttack = false; // 重置攻击状态（确保能重新检测命中）
+        peaBullet.isRelease = false;// 重置回收标记（避免被误判为已回收）
+        obj.SetActive(true);        // 激活子弹对象
     }
 
-    // 阳光获取回调：激活对象前，重置阳光状态
+    // 阳光获取回调：从池获取阳光时，重置状态确保正常交互
     void ActionOnGetSun(GameObject obj) {
         Sun sun = obj.GetComponent<Sun>();
-        sun.liveTimer = 0;          // 重置生命周期计时器
-        sun.isClick = false;        // 重置点击状态
-        sun.sunCollider2D.enabled = true; // 启用碰撞体（确保能被收集）
-        obj.SetActive(true);        // 激活对象
+        sun.liveTimer = 0;          // 重置生命周期计时器（防止刚生成就消失）
+        sun.isClick = false;        // 重置点击状态（确保能被玩家重新点击收集）
+        sun.sunCollider2D.enabled = true; // 启用碰撞体（允许玩家点击交互）
+        obj.SetActive(true);        // 激活阳光对象
     }
 
-    // 基础回收回调：回收对象到池时，禁用对象（不销毁，留待复用）
+    // 基础回收回调：对象回收至池时禁用（保留对象实例，留待下次复用）
     void ActionOnRelease(GameObject obj) {
         obj.SetActive(false);
     }
 
-    // 对象销毁回调：对象超出池最大容量时，彻底销毁（释放内存）
+    // 对象销毁回调：当对象数量超出池最大容量时，彻底销毁对象释放内存
     void ActionOnDestroy(GameObject obj) {
         Destroy(obj);
     }
 
-    // 对外提供：获取豌豆子弹（外部调用，如豌豆射手发射时）
+    // 对外提供：获取普通豌豆子弹（如豌豆射手发射时调用）
     public GameObject GetPeaBullet() {
         return peaBulletPool.Get();
     }
 
-    // 对外提供：回收豌豆子弹（外部调用，如子弹命中或超时后）
+    // 对外提供：回收普通豌豆子弹（如子弹命中目标或超时后调用）
     public void ReleasePeaBullet(GameObject gameObject) {
-        peaBulletPool.Release(gameObject);              // 回收到对象池
-        gameObject.GetComponent<PeaBullet>().isRelease = true; // 标记为已回收
+        peaBulletPool.Release(gameObject);              // 将子弹回收到对象池
+        gameObject.GetComponent<PeaBullet>().isRelease = true; // 标记子弹为已回收状态
     }
 
-    // 对外提供：获取豌豆子弹粒子
+    // 对外提供：获取寒冰豌豆子弹（如寒冰射手发射时调用）
+    public GameObject GetSnowPeaBullet() {
+        return snowPeaBulletPool.Get();
+    }
+
+    // 对外提供：回收寒冰豌豆子弹（如子弹命中目标或超时后调用）
+    public void ReleaseSnowPeaBullet(GameObject gameObject) {
+        snowPeaBulletPool.Release(gameObject);              // 将子弹回收到对象池
+        gameObject.GetComponent<PeaBullet>().isRelease = true; // 标记子弹为已回收状态
+    }
+
+    // 对外提供：获取普通豌豆子弹命中粒子（如子弹命中僵尸时调用）
     public GameObject GetPeaBulletPartical() {
         return peaBulletParticalPool.Get();
     }
 
-    // 对外提供：回收豌豆子弹粒子
+    // 对外提供：回收普通豌豆子弹命中粒子（粒子效果播放完成后调用）
     public void ReleasePeaBulletPartical(GameObject gameObject) {
         peaBulletParticalPool.Release(gameObject);
     }
 
-    // 对外提供：获取阳光（外部调用，如向日葵生成阳光时）
+    // 对外提供：获取寒冰豌豆子弹命中粒子（如子弹命中僵尸时调用）
+    public GameObject GetSnowPeaBulletPartical() {
+        return snowPeaBulletParticalPool.Get();
+    }
+
+    // 对外提供：回收寒冰豌豆子弹命中粒子（粒子效果播放完成后调用）
+    public void ReleaseSnowPeaBulletPartical(GameObject gameObject) {
+        snowPeaBulletParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取阳光对象（如向日葵生成阳光时调用）
     public GameObject GetSun() {
         return sunPool.Get();
     }
 
-    // 对外提供：回收阳光（外部调用，如阳光被收集或超时后）
+    // 对外提供：回收阳光对象（如阳光被收集或超时消失后调用）
     public void ReleaseSun(GameObject gameObject) {
         sunPool.Release(gameObject);
     }
 
-    // 对外提供：获取头部粒子
+    // 对外提供：获取头部发射粒子（如普通僵尸攻击时调用）
     public GameObject GetHeadEmissionPartical() {
         return headEmissionParticalPool.Get();
     }
 
-    // 对外提供：回收头部粒子
+    // 对外提供：回收头部发射粒子（粒子效果播放完成后调用）
     public void ReleaseHeadEmissionPartical(GameObject gameObject) {
         headEmissionParticalPool.Release(gameObject);
     }
 
-    // 对外提供：获取手部粒子
+    // 对外提供：获取手部发射粒子（如普通僵尸攻击时调用）
     public GameObject GetHandEmissionPartical() {
         return handEmissionParticalPool.Get();
     }
 
-    // 对外提供：回收手部粒子
+    // 对外提供：回收手部发射粒子（粒子效果播放完成后调用）
     public void ReleaseHandEmissionPartical(GameObject gameObject) {
         handEmissionParticalPool.Release(gameObject);
     }
 
-    // 对外提供：获取音频源（外部调用，如播放音效时）
+    // 对外提供：获取音频源对象（如播放音效时调用）
     public GameObject GetSource() {
         return sourcePool.Get();
     }
 
-    // 对外提供：回收音频源（外部调用，如音效播放完成后）
+    // 对外提供：回收音频源对象（如音效播放完成后调用）
     public void ReleaseSource(GameObject gameObject) {
         sourcePool.Release(gameObject);
     }
 
-    // 对外提供：播放豌豆子弹粒子效果（启动协程，控制粒子播放时长）
+    // 对外提供：获取撑杆僵尸头部发射粒子（如撑杆僵尸攻击时调用）
+    public GameObject GetPoleHeadEmissionPartical() {
+        return poleHeadEmissionParticalPool.Get();
+    }
+
+    // 对外提供：回收撑杆僵尸头部发射粒子（粒子效果播放完成后调用）
+    public void ReleasePoleHeadEmissionPartical(GameObject gameObject) {
+        poleHeadEmissionParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取撑杆僵尸手部发射粒子（如撑杆僵尸攻击时调用）
+    public GameObject GetPoleHandEmissionPartical() {
+        return poleHandEmissionParticalPool.Get();
+    }
+
+    // 对外提供：回收撑杆僵尸手部发射粒子（粒子效果播放完成后调用）
+    public void ReleasePoleHandEmissionPartical(GameObject gameObject) {
+        poleHandEmissionParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取路障僵尸发射粒子（如路障僵尸攻击时调用）
+    public GameObject GetConeEmissionPartical() {
+        return coneEmissionParticalPool.Get();
+    }
+
+    // 对外提供：回收路障僵尸发射粒子（粒子效果播放完成后调用）
+    public void ReleaseConeEmissionPartical(GameObject gameObject) {
+        coneEmissionParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取铁桶僵尸发射粒子（如铁桶僵尸攻击时调用）
+    public GameObject GetBucketEmissionPartical() {
+        return bucketEmissionParticalPool.Get();
+    }
+
+    // 对外提供：回收铁桶僵尸发射粒子（粒子效果播放完成后调用）
+    public void ReleaseBucketEmissionPartical(GameObject gameObject) {
+        bucketEmissionParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取旗帜僵尸发射粒子（如旗帜僵尸攻击时调用）
+    public GameObject GetFlagEmissionPartical() {
+        return flagEmissionParticalPool.Get();
+    }
+
+    // 对外提供：回收旗帜僵尸发射粒子（粒子效果播放完成后调用）
+    public void ReleaseFlagEmissionPartical(GameObject gameObject) {
+        flagEmissionParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取土豆地雷爆炸粒子（如土豆地雷触发爆炸时调用）
+    public GameObject GetPotatoBoomPartical() {
+        return potatoBoomParticalPool.Get();
+    }
+
+    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
+    public void ReleasePotatoBoomPartical(GameObject gameObject) {
+        potatoBoomParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取坚果墙轻伤粒子（如坚果墙受轻微攻击时调用）
+    public GameObject GetWallnutHurtSmallPartical() {
+        return wallnutHurtSmallParticalPool.Get();
+    }
+
+    // 对外提供：回收坚果墙轻伤粒子（粒子效果播放完成后调用）
+    public void ReleaseWallnutHurtSmallPartical(GameObject gameObject) {
+        wallnutHurtSmallParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取坚果墙重伤粒子（如坚果墙受严重攻击或被摧毁时调用）
+    public GameObject GetWallnutHurtLargePartical() {
+        return wallnutHurtLargeParticalPool.Get();
+    }
+
+    // 对外提供：回收坚果墙重伤粒子（粒子效果播放完成后调用）
+    public void ReleaseWallnutHurtLargePartical(GameObject gameObject) {
+        wallnutHurtLargeParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：获取僵尸被炸飞动画（如僵尸被爆炸类植物击杀时调用）
+    public GameObject GetZombieBoomSwf() {
+        return zombieBoomSwfPool.Get();
+    }
+
+    // 对外提供：回收僵尸被炸飞动画（动画播放完成后调用）
+    public void ReleaseZombieBoomSwf(GameObject gameObject) {
+        zombieBoomSwfPool.Release(gameObject);
+    }
+
+    // 对外提供：获取樱桃炸弹爆炸粒子（如樱桃炸弹触发爆炸时调用）
+    public GameObject GetCherryBombBoomPartical() {
+        return cherryBombBoomParticalPool.Get();
+    }
+
+    // 对外提供：回收樱桃炸弹爆炸粒子（爆炸效果播放完成后调用）
+    public void ReleaseCherryBombBoomPartical(GameObject gameObject) {
+        cherryBombBoomParticalPool.Release(gameObject);
+    }
+
+    // 对外提供：播放僵尸被炸飞动画（启动协程控制播放逻辑）
+    // 参数：动画位置、僵尸是否有头（切换对应动画）、渲染层级（避免遮挡）
+    public void PlayZombieBoomSwfIEnumrator(Transform transform, bool isHaveHead, int sort) {
+        StartCoroutine(PlayZombieBoomSwf(transform, isHaveHead, sort));
+    }
+
+    // 对外提供：播放普通豌豆子弹命中粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如子弹命中点）
     public void PlayPeaBulletParticalIEnumrator(Transform transform) {
         StartCoroutine(PlayPeaBulletPartical(transform));
     }
 
-    // 对外提供：播放头部粒子效果（带渲染层级参数，避免粒子遮挡）
-    public void PlayHeadEmissionIEnumrator(Transform transform, int sort) {
-        StartCoroutine(PlayHeadEmissionPartical(transform, sort));
+    // 对外提供：播放寒冰豌豆子弹命中粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如子弹命中点）
+    public void PlaySnowPeaBulletParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlaySnowPeaBulletPartical(transform));
     }
 
-    // 对外提供：播放手部粒子效果（带渲染层级参数）
-    public void PlayHandEmissionIEnumrator(Transform transform, int sort) {
-        StartCoroutine(PlayHandEmissionPartical(transform, sort));
+    // 对外提供：播放普通僵尸头部发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色（如冰冻效果）
+    public void PlayHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayHeadEmissionPartical(transform, sort, isCroze));
     }
 
-    // 豌豆子弹粒子播放协程：播放粒子后，等待0.6秒再回收
+    // 对外提供：播放普通僵尸手部发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayHandEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放撑杆僵尸头部发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayPoleHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayPoleHeadEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放撑杆僵尸手部发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayPoleHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayPoleHandEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放路障僵尸发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayConeEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayConeEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放铁桶僵尸发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayBucketEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayBucketEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放旗帜僵尸发射粒子（启动协程控制播放逻辑）
+    // 参数：粒子位置、渲染层级、是否使用特殊颜色
+    public void PlayFlagEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayFlagEmissionPartical(transform, sort, isCroze));
+    }
+
+    // 对外提供：播放土豆地雷爆炸粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如地雷位置）
+    public void PlayPotatoBoomParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayPotatoBoomPartical(transform));
+    }
+
+    // 对外提供：播放樱桃炸弹爆炸粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如樱桃炸弹位置）
+    public void PlayCherryBombBoomParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayCherryBombBoomPartical(transform));
+    }
+
+    // 对外提供：播放坚果墙轻伤粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如坚果墙位置）
+    public void PlayWallnutHurtSmallParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayWallnutHurtSmallPartical(transform));
+    }
+
+    // 对外提供：播放坚果墙重伤粒子（启动协程控制播放逻辑）
+    // 参数：粒子播放位置（如坚果墙位置）
+    public void PlayWallnutHurtLargeParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayWallnutHurtLargePartical(transform));
+    }
+
+    // 僵尸被炸飞动画播放协程（控制动画播放流程）
+    // 参数：动画位置、僵尸是否有头（切换动画片段）、渲染层级
+    public IEnumerator PlayZombieBoomSwf(Transform transform, bool isHaveHead, int sort) {
+        GameObject obj = GetZombieBoomSwf(); // 从池获取动画对象
+        obj.transform.position = transform.position; // 设置动画播放位置
+
+        // 获取动画控制器和渲染组件
+        SwfClipController[] swfClipControllers = obj.GetComponentsInChildren<SwfClipController>();
+        SwfClip[] swfClips = obj.GetComponentsInChildren<SwfClip>();
+
+        // 设置所有动画片段的渲染层级（确保正确显示层级）
+        foreach (SwfClip swfClip in swfClips) {
+            swfClip.sortingOrder = sort;
+        }
+
+        // 根据僵尸是否有头，播放对应动画片段
+        if (isHaveHead) {
+            swfClipControllers[1].gameObject.SetActive(false); // 禁用无头动画
+            swfClipControllers[0].Play(true); // 播放有头动画
+        }
+        else {
+            swfClipControllers[0].gameObject.SetActive(false); // 禁用有头动画
+            swfClipControllers[1].Play(true); // 播放无头动画
+        }
+
+        yield return new WaitForSeconds(2.8f); // 等待动画播放完成（固定时长2.8秒）
+
+        // 重置动画状态并回收对象
+        swfClipControllers[0].gameObject.SetActive(true);
+        swfClipControllers[1].gameObject.SetActive(true);
+        ReleaseZombieBoomSwf(obj);
+    }
+
+    // 樱桃炸弹爆炸粒子播放协程（控制单粒子系统的播放与回收）
+    // 参数：transform - 粒子播放的目标位置（樱桃炸弹的位置）
+    public IEnumerator PlayCherryBombBoomPartical(Transform transform) {
+        GameObject obj = GetCherryBombBoomPartical();       // 从对象池获取樱桃炸弹爆炸粒子对象
+        obj.transform.position = transform.position;        // 将粒子位置设置为爆炸发生的位置
+        var partical = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件，用于控制播放逻辑
+
+        partical.Play();                                    // 启动粒子播放（触发爆炸效果）
+
+        // 等待粒子播放完成：根据粒子系统自身配置的"总时长"等待，确保效果完整显示
+        yield return new WaitForSeconds(partical.main.duration);
+
+        partical.Clear();                                   // 清除粒子系统中残留的粒子，避免下次复用时有残影
+
+        ReleaseCherryBombBoomPartical(obj);                  // 将粒子对象回收到池，供下次爆炸时复用
+    }
+
+    // 土豆地雷爆炸粒子播放协程（控制多粒子组合系统的播放与回收）
+    // 参数：transform - 粒子播放的目标位置（土豆地雷的位置）
+    public IEnumerator PlayPotatoBoomPartical(Transform transform) {
+        GameObject obj = GetPotatoBoomPartical();       // 从对象池获取土豆地雷爆炸粒子对象
+        // 获取对象下所有粒子系统（含子物体，支持多粒子叠加的爆炸效果），true表示包含非激活状态的组件
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = transform.position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }
+        ReleasePotatoBoomPartical(obj);                  // 将粒子组合对象回收到池
+    }
+
+    // 坚果墙轻伤粒子播放协程（控制多粒子组合系统的播放与回收）
+    // 参数：transform - 粒子播放的目标位置（坚果墙的位置）
+    public IEnumerator PlayWallnutHurtSmallPartical(Transform transform) {
+        GameObject obj = GetWallnutHurtSmallPartical();       // 从对象池获取坚果墙轻伤粒子对象
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);  // 获取所有子粒子系统
+        obj.transform.position = transform.position;            // 设置粒子位置为坚果墙位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                          // 启动所有轻伤粒子（如碎片、灰尘效果）
+        }
+
+        yield return new WaitForSeconds(particals[0].main.duration);  // 等待轻伤效果播放完成
+
+        foreach (var ps in particals) {
+            ps.Clear();                                           // 清除残留粒子
+        }
+        ReleaseWallnutHurtSmallPartical(obj);                      // 回收粒子对象到池
+    }
+
+    // 坚果墙重伤粒子播放协程（控制多粒子组合系统的播放与回收）
+    // 参数：transform - 粒子播放的目标位置（坚果墙的位置）
+    public IEnumerator PlayWallnutHurtLargePartical(Transform transform) {
+        GameObject obj = GetWallnutHurtLargePartical();       // 从对象池获取坚果墙重伤粒子对象
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);  // 获取所有子粒子系统
+        obj.transform.position = transform.position;            // 设置粒子位置为坚果墙位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                          // 启动所有重伤粒子（如大量碎片、裂纹效果）
+        }
+
+        yield return new WaitForSeconds(particals[0].main.duration);  // 等待重伤效果播放完成
+
+        foreach (var ps in particals) {
+            ps.Clear();                                           // 清除残留粒子
+        }
+        ReleaseWallnutHurtLargePartical(obj);                      // 回收粒子对象到池
+    }
+
+    // 豌豆子弹粒子播放协程：控制子弹命中粒子的播放（固定等待时长）
+    // 参数：transform - 粒子播放的目标位置（子弹命中僵尸/障碍物的位置）
     public IEnumerator PlayPeaBulletPartical(Transform transform) {
-        GameObject obj = GetPeaBulletPartical();       // 从池获取粒子对象
-        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
-        particle.transform.position = transform.position; // 设为目标位置（如子弹命中点）
-        particle.Play();                                // 播放粒子
+        GameObject obj = GetPeaBulletPartical();       // 从对象池获取普通豌豆子弹命中粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        particle.transform.position = transform.position; // 设为子弹命中点位置，确保效果贴合碰撞处
+        particle.Play();                                // 启动命中粒子（如火花、冲击效果）
 
-        yield return new WaitForSeconds(0.6f);          // 等待粒子播放完成
+        yield return new WaitForSeconds(0.6f);          // 固定等待0.6秒（命中效果较短，用固定时长更高效）
 
         particle.Clear();                               // 清除残留粒子
-        ReleasePeaBulletPartical(obj);                  // 回收粒子到池
+        ReleasePeaBulletPartical(obj);                  // 回收粒子对象到池
     }
 
-    // 头部粒子播放协程：按指定层级播放，播放完成后回收
-    public IEnumerator PlayHeadEmissionPartical(Transform transform, int sort) {
-        GameObject obj = GetHeadEmissionPartical();
-        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
-        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
-        renderer.sortingOrder = sort;                   // 设置粒子渲染层级
-        particle.transform.position = transform.position;
-        particle.Play();
+    // 寒冰豌豆子弹粒子播放协程：控制寒冰子弹命中粒子的播放（固定等待时长）
+    // 参数：transform - 粒子播放的目标位置（子弹命中点）
+    public IEnumerator PlaySnowPeaBulletPartical(Transform transform) {
+        GameObject obj = GetSnowPeaBulletPartical();       // 从对象池获取寒冰豌豆子弹命中粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        particle.transform.position = transform.position; // 设为子弹命中点位置
+        particle.Play();                                // 启动寒冰命中粒子（如冰霜、白雾效果）
 
-        yield return new WaitForSeconds(particle.main.duration); // 等待粒子自然播放完成
+        yield return new WaitForSeconds(0.6f);          // 固定等待0.6秒，与普通豌豆命中效果时长保持一致
 
-        particle.Clear();
-        ReleaseHeadEmissionPartical(obj);
+        particle.Clear();                               // 清除残留粒子
+        ReleaseSnowPeaBulletPartical(obj);              // 回收粒子对象到池
     }
 
-    // 手部粒子播放协程：按指定层级播放，播放完成后回收
-    public IEnumerator PlayHandEmissionPartical(Transform transform, int sort) {
-        GameObject obj = GetHandEmissionPartical();
+    // 普通僵尸头部发射粒子播放协程：支持渲染层级与颜色切换的粒子控制
+    // 参数：transform - 粒子位置（僵尸头部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，确保粒子在正确的视觉层级显示
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitForSeconds(particle.main.duration);
+
+        mainModule.startColor = originColor;            // 恢复粒子原始颜色，确保下次复用正常
+        particle.Clear();                               // 清除残留粒子
+        ReleaseHeadEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    // 普通僵尸手部发射粒子播放协程：支持渲染层级与颜色切换的粒子控制
+    // 参数：transform - 粒子位置（僵尸手部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetHandEmissionPartical();      // 从对象池获取手部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，避免遮挡
+        particle.transform.position = transform.position; // 设为僵尸手部位置，贴合攻击动作
+        particle.Play();                                // 启动手部发射粒子（如攻击闪光、挥拳特效）
+
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色（如冰冻状态）
+
+        yield return new WaitForSeconds(particle.main.duration); // 等待粒子播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留粒子
+        ReleaseHandEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    // 撑杆僵尸头部发射粒子播放协程：支持渲染层级与颜色切换
+    // 参数：transform - 粒子位置（撑杆僵尸头部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayPoleHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetPoleHeadEmissionPartical();  // 从对象池获取撑杆僵尸头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
-        renderer.sortingOrder = sort;                   // 设置粒子渲染层级
-        particle.transform.position = transform.position;
-        particle.Play();
+        renderer.sortingOrder = sort;                   // 设置渲染层级
+        particle.transform.position = transform.position; // 设为撑杆僵尸头部位置
+        particle.Play();                                // 启动头部发射粒子
 
-        yield return new WaitForSeconds(particle.main.duration); // 等待粒子自然播放完成
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
 
-        particle.Clear();
-        ReleaseHandEmissionPartical(obj);
+        yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留
+        ReleasePoleHeadEmissionPartical(obj);           // 回收对象
+    }
+
+    // 撑杆僵尸手部发射粒子播放协程：支持渲染层级与颜色切换
+    // 参数：transform - 粒子位置（撑杆僵尸手部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayPoleHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetPoleHandEmissionPartical();  // 从对象池获取撑杆僵尸手部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级
+        particle.transform.position = transform.position; // 设为撑杆僵尸手部位置
+        particle.Play();                                // 启动手部发射粒子
+
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+
+        yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留
+        ReleasePoleHandEmissionPartical(obj);           // 回收对象
+    }
+
+    // 路障僵尸发射粒子播放协程：支持渲染层级与颜色切换
+    // 参数：transform - 粒子位置（路障僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayConeEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetConeEmissionPartical();      // 从对象池获取路障僵尸发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级
+        particle.transform.position = transform.position; // 设为路障僵尸攻击部位位置
+        particle.Play();                                // 启动发射粒子
+
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+
+        yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留
+        ReleaseConeEmissionPartical(obj);               // 回收对象
+    }
+
+    // 铁桶僵尸发射粒子播放协程：支持渲染层级与颜色切换
+    // 参数：transform - 粒子位置（铁桶僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayBucketEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetBucketEmissionPartical();    // 从对象池获取铁桶僵尸发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级
+        particle.transform.position = transform.position; // 设为铁桶僵尸攻击部位位置
+        particle.Play();                                // 启动发射粒子
+
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+
+        yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留
+        ReleaseBucketEmissionPartical(obj);             // 回收对象
+    }
+
+    // 旗帜僵尸发射粒子播放协程：支持渲染层级与颜色切换
+    // 参数：transform - 粒子位置（旗帜僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
+    public IEnumerator PlayFlagEmissionPartical(Transform transform, int sort, bool isCroze) {
+        GameObject obj = GetFlagEmissionPartical();      // 从对象池获取旗帜僵尸发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级
+        particle.transform.position = transform.position; // 设为旗帜僵尸攻击部位位置
+        particle.Play();                                // 启动发射粒子
+
+        var mainModule = particle.main;
+        Color originColor = mainModule.startColor.color; // 保存原始颜色
+        if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+
+        yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
+
+        mainModule.startColor = originColor;            // 恢复原始颜色
+        particle.Clear();                               // 清除残留
+        ReleaseFlagEmissionPartical(obj);               // 回收对象
     }
 }

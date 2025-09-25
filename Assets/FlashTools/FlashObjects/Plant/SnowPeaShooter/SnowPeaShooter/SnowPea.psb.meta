@@ -1,0 +1,662 @@
+fileFormatVersion: 2
+guid: 0177c9aa1bb919a4b97ffaeec84e53fd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: SnowPea mouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 394
+      width: 77
+      height: 103
+    spriteID: 3707c0a25b37cb94b8f69f1a32052a1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 394}
+    spritePosition: {x: 186, y: 148}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 175
+      y: 4
+      width: 63
+      height: 47
+    spriteID: 795abc5a8798f614abe7c18f2844699c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 175, y: 4}
+    spritePosition: {x: 127, y: 180}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 175
+      y: 59
+      width: 63
+      height: 47
+    spriteID: 58e78b48ce093794e8fbaaaa17d83734
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 175, y: 59}
+    spritePosition: {x: 127, y: 180}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 163
+      height: 132
+    spriteID: 975c748e27dfc2d4d8389a942e117abc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 47, y: 114}
+  - name: SnowPea crystals3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 245
+      width: 87
+      height: 87
+    spriteID: f5e205c4809334c408aef22f4f6386f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 245}
+    spritePosition: {x: 0, y: 130}
+  - name: SnowPea crystals2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 168
+      y: 144
+      width: 81
+      height: 70
+    spriteID: 6d89f3c54d13d964083309c79d948093
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 168, y: 144}
+    spritePosition: {x: 13, y: 181}
+  - name: SnowPea crystals1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 245
+      width: 92
+      height: 141
+    spriteID: 7ec6dac3e6f811f4abd36035e668e4cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 245}
+    spritePosition: {x: 10, y: 121}
+  - name: frontleaf tip left
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 245
+      width: 52
+      height: 68
+    spriteID: a2c7542b56f874e44a68e809ef3cf923
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 199, y: 245}
+    spritePosition: {x: 48, y: 0}
+  - name: frontleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 399
+      width: 36
+      height: 70
+    spriteID: 64eaa584684fea24ca5492b13260b3d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 399}
+    spritePosition: {x: 202, y: 21}
+  - name: frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 144
+      width: 156
+      height: 93
+    spriteID: c2f9b7a5cb915a440ab62af412d968ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 144}
+    spritePosition: {x: 62, y: 5}
+  - name: stalk top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 399
+      width: 38
+      height: 31
+    spriteID: b2b1333a8ebc39a4288df51707fb9597
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 399}
+    spritePosition: {x: 108, y: 96}
+  - name: stalk bottom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 214
+      y: 340
+      width: 36
+      height: 45
+    spriteID: e6f8b9e53a6e5ea4e9e14d5b3a20b4a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 214, y: 340}
+    spritePosition: {x: 118, y: 61}
+  - name: backleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 438
+      width: 28
+      height: 24
+    spriteID: 958562c1fab06b64196002e707b018c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 438}
+    spritePosition: {x: 164, y: 81}
+  - name: backleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 194
+      y: 399
+      width: 35
+      height: 28
+    spriteID: a4dc1248469b2fd4eb111bbf67dc0f76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 194, y: 399}
+    spritePosition: {x: 72, y: 72}
+  - name: backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 340
+      width: 102
+      height: 51
+    spriteID: 5c49b36696fe57440a2eba3f1fd117c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 340}
+    spritePosition: {x: 83, y: 53}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: SnowPeaShooter Head
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 1c03b63cd1088954bbd8ea3b3dc00b70
+    layerID: 97
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: SnowPea mouth
+    spriteName: SnowPea mouth
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 3707c0a25b37cb94b8f69f1a32052a1a
+    layerID: 86
+    mosaicPosition: {x: 4, y: 394}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SnowPeaShooter Eye
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 19ca007642364c847bea216ae0f98c52
+    layerID: 99
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 795abc5a8798f614abe7c18f2844699c
+    layerID: 102
+    mosaicPosition: {x: 175, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 58e78b48ce093794e8fbaaaa17d83734
+    layerID: 101
+    mosaicPosition: {x: 175, y: 59}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 975c748e27dfc2d4d8389a942e117abc
+    layerID: 79
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SnowPea crystals3
+    spriteName: SnowPea crystals3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f5e205c4809334c408aef22f4f6386f5
+    layerID: 72
+    mosaicPosition: {x: 104, y: 245}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SnowPea crystals2
+    spriteName: SnowPea crystals2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6d89f3c54d13d964083309c79d948093
+    layerID: 65
+    mosaicPosition: {x: 168, y: 144}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SnowPea crystals1
+    spriteName: SnowPea crystals1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7ec6dac3e6f811f4abd36035e668e4cb
+    layerID: 58
+    mosaicPosition: {x: 4, y: 245}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SnowPeaShooter Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e77df4d18a7ac284ca1fada8ba7dd292
+    layerID: 95
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: frontleaf tip left
+    spriteName: frontleaf tip left
+    isGroup: 0
+    parentIndex: 9
+    spriteID: a2c7542b56f874e44a68e809ef3cf923
+    layerID: 51
+    mosaicPosition: {x: 199, y: 245}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf right tip
+    spriteName: frontleaf right tip
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 64eaa584684fea24ca5492b13260b3d4
+    layerID: 44
+    mosaicPosition: {x: 104, y: 399}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf
+    spriteName: frontleaf
+    isGroup: 0
+    parentIndex: 9
+    spriteID: c2f9b7a5cb915a440ab62af412d968ae
+    layerID: 37
+    mosaicPosition: {x: 4, y: 144}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: stalk top
+    spriteName: stalk top
+    isGroup: 0
+    parentIndex: 9
+    spriteID: b2b1333a8ebc39a4288df51707fb9597
+    layerID: 30
+    mosaicPosition: {x: 148, y: 399}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: stalk bottom
+    spriteName: stalk bottom
+    isGroup: 0
+    parentIndex: 9
+    spriteID: e6f8b9e53a6e5ea4e9e14d5b3a20b4a8
+    layerID: 23
+    mosaicPosition: {x: 214, y: 340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf right tip
+    spriteName: backleaf right tip
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 958562c1fab06b64196002e707b018c4
+    layerID: 16
+    mosaicPosition: {x: 148, y: 438}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf left tip
+    spriteName: backleaf left tip
+    isGroup: 0
+    parentIndex: 9
+    spriteID: a4dc1248469b2fd4eb111bbf67dc0f76
+    layerID: 9
+    mosaicPosition: {x: 194, y: 399}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf
+    spriteName: backleaf
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 5c49b36696fe57440a2eba3f1fd117c6
+    layerID: 2
+    mosaicPosition: {x: 104, y: 340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

@@ -32,10 +32,18 @@ public class ShovelUI : MonoBehaviour {
         // 射线检测点击的单元格
         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero);
 
-        if (hit && hit.collider.CompareTag("Cell")) {
-            // 调用单元格的移除植物方法
-            Cell cell = hit.collider.GetComponent<Cell>();
-            cell.SubPlant();
+        if (hit) {
+            if (hit.collider.CompareTag("Cell")) {
+                // 调用单元格的移除植物方法
+                Cell cell = hit.collider.GetComponent<Cell>();
+                cell.SubPlant();
+            }
+            else if (hit.collider.CompareTag("CardList")) {
+                CardListUI cardListUI = hit.collider.GetComponent<CardListUI>();
+                cardListUI.OnClick();
+            }
         }
+
+        
     }
 }

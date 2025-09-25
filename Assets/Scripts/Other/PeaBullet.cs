@@ -36,7 +36,7 @@ public class PeaBullet : MonoBehaviour {
     }
 
     // 碰撞触发：子弹命中僵尸时执行伤害逻辑
-    private void OnTriggerEnter2D(Collider2D collision) {
+    public virtual void OnTriggerEnter2D(Collider2D collision) {
         // 只对"Zombie"标签的对象生效
         if (collision.CompareTag("Zombie")) {
             if (isAttack == true) return; // 已命中过，避免重复伤害
@@ -44,10 +44,6 @@ public class PeaBullet : MonoBehaviour {
 
             // 播放子弹命中粒子效果（从对象池获取粒子）
             ObjectPoolManager.Instance.PlayPeaBulletParticalIEnumrator(transform);
-
-            // 随机播放一种命中音效（增加音效多样性）
-            var clips = new[] { Config.splat, Config.splat2, Config.splat3 };
-            AudioManager.Instance.PlayClip(clips[Random.Range(0, 3)]);
 
             // 给命中的僵尸造成伤害
             collision.GetComponent<Zombie>().TakeDamage(atkValue);

@@ -9,6 +9,7 @@ TagManager:
   - Zombie
   - House
   - Cell
+  - CardList
   layers:
   - Default
   - TransparentFX

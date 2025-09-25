@@ -24,7 +24,8 @@ public class Cell : MonoBehaviour {
     public void OnPointerEnter(BaseEventData data) {
         // 若单元格有植物且选中了铲子，让植物高亮（提示可铲除）
         if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
-            currentPlant.animator.SetBool("isBright", true);
+            currentPlant.isBrighten = true;
+            currentPlant.PlayBright();
         }
 
         // 若没有选中植物，或单元格已有植物，不显示预览
@@ -32,7 +33,7 @@ public class Cell : MonoBehaviour {
 
         // 生成植物预览实例（复制当前选中的植物）
         plantPreview = Instantiate(HandManager.Instance.currentPlant);
-        plantPreview.GetComponent<Collider2D>().enabled = false; // 禁用碰撞体，避免影响交互
+        plantPreview.TransitionToDisable();     // 禁用功能，避免影响交互
 
         // 调整预览植物的显示效果：半透明（alpha 0.6）、层级降低（避免遮挡其他UI）
         SpriteRenderer[] sprites = plantPreview.GetComponentsInChildren<SpriteRenderer>(true);
@@ -49,7 +50,8 @@ public class Cell : MonoBehaviour {
     public void OnPointerExit(BaseEventData data) {
         // 若单元格有植物且选中了铲子，取消植物高亮
         if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
-            currentPlant.animator.SetBool("isBright", false);
+            currentPlant.isBrighten = false;
+            currentPlant.StopBright();
         }
 
         // 销毁预览植物，避免残留
