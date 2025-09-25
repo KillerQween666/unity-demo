@@ -129,12 +129,21 @@ public class Card : MonoBehaviour {
         cardMask.gameObject.SetActive(false); // 隐藏冷却进度
     }
 
+    public void TransitionToPlanting() {
+        cardMask.gameObject.SetActive(true);
+        cardGray.SetActive(true);
+    }
+
+    public void CancelPlant() {
+        cardMask.gameObject.SetActive(false);
+        cardGray.SetActive(false);
+    }
+
     // 卡牌点击事件（UI按钮绑定）
     public void OnClick() {
         if (cardState == CardState.Ready) {
             // 准备就绪时：选中卡牌，让植物跟随鼠标
-            cardMask.gameObject.SetActive(true);
-            cardGray.SetActive(true);
+            TransitionToPlanting();
             HandManager.Instance.AddPlant(plantType);
         }
         else if (cardState == CardState.select) {
@@ -167,8 +176,6 @@ public class Card : MonoBehaviour {
             }
             else if (hit.collider.CompareTag("CardList")) {
                 // 点击卡池：取消卡牌选中状态，恢复UI显示
-                cardMask.gameObject.SetActive(false);
-                cardGray.SetActive(false);
                 CardListUI cardListUI = hit.collider.GetComponent<CardListUI>();
                 cardListUI.OnClick();
             }
