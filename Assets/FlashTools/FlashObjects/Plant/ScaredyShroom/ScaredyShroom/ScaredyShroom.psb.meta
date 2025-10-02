@@ -94,6 +94,48 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: sweat2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 218
+      y: 359
+      width: 24
+      height: 45
+    spriteID: 8272669b9c248eb4cac9da2b8752258c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 218, y: 359}
+    spritePosition: {x: 118, y: 126}
+  - name: sweat1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 4
+      width: 24
+      height: 45
+    spriteID: e7a89aa1d03f8a54ca47773d78142b1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 4}
+    spritePosition: {x: 73, y: 126}
   - name: ScaredyShroom eyebrow2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +178,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 128, y: 412}
     spritePosition: {x: 96, y: 175}
-  - name: Head2
+  - name: ScaredyShroom head2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -185,8 +227,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 218
-      y: 359
+      x: 184
+      y: 412
       width: 30
       height: 36
     spriteID: 4c07c8e2af6039a4b9e042f0f6e685e5
@@ -197,7 +239,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 218, y: 359}
+    uvTransform: {x: 184, y: 412}
     spritePosition: {x: 118, y: 138}
   - name: Blink1Eye1
     originalName: 
@@ -206,7 +248,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 184
+      x: 222
       y: 412
       width: 30
       height: 36
@@ -218,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 184, y: 412}
+    uvTransform: {x: 222, y: 412}
     spritePosition: {x: 118, y: 138}
   - name: BigEye1
     originalName: 
@@ -248,8 +290,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 222
-      y: 412
+      x: 216
+      y: 57
       width: 27
       height: 34
     spriteID: 91281278f6703554b961506f8721a6f0
@@ -260,7 +302,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 222, y: 412}
+    uvTransform: {x: 216, y: 57}
     spritePosition: {x: 118, y: 145}
   - name: ScaredyShroom lips
     originalName: 
@@ -311,8 +353,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 495
+      x: 216
+      y: 141
       width: 16
       height: 9
     spriteID: 43ab4b9951814cf4e968943ba0e13607
@@ -323,7 +365,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 495}
+    uvTransform: {x: 216, y: 141}
     spritePosition: {x: 147, y: 167}
   - name: Blink1Eye2
     originalName: 
@@ -375,7 +417,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 216
-      y: 4
+      y: 99
       width: 24
       height: 34
     spriteID: 8e893bd79f177be458a84098462505a0
@@ -386,7 +428,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 216, y: 4}
+    uvTransform: {x: 216, y: 99}
     spritePosition: {x: 143, y: 152}
   - name: anim face
     originalName: 
@@ -500,6 +542,26 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
+  - name: sweat2
+    spriteName: sweat2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8272669b9c248eb4cac9da2b8752258c
+    layerID: 87
+    mosaicPosition: {x: 218, y: 359}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sweat1
+    spriteName: sweat1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e7a89aa1d03f8a54ca47773d78142b1b
+    layerID: 86
+    mosaicPosition: {x: 216, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: ScaredyShroom eyebrow2
     spriteName: ScaredyShroom eyebrow2
     isGroup: 0
@@ -520,8 +582,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Head2
-    spriteName: Head2
+  - name: ScaredyShroom head2
+    spriteName: ScaredyShroom head2
     isGroup: 0
     parentIndex: 0
     spriteID: d1703649c06ee6446abda8c2bb65e2ec
@@ -553,27 +615,27 @@ ScriptedImporter:
   - name: Blink2Eye1
     spriteName: Blink2Eye1
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 7
     spriteID: 4c07c8e2af6039a4b9e042f0f6e685e5
     layerID: 73
-    mosaicPosition: {x: 218, y: 359}
+    mosaicPosition: {x: 184, y: 412}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: Blink1Eye1
     spriteName: Blink1Eye1
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 7
     spriteID: ffc9c74eb7ab00d4598a4336f5e6e4cb
     layerID: 72
-    mosaicPosition: {x: 184, y: 412}
+    mosaicPosition: {x: 222, y: 412}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: BigEye1
     spriteName: BigEye1
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 7
     spriteID: cc8c559ec11e4e4419a97e0509b64136
     layerID: 70
     mosaicPosition: {x: 210, y: 186}
@@ -583,10 +645,10 @@ ScriptedImporter:
   - name: anim eye1
     spriteName: anim eye1
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 7
     spriteID: 91281278f6703554b961506f8721a6f0
     layerID: 37
-    mosaicPosition: {x: 222, y: 412}
+    mosaicPosition: {x: 216, y: 57}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -623,17 +685,17 @@ ScriptedImporter:
   - name: Blink2Eye2
     spriteName: Blink2Eye2
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 14
     spriteID: 43ab4b9951814cf4e968943ba0e13607
     layerID: 78
-    mosaicPosition: {x: 4, y: 495}
+    mosaicPosition: {x: 216, y: 141}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: Blink1Eye2
     spriteName: Blink1Eye2
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 14
     spriteID: 9bb10ccded88d8741a71ddfcb7c8afed
     layerID: 77
     mosaicPosition: {x: 165, y: 275}
@@ -643,7 +705,7 @@ ScriptedImporter:
   - name: BigEye2
     spriteName: BigEye2
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 14
     spriteID: 767bf5ba581217e429d76839917d4202
     layerID: 71
     mosaicPosition: {x: 218, y: 310}
@@ -653,10 +715,10 @@ ScriptedImporter:
   - name: anim eye2
     spriteName: anim eye2
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 14
     spriteID: 8e893bd79f177be458a84098462505a0
     layerID: 16
-    mosaicPosition: {x: 216, y: 4}
+    mosaicPosition: {x: 216, y: 99}
     flatten: 0
     isImported: 1
     isVisible: 1
