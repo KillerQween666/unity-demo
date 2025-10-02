@@ -22,7 +22,8 @@ public enum PlantType {
     Wallnut,          // 坚果墙
     PotatoMine,       // 土豆地雷
     CherryBomb,       // 樱桃炸弹
-    Chomper           // 食人花
+    Chomper,           // 食人花
+    SunShroom,
 }
 
 // 植物卡牌核心脚本：控制卡牌状态、UI显示、点击种植及冷却逻辑
@@ -145,8 +146,7 @@ public class Card : MonoBehaviour {
             // 准备就绪时：选中卡牌，让植物跟随鼠标
             TransitionToPlanting();
             HandManager.Instance.AddPlant(plantType);
-        }
-        else if (cardState == CardState.select) {
+        } else if (cardState == CardState.select) {
             // 选中状态时：切换卡牌在卡槽/卡池的位置
             if (isInSlot) {
                 isInSlot = false;
@@ -161,6 +161,8 @@ public class Card : MonoBehaviour {
 
     // 鼠标抬起事件（检测是否种植植物）
     public void OnPointerUp() {
+        if (cardState != CardState.Ready) return;
+
         // 将鼠标屏幕坐标转换为2D世界坐标（Z轴设0，避免层级偏差）
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPosition.z = 0;

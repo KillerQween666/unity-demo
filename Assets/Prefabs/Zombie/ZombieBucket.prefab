@@ -2795,13 +2795,15 @@ MonoBehaviour:
   - {fileID: 2543405097461759954}
   - {fileID: 3137813419459961895}
   - {fileID: 7670890155877052631}
-  HP: 500
+  HP: 475
   minSpeed: 0.9
   maxSpeed: 1.1
   atkValue: 20
+  spriteList: []
   headEmissionTransform: {fileID: 5857313316338093248}
   handEmissionTransform: {fileID: 825067262293841205}
   shadow: {fileID: 6015008012850116351}
+  isHaveHead: 1
   hideRenderers:
   - {fileID: 3368482071866132241}
   - {fileID: 1706038405159553155}

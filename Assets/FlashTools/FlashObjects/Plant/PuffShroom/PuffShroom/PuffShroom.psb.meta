@@ -122,8 +122,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 79
+      x: 100
+      y: 110
       width: 24
       height: 45
     spriteID: 65164fdb66b6d5246910b6c08c3d89a3
@@ -134,7 +134,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 79}
+    uvTransform: {x: 100, y: 110}
     spritePosition: {x: 114, y: 16}
   - name: PuffShroom stem
     originalName: 
@@ -143,8 +143,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 79
+      x: 132
+      y: 110
       width: 7
       height: 27
     spriteID: 66c66a5f5d496724cb8c654733d4e916
@@ -155,17 +155,38 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 79}
+    uvTransform: {x: 132, y: 110}
     spritePosition: {x: 112, y: 25}
-  - name: Blink
+  - name: Blink2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 193
-      y: 79
+      x: 39
+      y: 185
+      width: 24
+      height: 23
+    spriteID: 6297dac025369ff469fa2137bcf7f84e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 185}
+    spritePosition: {x: 90, y: 37}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 185
       width: 27
       height: 25
     spriteID: 1cc5b60ce4ef1854eb355e0cf02eef2a
@@ -176,7 +197,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 193, y: 79}
+    uvTransform: {x: 4, y: 185}
     spritePosition: {x: 89, y: 35}
   - name: anim face
     originalName: 
@@ -185,8 +206,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 4
+      x: 4
+      y: 110
       width: 88
       height: 67
     spriteID: 25f6322400d987646ab52a03ccb7b0b8
@@ -197,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 4}
+    uvTransform: {x: 4, y: 110}
     spritePosition: {x: 29, y: 0}
   characterData:
     bones: []
@@ -275,7 +296,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 65164fdb66b6d5246910b6c08c3d89a3
     layerID: 16
-    mosaicPosition: {x: 161, y: 79}
+    mosaicPosition: {x: 100, y: 110}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -285,7 +306,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 66c66a5f5d496724cb8c654733d4e916
     layerID: 9
-    mosaicPosition: {x: 228, y: 79}
+    mosaicPosition: {x: 132, y: 110}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -299,13 +320,23 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Blink
-    spriteName: Blink
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 6297dac025369ff469fa2137bcf7f84e
+    layerID: 40
+    mosaicPosition: {x: 39, y: 185}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1
+    spriteName: Blink1
     isGroup: 0
     parentIndex: 3
     spriteID: 1cc5b60ce4ef1854eb355e0cf02eef2a
     layerID: 36
-    mosaicPosition: {x: 193, y: 79}
+    mosaicPosition: {x: 4, y: 185}
     flatten: 0
     isImported: 1
     isVisible: 0
@@ -315,7 +346,7 @@ ScriptedImporter:
     parentIndex: 3
     spriteID: 25f6322400d987646ab52a03ccb7b0b8
     layerID: 2
-    mosaicPosition: {x: 161, y: 4}
+    mosaicPosition: {x: 4, y: 110}
     flatten: 0
     isImported: 1
     isVisible: 1

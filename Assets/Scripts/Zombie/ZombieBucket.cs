@@ -27,7 +27,7 @@ public class ZombieBucket : ZombieCommon {
         base.TakeDamage(damage); // 先执行父类的受伤处理
 
         // 根据生命值切换桶的状态
-        if (HP < 375) {
+        if (HP < 350) {
             BucketBad(); // 切换到轻微破损
         }
 

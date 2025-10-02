@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1820643829202810638
+--- !u!1 &3715676026613022771
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1387104873073982096}
-  - component: {fileID: 5907127501483692956}
-  - component: {fileID: 4384041707649240708}
-  - component: {fileID: 1999118533036906478}
-  - component: {fileID: 5527943100380848074}
-  - component: {fileID: 5570815433250783935}
+  - component: {fileID: 6130729854146785150}
+  - component: {fileID: 3798391994607460889}
+  - component: {fileID: 321181543205239238}
+  - component: {fileID: 8022372180940375079}
+  - component: {fileID: 2932967105554666514}
+  - component: {fileID: 5073804309511761589}
   m_Layer: 0
   m_Name: ScaredyShroom.fla._Stage_
   m_TagString: Untagged
@@ -21,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1387104873073982096
+--- !u!4 &6130729854146785150
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -36,21 +36,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5907127501483692956
+--- !u!33 &3798391994607460889
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   m_Mesh: {fileID: 0}
---- !u!23 &4384041707649240708
+--- !u!23 &321181543205239238
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,25 +86,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!210 &1999118533036906478
+--- !u!210 &8022372180940375079
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &5527943100380848074
+--- !u!114 &2932967105554666514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d720f6c1045ab4d45b705672aba45e73, type: 3}
@@ -116,13 +116,13 @@ MonoBehaviour:
   _clip: {fileID: 11400000, guid: 7effa2ec474799243be65a8977e409e3, type: 2}
   _sequence: Default
   _currentFrame: 0
---- !u!114 &5570815433250783935
+--- !u!114 &5073804309511761589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820643829202810638}
+  m_GameObject: {fileID: 3715676026613022771}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92ca98b80846d4b34b476a918b98a542, type: 3}

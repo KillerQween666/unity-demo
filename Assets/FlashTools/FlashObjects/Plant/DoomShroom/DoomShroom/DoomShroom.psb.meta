@@ -94,7 +94,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: DoomShroom head1
+  - name: DoomShroom head3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -104,8 +104,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 338
-      height: 184
-    spriteID: 68ce87d7fb3a5524782360c5be60ff63
+      height: 207
+    spriteID: 2098f4eb5aa3a2b48812ab4a52b60471
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -114,8 +114,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 135}
-  - name: DoomShroom body
+    spritePosition: {x: 2, y: 101}
+  - name: DoomShroom head2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -123,9 +123,51 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 196
-      width: 181
-      height: 167
+      y: 220
+      width: 309
+      height: 184
+    spriteID: b08d60ca61de50c479546b3b2af10468
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 220}
+    spritePosition: {x: 15, y: 112}
+  - name: DoomShroom head1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 403
+      width: 271
+      height: 152
+    spriteID: 68ce87d7fb3a5524782360c5be60ff63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 403}
+    spritePosition: {x: 40, y: 119}
+  - name: DoomShroom body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 220
+      width: 149
+      height: 136
     spriteID: 4ba2025de3bcde84db0b6c9a6664ee16
     spriteBone: []
     spriteOutline: []
@@ -134,8 +176,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 196}
-    spritePosition: {x: 72, y: 0}
+    uvTransform: {x: 320, y: 220}
+    spritePosition: {x: 97, y: 13}
   characterData:
     bones: []
     parts: []
@@ -196,13 +238,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: DoomShroom head3
+    spriteName: DoomShroom head3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2098f4eb5aa3a2b48812ab4a52b60471
+    layerID: 19
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: DoomShroom head2
+    spriteName: DoomShroom head2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b08d60ca61de50c479546b3b2af10468
+    layerID: 18
+    mosaicPosition: {x: 4, y: 220}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
   - name: DoomShroom head1
     spriteName: DoomShroom head1
     isGroup: 0
     parentIndex: -1
     spriteID: 68ce87d7fb3a5524782360c5be60ff63
     layerID: 9
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 4, y: 403}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -212,7 +274,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 4ba2025de3bcde84db0b6c9a6664ee16
     layerID: 2
-    mosaicPosition: {x: 4, y: 196}
+    mosaicPosition: {x: 320, y: 220}
     flatten: 0
     isImported: 1
     isVisible: 1
