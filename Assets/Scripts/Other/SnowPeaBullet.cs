@@ -15,9 +15,12 @@ public class SnowPeaBullet : PeaBullet {
             ObjectPoolManager.Instance.PlaySnowPeaBulletParticalIEnumrator(transform);
 
             // 获取命中的僵尸组件，执行伤害和减速
-            Zombie zombie = collision.GetComponent<Zombie>();
-            zombie.TakeDamage(atkValue); // 造成基础伤害
-            zombie.PlaySlowSpeed(); // 触发僵尸减速效果
+            if (collision != null) {
+                Zombie zombie = collision.GetComponent<Zombie>();
+                if (zombie != null) {
+                    zombie.TakeDamage(atkValue, 3);
+                }
+            }
 
             // 子弹完成使命，回收到对象池（复用，减少性能消耗）
             ObjectPoolManager.Instance.ReleaseSnowPeaBullet(this.gameObject);

@@ -28,8 +28,8 @@ public class Zombie : MonoBehaviour {
     private Dictionary<SpriteRenderer, Color> originColors = new Dictionary<SpriteRenderer, Color>(); // 保存原始颜色，用于恢复
 
     // 受伤闪烁效果的亮度参数
-    private float originalBright = 1f; // 正常亮度
-    private float flashBright = 2f; // 闪烁时的亮度
+    protected float originalBright = 1f; // 正常亮度
+    protected float flashBright = 2f; // 闪烁时的亮度
     public Coroutine flashCoroutine; // 闪烁效果的协程
 
     // 特效生成的位置（头部和手部）
@@ -72,11 +72,19 @@ public class Zombie : MonoBehaviour {
         AudioManager.Instance.PlayClip(Config.eatPlant3);
     }
 
+    protected virtual void EnterEat() {
+        animator.SetBool("isEat", true);
+    }
+
+    protected virtual void ExitEat() {
+        animator.SetBool("isEat", false); 
+    }
+
     // 碰撞进入时触发（检测到植物或房子）
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Plant")) {
             currentEatPlant = collision.GetComponent<Plant>();
-            animator.SetBool("isEat", true); // 切换到攻击动画
+            EnterEat(); // 切换到攻击动画
         }
         else if (collision.CompareTag("House")) {
             animator.SetBool("isEat", true);
@@ -87,13 +95,14 @@ public class Zombie : MonoBehaviour {
     // 碰撞退出时触发（离开植物）
     protected virtual void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag("Plant")) {
-            animator.SetBool("isEat", false); // 停止攻击动画
+            ExitEat();  // 停止攻击动画
             currentEatPlant = null; // 清空目标
         }
     }
 
-    // 受到伤害的处理（可被重写）
-    public virtual void TakeDamage(float damage) {
+    public virtual void TakeCommonDamage(float damage) {
+        if (isCroze) PlaySlowSpeed();
+
         HP -= damage;
         PlayAttackSource(); // 播放受击音效
 
@@ -102,6 +111,19 @@ public class Zombie : MonoBehaviour {
         flashCoroutine = StartCoroutine(PlayFlash());
         // 生命值为0时死亡
         if (HP <= 0) ToDead();
+    }
+
+    // 受到伤害的处理（可被重写）
+    public void TakeDamage(float damage, int hurtType = 0) {
+        if (hurtType == 1 && damage >= HP) {
+            Dead();
+            ObjectPoolManager.Instance.PlayZombieBoomSwfIEnumrator(transform, isHaveHead, spriteList[0].sortingOrder + 100);
+        } else if (hurtType == 2 && damage >= HP) {
+            Dead();
+        } else {
+            if (hurtType == 3) isCroze = true;
+            TakeCommonDamage(damage);     
+        }
     }
 
     // 死亡处理（播放死亡动画）

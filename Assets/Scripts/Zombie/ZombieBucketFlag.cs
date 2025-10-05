@@ -34,8 +34,8 @@ public class ZombieBucketFlag : ZombieCommon {
     }
 
     // 重写受伤逻辑（增加桶和旗帜的状态变化）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage); // 先执行父类的受伤处理
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
 
         // 根据生命值区间切换桶的状态
         if (HP < 450) {

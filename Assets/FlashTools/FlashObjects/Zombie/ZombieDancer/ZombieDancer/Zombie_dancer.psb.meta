@@ -136,7 +136,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 256, y: 222}
     spritePosition: {x: 271, y: 463}
-  - name: Zombie Jackson outerarm upper
+  - name: Zombie outerarm upper
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -157,7 +157,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 328, y: 222}
     spritePosition: {x: 276, y: 422}
-  - name: Zombie Jackson colar
+  - name: Zombie colar
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -262,7 +262,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 228, y: 4}
     spritePosition: {x: 221, y: 491}
-  - name: Zombie Jackson body1
+  - name: Zombie body1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -304,7 +304,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 612, y: 124}
     spritePosition: {x: 239, y: 294}
-  - name: Zombie Jackson outerleg upper
+  - name: Zombie outerleg upper
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -325,7 +325,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 908, y: 4}
     spritePosition: {x: 221, y: 246}
-  - name: Zombie Jackson outerleg toe
+  - name: Zombie outerleg toe
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -346,7 +346,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 919, y: 124}
     spritePosition: {x: 152, y: 118}
-  - name: Zombie Jackson outerleg lower
+  - name: Zombie outerleg lower
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -367,7 +367,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 186, y: 222}
     spritePosition: {x: 215, y: 165}
-  - name: Zombie Jackson outerleg foot
+  - name: Zombie outerleg foot
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -388,7 +388,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 826, y: 124}
     spritePosition: {x: 200, y: 119}
-  - name: Zombie Jackson body2
+  - name: Zombie body2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -409,7 +409,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 415, y: 113}
     spritePosition: {x: 222, y: 300}
-  - name: Zombie Jackson innerleg upper
+  - name: Zombie innerleg upper
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -430,7 +430,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 518, y: 4}
     spritePosition: {x: 220, y: 253}
-  - name: Zombie Jackson innerleg foot
+  - name: Zombie innerleg foot
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -451,7 +451,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 605, y: 4}
     spritePosition: {x: 304, y: 151}
-  - name: Zombie Jackson innerleg lower
+  - name: Zombie innerleg lower
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -472,7 +472,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 722, y: 4}
     spritePosition: {x: 264, y: 181}
-  - name: Zombie Jackson innerarm hand
+  - name: Zombie innerarm hand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -493,7 +493,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 812, y: 4}
     spritePosition: {x: 122, y: 583}
-  - name: Zombie Jackson innerarm lower
+  - name: Zombie innerarm lower
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -514,7 +514,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 402, y: 222}
     spritePosition: {x: 178, y: 530}
-  - name: Zombie Jackson innerarm upper
+  - name: Zombie innerarm upper
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -615,8 +615,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson outerarm upper
-    spriteName: Zombie Jackson outerarm upper
+  - name: Zombie outerarm upper
+    spriteName: Zombie outerarm upper
     isGroup: 0
     parentIndex: -1
     spriteID: eea6e27d9f6ce02479602cdbf2ab2026
@@ -625,8 +625,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson colar
-    spriteName: Zombie Jackson colar
+  - name: Zombie colar
+    spriteName: Zombie colar
     isGroup: 0
     parentIndex: -1
     spriteID: d47c83b38e740b5439c2bb3241321a63
@@ -675,8 +675,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson body1
-    spriteName: Zombie Jackson body1
+  - name: Zombie body1
+    spriteName: Zombie body1
     isGroup: 0
     parentIndex: -1
     spriteID: 7ff803b3daebe7540be83e5c2446ef5a
@@ -695,8 +695,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson outerleg upper
-    spriteName: Zombie Jackson outerleg upper
+  - name: Zombie outerleg upper
+    spriteName: Zombie outerleg upper
     isGroup: 0
     parentIndex: -1
     spriteID: 573db672431adc9478f764f142863bef
@@ -705,8 +705,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson outerleg toe
-    spriteName: Zombie Jackson outerleg toe
+  - name: Zombie outerleg toe
+    spriteName: Zombie outerleg toe
     isGroup: 0
     parentIndex: -1
     spriteID: 0547f7015fb81554084091c6bbd30074
@@ -715,8 +715,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson outerleg lower
-    spriteName: Zombie Jackson outerleg lower
+  - name: Zombie outerleg lower
+    spriteName: Zombie outerleg lower
     isGroup: 0
     parentIndex: -1
     spriteID: 8ab203d620f1dab4790b03838b254d98
@@ -725,8 +725,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson outerleg foot
-    spriteName: Zombie Jackson outerleg foot
+  - name: Zombie outerleg foot
+    spriteName: Zombie outerleg foot
     isGroup: 0
     parentIndex: -1
     spriteID: 1a198ded95a404c459e61a166c56f1b3
@@ -735,8 +735,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson body2
-    spriteName: Zombie Jackson body2
+  - name: Zombie body2
+    spriteName: Zombie body2
     isGroup: 0
     parentIndex: -1
     spriteID: 81e1bff03397a9f4bb308a75ec7a2c35
@@ -745,8 +745,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerleg upper
-    spriteName: Zombie Jackson innerleg upper
+  - name: Zombie innerleg upper
+    spriteName: Zombie innerleg upper
     isGroup: 0
     parentIndex: -1
     spriteID: 4d1255d1be29a6b4187efa3b1cd030a2
@@ -755,8 +755,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerleg foot
-    spriteName: Zombie Jackson innerleg foot
+  - name: Zombie innerleg foot
+    spriteName: Zombie innerleg foot
     isGroup: 0
     parentIndex: -1
     spriteID: 9fb28ae10a18f5e4d9379f6f735c11a9
@@ -765,8 +765,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerleg lower
-    spriteName: Zombie Jackson innerleg lower
+  - name: Zombie innerleg lower
+    spriteName: Zombie innerleg lower
     isGroup: 0
     parentIndex: -1
     spriteID: d1551eb01a2f6814b825bf5687c3d516
@@ -775,8 +775,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerarm hand
-    spriteName: Zombie Jackson innerarm hand
+  - name: Zombie innerarm hand
+    spriteName: Zombie innerarm hand
     isGroup: 0
     parentIndex: -1
     spriteID: 16f0e592abfe08648bafadcbefd4abed
@@ -785,8 +785,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerarm lower
-    spriteName: Zombie Jackson innerarm lower
+  - name: Zombie innerarm lower
+    spriteName: Zombie innerarm lower
     isGroup: 0
     parentIndex: -1
     spriteID: c121d250432ab4e488b7649116083720
@@ -795,8 +795,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Zombie Jackson innerarm upper
-    spriteName: Zombie Jackson innerarm upper
+  - name: Zombie innerarm upper
+    spriteName: Zombie innerarm upper
     isGroup: 0
     parentIndex: -1
     spriteID: faea15ab55bf4764babf33e4de5b2773

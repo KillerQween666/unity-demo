@@ -94,6 +94,48 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: zombie football leftarm eat hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 815
+      y: 457
+      width: 112
+      height: 96
+    spriteID: 01bb6c0aaa9f77f4a98edd10ff3b2412
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 815, y: 457}
+    spritePosition: {x: 22, y: 247}
+  - name: zombie football rightarm eat hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 457
+      width: 110
+      height: 103
+    spriteID: 6223f98403179464b960754b681bc21d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 457}
+    spritePosition: {x: 214, y: 217}
   - name: zombie football rightarm hand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -101,8 +143,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 820
+      x: 320
+      y: 457
       width: 119
       height: 98
     spriteID: 143071eb30d0e60438b5dfec5f4c13b7
@@ -113,7 +155,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 820}
+    uvTransform: {x: 320, y: 457}
     spritePosition: {x: 218, y: 197}
   - name: zombie football leftarm hand
     originalName: 
@@ -122,8 +164,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
-      y: 845
+      x: 700
+      y: 457
       width: 107
       height: 102
     spriteID: 22e4f16d969839e4984c08e125c29c98
@@ -134,8 +176,50 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 845}
+    uvTransform: {x: 700, y: 457}
     spritePosition: {x: 27, y: 262}
+  - name: Zombie_football_helmet3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 4
+      width: 224
+      height: 257
+    spriteID: e1ff1d6e54822874096647f86cc5f3c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 4}
+    spritePosition: {x: 146, y: 328}
+  - name: Zombie_football_helmet2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 771
+      y: 4
+      width: 224
+      height: 243
+    spriteID: 7f926aa7c3734484883f13dce62e8ced
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 771, y: 4}
+    spritePosition: {x: 146, y: 342}
   - name: zombie football helmet
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -143,8 +227,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 298
+      x: 542
+      y: 4
       width: 221
       height: 249
     spriteID: e405bcf1834436e458790206c2ab4a16
@@ -155,7 +239,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 298}
+    uvTransform: {x: 542, y: 4}
     spritePosition: {x: 150, y: 333}
   - name: anim head2
     originalName: 
@@ -164,8 +248,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
-      y: 955
+      x: 447
+      y: 568
       width: 106
       height: 57
     spriteID: 937764dad29314e42868a1a5fd771a60
@@ -176,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 955}
+    uvTransform: {x: 447, y: 568}
     spritePosition: {x: 199, y: 351}
   - name: zombie football upperbody3
     originalName: 
@@ -185,8 +269,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
-      y: 457
+      x: 250
+      y: 298
       width: 228
       height: 125
     spriteID: 0ecf5bdbc66cadc4a8087b8cd37b3f13
@@ -197,7 +281,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 457}
+    uvTransform: {x: 250, y: 298}
     spritePosition: {x: 303, y: 309}
   - name: zombie football rightarm lower
     originalName: 
@@ -206,8 +290,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 629
+      x: 565
+      y: 553
       width: 101
       height: 77
     spriteID: 21759e762beae2c45b55fe2971b68a55
@@ -218,7 +302,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 629}
+    uvTransform: {x: 565, y: 553}
     spritePosition: {x: 310, y: 236}
   - name: zombie football rightarm upper
     originalName: 
@@ -227,8 +311,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 152
-      y: 555
+      x: 963
+      y: 561
       width: 38
       height: 61
     spriteID: 609702bb35e550e459ec407e5ed566e2
@@ -239,7 +323,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 152, y: 555}
+    uvTransform: {x: 963, y: 561}
     spritePosition: {x: 373, y: 264}
   - name: anim head1
     originalName: 
@@ -248,8 +332,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 310
-      y: 4
+      x: 4
+      y: 457
       width: 178
       height: 176
     spriteID: 525adcdd66d764c4ab996980b01d1008
@@ -260,7 +344,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 310, y: 4}
+    uvTransform: {x: 4, y: 457}
     spritePosition: {x: 166, y: 372}
   - name: anim hair
     originalName: 
@@ -269,8 +353,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
-      y: 590
+      x: 486
+      y: 298
       width: 207
       height: 104
     spriteID: 94745ff106380dd47962020f2af74122
@@ -281,7 +365,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 590}
+    uvTransform: {x: 486, y: 298}
     spritePosition: {x: 156, y: 452}
   - name: zombie football upperbody
     originalName: 
@@ -311,8 +395,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 113
-      y: 629
+      x: 700
+      y: 567
       width: 102
       height: 41
     spriteID: eccceff1e33efaa40b83c18274622b4a
@@ -323,7 +407,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 113, y: 629}
+    uvTransform: {x: 700, y: 567}
     spritePosition: {x: 112, y: 266}
   - name: zombie football upperbody2
     originalName: 
@@ -332,7 +416,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
+      x: 4
       y: 298
       width: 238
       height: 151
@@ -344,7 +428,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 298}
+    uvTransform: {x: 4, y: 298}
     spritePosition: {x: 112, y: 314}
   - name: zombie football rightleg upper
     originalName: 
@@ -353,8 +437,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 233
-      y: 702
+      x: 701
+      y: 298
       width: 112
       height: 135
     spriteID: 74c1a54556b460042986a8fe11fbd9f8
@@ -365,7 +449,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 233, y: 702}
+    uvTransform: {x: 701, y: 298}
     spritePosition: {x: 327, y: 104}
   - name: zombie football rightleg foot
     originalName: 
@@ -374,8 +458,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 555
+      x: 815
+      y: 561
       width: 140
       height: 66
     spriteID: df88ebf9b3315f144bcd51c5bc71ff2b
@@ -386,7 +470,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 555}
+    uvTransform: {x: 815, y: 561}
     spritePosition: {x: 330, y: 6}
   - name: zombie football rightleg lower
     originalName: 
@@ -395,8 +479,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 714
+      x: 935
+      y: 457
       width: 83
       height: 83
     spriteID: 1a3fbac17638567438ea1d0d24d2ecc5
@@ -407,7 +491,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 714}
+    uvTransform: {x: 935, y: 457}
     spritePosition: {x: 379, y: 55}
   - name: zombie football lowerbody
     originalName: 
@@ -416,8 +500,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 310
-      y: 188
+      x: 821
+      y: 298
       width: 168
       height: 81
     spriteID: 238087ed66ca3cb46b3054768ee1a6a4
@@ -428,7 +512,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 310, y: 188}
+    uvTransform: {x: 821, y: 298}
     spritePosition: {x: 272, y: 191}
   - name: zombie football leftleg upper
     originalName: 
@@ -437,8 +521,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 702
+      x: 190
+      y: 457
       width: 122
       height: 110
     spriteID: 7bc74e0343c8d744e889867ec5d5148f
@@ -449,7 +533,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 702}
+    uvTransform: {x: 190, y: 457}
     spritePosition: {x: 232, y: 136}
   - name: zombie football leftleg lower
     originalName: 
@@ -458,8 +542,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 448
-      y: 590
+      x: 4
+      y: 641
       width: 60
       height: 86
     spriteID: ada75f14eae429b47a2d20a5cc05f5d7
@@ -470,7 +554,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 448, y: 590}
+    uvTransform: {x: 4, y: 641}
     spritePosition: {x: 243, y: 87}
   - name: zombie football leftleg foot
     originalName: 
@@ -479,8 +563,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 926
+      x: 565
+      y: 457
       width: 127
       height: 88
     spriteID: c7f2a64f0e3743e4e9c7418af03a0234
@@ -491,7 +575,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 926}
+    uvTransform: {x: 565, y: 457}
     spritePosition: {x: 193, y: 37}
   - name: zombie football leftarm upper
     originalName: 
@@ -500,8 +584,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 805
+      x: 320
+      y: 563
       width: 40
       height: 54
     spriteID: b3660825a113f9047b75155809f69fbb
@@ -512,7 +596,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 805}
+    uvTransform: {x: 320, y: 563}
     spritePosition: {x: 188, y: 276}
   characterData:
     bones: []
@@ -574,13 +658,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: zombie football leftarm eat hand
+    spriteName: zombie football leftarm eat hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 01bb6c0aaa9f77f4a98edd10ff3b2412
+    layerID: 150
+    mosaicPosition: {x: 815, y: 457}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: zombie football rightarm eat hand
+    spriteName: zombie football rightarm eat hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6223f98403179464b960754b681bc21d
+    layerID: 149
+    mosaicPosition: {x: 447, y: 457}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
   - name: zombie football rightarm hand
     spriteName: zombie football rightarm hand
     isGroup: 0
     parentIndex: -1
     spriteID: 143071eb30d0e60438b5dfec5f4c13b7
     layerID: 140
-    mosaicPosition: {x: 353, y: 820}
+    mosaicPosition: {x: 320, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -590,17 +694,47 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 22e4f16d969839e4984c08e125c29c98
     layerID: 133
-    mosaicPosition: {x: 233, y: 845}
+    mosaicPosition: {x: 700, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: zombie football helmet
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e0a9e6c781919d041a1a775bf82feb71
+    layerID: 151
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Zombie_football_helmet3
+    spriteName: Zombie_football_helmet3
+    isGroup: 0
+    parentIndex: 4
+    spriteID: e1ff1d6e54822874096647f86cc5f3c4
+    layerID: 154
+    mosaicPosition: {x: 310, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Zombie_football_helmet2
+    spriteName: Zombie_football_helmet2
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 7f926aa7c3734484883f13dce62e8ced
+    layerID: 153
+    mosaicPosition: {x: 771, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: zombie football helmet
     spriteName: zombie football helmet
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 4
     spriteID: e405bcf1834436e458790206c2ab4a16
     layerID: 126
-    mosaicPosition: {x: 4, y: 298}
+    mosaicPosition: {x: 542, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -610,7 +744,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 937764dad29314e42868a1a5fd771a60
     layerID: 119
-    mosaicPosition: {x: 233, y: 955}
+    mosaicPosition: {x: 447, y: 568}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -620,7 +754,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 0ecf5bdbc66cadc4a8087b8cd37b3f13
     layerID: 112
-    mosaicPosition: {x: 233, y: 457}
+    mosaicPosition: {x: 250, y: 298}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -630,7 +764,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 21759e762beae2c45b55fe2971b68a55
     layerID: 105
-    mosaicPosition: {x: 4, y: 629}
+    mosaicPosition: {x: 565, y: 553}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -640,7 +774,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 609702bb35e550e459ec407e5ed566e2
     layerID: 98
-    mosaicPosition: {x: 152, y: 555}
+    mosaicPosition: {x: 963, y: 561}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -650,7 +784,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 525adcdd66d764c4ab996980b01d1008
     layerID: 91
-    mosaicPosition: {x: 310, y: 4}
+    mosaicPosition: {x: 4, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -660,7 +794,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 94745ff106380dd47962020f2af74122
     layerID: 84
-    mosaicPosition: {x: 233, y: 590}
+    mosaicPosition: {x: 486, y: 298}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -680,7 +814,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: eccceff1e33efaa40b83c18274622b4a
     layerID: 70
-    mosaicPosition: {x: 113, y: 629}
+    mosaicPosition: {x: 700, y: 567}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -690,7 +824,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: aeb07e5220e92ed438de8b04ec3ab0ba
     layerID: 63
-    mosaicPosition: {x: 233, y: 298}
+    mosaicPosition: {x: 4, y: 298}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -700,7 +834,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 74c1a54556b460042986a8fe11fbd9f8
     layerID: 56
-    mosaicPosition: {x: 233, y: 702}
+    mosaicPosition: {x: 701, y: 298}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -710,7 +844,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: df88ebf9b3315f144bcd51c5bc71ff2b
     layerID: 49
-    mosaicPosition: {x: 4, y: 555}
+    mosaicPosition: {x: 815, y: 561}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -720,7 +854,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 1a3fbac17638567438ea1d0d24d2ecc5
     layerID: 42
-    mosaicPosition: {x: 4, y: 714}
+    mosaicPosition: {x: 935, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -730,7 +864,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 238087ed66ca3cb46b3054768ee1a6a4
     layerID: 35
-    mosaicPosition: {x: 310, y: 188}
+    mosaicPosition: {x: 821, y: 298}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -740,7 +874,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 7bc74e0343c8d744e889867ec5d5148f
     layerID: 28
-    mosaicPosition: {x: 353, y: 702}
+    mosaicPosition: {x: 190, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -750,7 +884,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: ada75f14eae429b47a2d20a5cc05f5d7
     layerID: 21
-    mosaicPosition: {x: 448, y: 590}
+    mosaicPosition: {x: 4, y: 641}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -760,7 +894,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: c7f2a64f0e3743e4e9c7418af03a0234
     layerID: 14
-    mosaicPosition: {x: 353, y: 926}
+    mosaicPosition: {x: 565, y: 457}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -770,7 +904,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: b3660825a113f9047b75155809f69fbb
     layerID: 7
-    mosaicPosition: {x: 4, y: 805}
+    mosaicPosition: {x: 320, y: 563}
     flatten: 0
     isImported: 1
     isVisible: 1

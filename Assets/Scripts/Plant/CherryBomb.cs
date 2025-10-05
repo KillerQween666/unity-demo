@@ -50,8 +50,7 @@ public class CherryBomb : Plant {
                 // 尝试获取碰撞体上的Zombie组件
                 if (coll.TryGetComponent<Zombie>(out var zombie)) {
                     // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
-                    ObjectPoolManager.Instance.PlayZombieBoomSwfIEnumrator(zombie.transform, zombie.isHaveHead, zombie.spriteList[0].sortingOrder + 100);
-                    zombie.Dead(); // 直接杀死僵尸
+                    zombie.TakeDamage(600, 1);
                 }
             }
         }

@@ -24,6 +24,13 @@ public enum PlantType {
     CherryBomb,       // 樱桃炸弹
     Chomper,           // 食人花
     SunShroom,
+    PuffShroom,
+    FumeShroom,
+    ScaredyShroom,
+    IceShroom,
+    DoomShroom,
+    HypnoShroom,
+    Gravebuster,
 }
 
 // 植物卡牌核心脚本：控制卡牌状态、UI显示、点击种植及冷却逻辑

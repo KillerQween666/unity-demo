@@ -12,8 +12,9 @@ public class ZombiePole : Zombie {
     private bool isUsePole = false; // 是否已使用撑杆
 
     // 重写受伤逻辑（按生命值阈值隐藏身体部位）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage); // 执行父类受伤处理（扣血、闪烁等）
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
+
         // 生命值低于对应值时隐藏手部/头部
         if (HP <= 125) HideHand();
         if (HP <= 25) HideHead();

@@ -23,8 +23,8 @@ public class ZombieBucket : ZombieCommon {
     }
 
     // 重写受伤逻辑（增加桶的状态变化）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage); // 先执行父类的受伤处理
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
 
         // 根据生命值切换桶的状态
         if (HP < 350) {

@@ -21,8 +21,9 @@ public class ZombieFlag : ZombieCommon {
     }
 
     // 重写受伤逻辑（增加旗帜状态处理）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage);
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
+
         // 旗帜状态变化
         if (HP <= 100) {
             FlagBad(); // 旗帜破损

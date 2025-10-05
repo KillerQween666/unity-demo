@@ -102,7 +102,7 @@ public class PotatoMine : Plant {
         foreach (var coll in hitColliders) {
             if (coll != null) { // 避免空引用
                 if (coll.TryGetComponent<Zombie>(out var zombie)) { // 获取僵尸组件
-                    zombie.Dead(); // 直接杀死僵尸
+                    zombie.TakeDamage(600, 2);
                 }
             }
         }

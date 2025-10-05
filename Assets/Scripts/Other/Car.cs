@@ -43,8 +43,11 @@ public class Car : MonoBehaviour {
         CarMove(); // 启动小车移动（播放动画、音效，标记为移动状态）
 
         // 如果碰撞到的是僵尸，调用僵尸的"压扁"方法
-        if (collision.CompareTag("Zombie")) {
-            collision.GetComponent<Zombie>().Push();
+        if (collision != null) {
+            Zombie zombie = collision.GetComponent<Zombie>();
+            if (zombie != null) {
+                zombie.Push();
+            }
         }
     }
 

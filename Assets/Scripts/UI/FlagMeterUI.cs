@@ -19,6 +19,7 @@ public class FlagMeterUI : MonoBehaviour {
     private bool isGameEnd = false;   // 游戏是否结束
     private bool isHugeWave = false;
 
+    private int setLevel;
     private int setSpeed;
 
     private void Start() {
@@ -36,6 +37,11 @@ public class FlagMeterUI : MonoBehaviour {
                 ZombieManager.Instance.setSpawnZombieSpeed(1.5f);
             }
 
+            if (gameTimer > gameTime * 0.4 && setLevel == 0) {
+                setLevel++;
+                ZombieManager.Instance.setSpawnLowerLevel(2);
+            }
+
             if (gameTimer > gameTime * 0.45 && isHugeWave == false) {
                 isHugeWave = true;
 
@@ -45,6 +51,11 @@ public class FlagMeterUI : MonoBehaviour {
             if (gameTimer > gameTime * 0.75 && setSpeed == 1) {
                 setSpeed++;
                 ZombieManager.Instance.setSpawnZombieSpeed(0.5f);
+            }
+
+            if (gameTimer > gameTime * 0.8 && setLevel == 1) {
+                setLevel++;
+                ZombieManager.Instance.setSpawnLowerLevel(4);
             }
 
             // 时间到，显示结束界面

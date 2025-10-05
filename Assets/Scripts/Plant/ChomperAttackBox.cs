@@ -30,7 +30,7 @@ public class ChomperAttackBox : MonoBehaviour {
 
         if (zombie != null) { // 若僵尸仍存在（未被其他攻击消灭）
             if (isAttack == false) { // 未触发过攻击，执行吞噬逻辑
-                zombie.Dead(); // 杀死僵尸
+                zombie.TakeDamage(10000, 2);
                 chomper.TranstionToEat(); // 将食人花切换到进食状态
             }
             isAttack = true; // 标记为已攻击，防止重复触发  

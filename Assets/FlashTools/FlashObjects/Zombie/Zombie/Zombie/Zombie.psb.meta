@@ -101,8 +101,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 249
-      y: 89
+      x: 299
+      y: 150
       width: 24
       height: 38
     spriteID: c869065a5390c7b42ac6cfdba62d7316
@@ -113,7 +113,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 249, y: 89}
+    uvTransform: {x: 299, y: 150}
     spritePosition: {x: 76, y: 80}
   - name: Zombie outerarm upper
     originalName: 
@@ -122,8 +122,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 183
-      y: 456
+      x: 258
+      y: 241
       width: 23
       height: 46
     spriteID: c0bbd4c6fd83280438cfd033fb75f5c8
@@ -134,7 +134,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 456}
+    uvTransform: {x: 258, y: 241}
     spritePosition: {x: 85, y: 108}
   - name: Zombie outerarm hand
     originalName: 
@@ -143,8 +143,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 183
-      y: 411
+      x: 258
+      y: 196
       width: 32
       height: 37
     spriteID: 294e24725b76e8144a55947f2845bf14
@@ -155,7 +155,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 411}
+    uvTransform: {x: 258, y: 196}
     spritePosition: {x: 69, y: 53}
   - name: Zombie eat hand
     originalName: 
@@ -164,8 +164,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 183
-      y: 273
+      x: 468
+      y: 4
       width: 37
       height: 47
     spriteID: 70c75fcf2b300824f835541cabbd6860
@@ -176,7 +176,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 273}
+    uvTransform: {x: 468, y: 4}
     spritePosition: {x: 19, y: 139}
   - name: anim tongue
     originalName: 
@@ -185,8 +185,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 224
-      y: 365
+      x: 384
+      y: 138
       width: 13
       height: 19
     spriteID: baf779795d855ff4aab4dad95ca41244
@@ -197,7 +197,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 224, y: 365}
+    uvTransform: {x: 384, y: 138}
     spritePosition: {x: 50, y: 134}
   - name: anim head1
     originalName: 
@@ -206,8 +206,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 457
-      y: 58
+      x: 335
+      y: 138
       width: 41
       height: 20
     spriteID: 94bec2510c634cd43a1e90028396a962
@@ -218,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 457, y: 58}
+    uvTransform: {x: 335, y: 138}
     spritePosition: {x: 38, y: 137}
   - name: Zombie outerarm screendoor
     originalName: 
@@ -227,8 +227,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 303
-      y: 4
+      x: 183
+      y: 179
       width: 56
       height: 65
     spriteID: 8a0f9d77ffd38a24bb524bf76cc78331
@@ -239,7 +239,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 303, y: 4}
+    uvTransform: {x: 183, y: 179}
     spritePosition: {x: 68, y: 86}
   - name: Zombie innerarm screendoor hand
     originalName: 
@@ -248,8 +248,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 223
-      y: 411
+      x: 70
+      y: 473
       width: 14
       height: 28
     spriteID: 3da007200f3a3af4a8afc9403a634c03
@@ -260,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 223, y: 411}
+    uvTransform: {x: 70, y: 473}
     spritePosition: {x: 12, y: 117}
   - name: anim screendoor
     originalName: 
@@ -283,6 +283,48 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 15, y: 11}
+  - name: Zombie_screendoor2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 321
+      width: 76
+      height: 144
+    spriteID: f6250f455795d574d9992e0ee6f7b8bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 321}
+    spritePosition: {x: 19, y: 19}
+  - name: Zombie_screendoor3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 170
+      width: 77
+      height: 143
+    spriteID: 1a9245338e46f5348a11b7584356f3cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 170}
+    spritePosition: {x: 19, y: 20}
   - name: Zombie duckytube
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -311,8 +353,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 249
-      y: 135
+      x: 258
+      y: 342
       width: 21
       height: 41
     spriteID: 4fc5da8d028a45344956482a4a44aa86
@@ -323,7 +365,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 249, y: 135}
+    uvTransform: {x: 258, y: 342}
     spritePosition: {x: 58, y: 103}
   - name: Zombie body
     originalName: 
@@ -332,8 +374,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 170
+      x: 183
+      y: 89
       width: 67
       height: 82
     spriteID: 9af379efaf0ae34429eb19abbc18b367
@@ -344,7 +386,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 170}
+    uvTransform: {x: 183, y: 89}
     spritePosition: {x: 63, y: 87}
   - name: Zombie innerarm screendoor
     originalName: 
@@ -353,8 +395,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 183
-      y: 89
+      x: 4
+      y: 473
       width: 58
       height: 35
     spriteID: 63262588c65ac9747b23c9bed933a133
@@ -365,7 +407,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 89}
+    uvTransform: {x: 4, y: 473}
     spritePosition: {x: 17, y: 110}
   - name: Zombie_flag
     originalName: 
@@ -374,8 +416,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 421
+      x: 391
+      y: 4
       width: 69
       height: 54
     spriteID: 780c5adde3cbc8f43b8b6d43ec0e4582
@@ -386,7 +428,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 421}
+    uvTransform: {x: 391, y: 4}
     spritePosition: {x: 0, y: 183}
   - name: Zombie_flag3
     originalName: 
@@ -395,8 +437,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 226
-      y: 4
+      x: 258
+      y: 89
       width: 69
       height: 53
     spriteID: 6797bef6dd14588459b3d716386b2285
@@ -407,7 +449,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 226, y: 4}
+    uvTransform: {x: 258, y: 89}
     spritePosition: {x: 0, y: 184}
   - name: Zombie_flagpole
     originalName: 
@@ -417,7 +459,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 183
-      y: 175
+      y: 295
       width: 22
       height: 90
     spriteID: e88e43bd1f92fd049aa5ac8b850cf7af
@@ -428,7 +470,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 175}
+    uvTransform: {x: 183, y: 295}
     spritePosition: {x: 4, y: 110}
   - name: Zombie flaghand
     originalName: 
@@ -437,8 +479,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 367
-      y: 53
+      x: 213
+      y: 355
       width: 29
       height: 28
     spriteID: 7dc6d0127cb84e4418356c201e1571a4
@@ -449,7 +491,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 367, y: 53}
+    uvTransform: {x: 213, y: 355}
     spritePosition: {x: 4, y: 121}
   - name: Zombie innerarm screendoor
     originalName: 
@@ -459,7 +501,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 183
-      y: 132
+      y: 252
       width: 58
       height: 35
     spriteID: d4f5664849820724d85affccf76b54dc
@@ -470,7 +512,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 132}
+    uvTransform: {x: 183, y: 252}
     spritePosition: {x: 17, y: 110}
   - name: anim bucket
     originalName: 
@@ -500,8 +542,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 260
+      x: 226
+      y: 4
       width: 78
       height: 70
     spriteID: fdcdd386c42b128479ab5dd42ea9aba1
@@ -512,7 +554,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 260}
+    uvTransform: {x: 226, y: 4}
     spritePosition: {x: 21, y: 166}
   - name: anim bucket2
     originalName: 
@@ -584,8 +626,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 338
+      x: 312
+      y: 4
       width: 71
       height: 75
     spriteID: b9fd18b7a996f96488497b1bdb4bb522
@@ -596,7 +638,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 338}
+    uvTransform: {x: 312, y: 4}
     spritePosition: {x: 31, y: 175}
   - name: Zombie mustache
     originalName: 
@@ -605,8 +647,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 483
+      x: 183
+      y: 484
       width: 62
       height: 20
     spriteID: 08789691756466e4b8473e0437a22705
@@ -617,7 +659,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 483}
+    uvTransform: {x: 183, y: 484}
     spritePosition: {x: 24, y: 149}
   - name: anim hair
     originalName: 
@@ -626,8 +668,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 367
-      y: 4
+      x: 335
+      y: 89
       width: 82
       height: 41
     spriteID: a58ae0f2fab3bf14990f1c70db31935a
@@ -638,7 +680,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 367, y: 4}
+    uvTransform: {x: 335, y: 89}
     spritePosition: {x: 20, y: 172}
   - name: anim head1
     originalName: 
@@ -668,8 +710,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 315
-      y: 89
+      x: 258
+      y: 470
       width: 28
       height: 27
     spriteID: 241bc27284d2ac44a98f5c298bf56bbd
@@ -680,7 +722,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 315, y: 89}
+    uvTransform: {x: 258, y: 470}
     spritePosition: {x: 62, y: 141}
   - name: Zombie outerleg lower
     originalName: 
@@ -689,8 +731,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 183
-      y: 365
+      x: 258
+      y: 150
       width: 33
       height: 38
     spriteID: 774295f18cebbb844946f3fce2b0a6bb
@@ -701,7 +743,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 365}
+    uvTransform: {x: 258, y: 150}
     spritePosition: {x: 112, y: 33}
   - name: Zombie outerleg foot
     originalName: 
@@ -711,7 +753,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 183
-      y: 328
+      y: 447
       width: 55
       height: 29
     spriteID: ff35ba62c776f69439e2407b17d4bc82
@@ -722,7 +764,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 183, y: 328}
+    uvTransform: {x: 183, y: 447}
     spritePosition: {x: 87, y: 18}
   - name: Zombie outerleg upper
     originalName: 
@@ -732,7 +774,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 213
-      y: 175
+      y: 295
       width: 28
       height: 52
     spriteID: e745c09685ed4c64e8ac515f78f745d3
@@ -743,7 +785,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 213, y: 175}
+    uvTransform: {x: 213, y: 295}
     spritePosition: {x: 104, y: 62}
   - name: Zombie innerleg foot
     originalName: 
@@ -752,8 +794,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 53
+      x: 335
+      y: 166
       width: 35
       height: 23
     spriteID: 663d71cf252cc454c957a66bcd9e8c5a
@@ -764,7 +806,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 53}
+    uvTransform: {x: 335, y: 166}
     spritePosition: {x: 73, y: 29}
   - name: Zombie innerleg lower
     originalName: 
@@ -773,8 +815,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 457
-      y: 4
+      x: 183
+      y: 393
       width: 42
       height: 46
     spriteID: 4dd5fbadefd9ffa4c8b44c12820d57aa
@@ -785,7 +827,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 457, y: 4}
+    uvTransform: {x: 183, y: 393}
     spritePosition: {x: 66, y: 31}
   - name: Zombie innerleg upper
     originalName: 
@@ -794,8 +836,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 249
-      y: 184
+      x: 335
+      y: 197
       width: 20
       height: 35
     spriteID: 3677a8d09435b5046a408827b1cadaac
@@ -806,7 +848,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 249, y: 184}
+    uvTransform: {x: 335, y: 197}
     spritePosition: {x: 87, y: 64}
   - name: anim innerarm1
     originalName: 
@@ -815,8 +857,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 214
-      y: 456
+      x: 258
+      y: 295
       width: 27
       height: 39
     spriteID: bd293bf8731aa2e4da6b28e5a0d5a79e
@@ -827,7 +869,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 214, y: 456}
+    uvTransform: {x: 258, y: 295}
     spritePosition: {x: 56, y: 109}
   - name: anim innerarm2
     originalName: 
@@ -836,8 +878,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 281
-      y: 89
+      x: 258
+      y: 391
       width: 26
       height: 33
     spriteID: 0f7c03e507dc3d841b9fcc6bf29b3651
@@ -848,7 +890,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 281, y: 89}
+    uvTransform: {x: 258, y: 391}
     spritePosition: {x: 56, y: 84}
   - name: anim innerarm3
     originalName: 
@@ -857,8 +899,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 213
-      y: 235
+      x: 258
+      y: 432
       width: 26
       height: 30
     spriteID: 679730395ef740f429f1d77509d2762f
@@ -869,7 +911,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 213, y: 235}
+    uvTransform: {x: 258, y: 432}
     spritePosition: {x: 57, y: 64}
   characterData:
     bones: []
@@ -947,7 +989,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: c869065a5390c7b42ac6cfdba62d7316
     layerID: 175
-    mosaicPosition: {x: 249, y: 89}
+    mosaicPosition: {x: 299, y: 150}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -957,7 +999,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: c0bbd4c6fd83280438cfd033fb75f5c8
     layerID: 168
-    mosaicPosition: {x: 183, y: 456}
+    mosaicPosition: {x: 258, y: 241}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -967,7 +1009,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 294e24725b76e8144a55947f2845bf14
     layerID: 161
-    mosaicPosition: {x: 183, y: 411}
+    mosaicPosition: {x: 258, y: 196}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -977,7 +1019,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 70c75fcf2b300824f835541cabbd6860
     layerID: 248
-    mosaicPosition: {x: 183, y: 273}
+    mosaicPosition: {x: 468, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 0
@@ -997,7 +1039,7 @@ ScriptedImporter:
     parentIndex: 5
     spriteID: baf779795d855ff4aab4dad95ca41244
     layerID: 126
-    mosaicPosition: {x: 224, y: 365}
+    mosaicPosition: {x: 384, y: 138}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1007,7 +1049,7 @@ ScriptedImporter:
     parentIndex: 5
     spriteID: 94bec2510c634cd43a1e90028396a962
     layerID: 119
-    mosaicPosition: {x: 457, y: 58}
+    mosaicPosition: {x: 335, y: 138}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1020,7 +1062,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: Zombie Door1
     spriteName: 
     isGroup: 1
@@ -1030,14 +1072,14 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: Zombie outerarm screendoor
     spriteName: Zombie outerarm screendoor
     isGroup: 0
     parentIndex: 9
     spriteID: 8a0f9d77ffd38a24bb524bf76cc78331
     layerID: 154
-    mosaicPosition: {x: 303, y: 4}
+    mosaicPosition: {x: 183, y: 179}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1047,20 +1089,50 @@ ScriptedImporter:
     parentIndex: 9
     spriteID: 3da007200f3a3af4a8afc9403a634c03
     layerID: 147
-    mosaicPosition: {x: 223, y: 411}
+    mosaicPosition: {x: 70, y: 473}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: anim screendoor
+    spriteName: 
+    isGroup: 1
+    parentIndex: 9
+    spriteID: 61319973fa407944daf5797d699576c9
+    layerID: 273
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: anim screendoor
     spriteName: anim screendoor
     isGroup: 0
-    parentIndex: 9
+    parentIndex: 12
     spriteID: a6256fd30c327e24aa1599e8184c3c3f
     layerID: 140
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: Zombie_screendoor2
+    spriteName: Zombie_screendoor2
+    isGroup: 0
+    parentIndex: 12
+    spriteID: f6250f455795d574d9992e0ee6f7b8bb
+    layerID: 276
+    mosaicPosition: {x: 4, y: 321}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Zombie_screendoor3
+    spriteName: Zombie_screendoor3
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 1a9245338e46f5348a11b7584356f3cd
+    layerID: 275
+    mosaicPosition: {x: 4, y: 170}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
   - name: Zombie Swim
     spriteName: 
     isGroup: 1
@@ -1074,7 +1146,7 @@ ScriptedImporter:
   - name: Zombie duckytube
     spriteName: Zombie duckytube
     isGroup: 0
-    parentIndex: 13
+    parentIndex: 16
     spriteID: c36be6367ec10fe4b9316767e240ec63
     layerID: 105
     mosaicPosition: {x: 93, y: 4}
@@ -1087,7 +1159,7 @@ ScriptedImporter:
     parentIndex: 8
     spriteID: 4fc5da8d028a45344956482a4a44aa86
     layerID: 112
-    mosaicPosition: {x: 249, y: 135}
+    mosaicPosition: {x: 258, y: 342}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1097,7 +1169,7 @@ ScriptedImporter:
     parentIndex: 8
     spriteID: 9af379efaf0ae34429eb19abbc18b367
     layerID: 98
-    mosaicPosition: {x: 4, y: 170}
+    mosaicPosition: {x: 183, y: 89}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1114,10 +1186,10 @@ ScriptedImporter:
   - name: Zombie innerarm screendoor
     spriteName: Zombie innerarm screendoor
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 20
     spriteID: 63262588c65ac9747b23c9bed933a133
     layerID: 234
-    mosaicPosition: {x: 183, y: 89}
+    mosaicPosition: {x: 4, y: 473}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1134,7 +1206,7 @@ ScriptedImporter:
   - name: flag
     spriteName: 
     isGroup: 1
-    parentIndex: 19
+    parentIndex: 22
     spriteID: fe16fd08a0361184ea9c3dc18843c4fe
     layerID: 237
     mosaicPosition: {x: 0, y: 0}
@@ -1144,50 +1216,50 @@ ScriptedImporter:
   - name: Zombie_flag
     spriteName: Zombie_flag
     isGroup: 0
-    parentIndex: 20
+    parentIndex: 23
     spriteID: 780c5adde3cbc8f43b8b6d43ec0e4582
     layerID: 236
-    mosaicPosition: {x: 4, y: 421}
+    mosaicPosition: {x: 391, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie_flag3
     spriteName: Zombie_flag3
     isGroup: 0
-    parentIndex: 20
+    parentIndex: 23
     spriteID: 6797bef6dd14588459b3d716386b2285
     layerID: 251
-    mosaicPosition: {x: 226, y: 4}
+    mosaicPosition: {x: 258, y: 89}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie_flagpole
     spriteName: Zombie_flagpole
     isGroup: 0
-    parentIndex: 20
+    parentIndex: 23
     spriteID: e88e43bd1f92fd049aa5ac8b850cf7af
     layerID: 235
-    mosaicPosition: {x: 183, y: 175}
+    mosaicPosition: {x: 183, y: 295}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie flaghand
     spriteName: Zombie flaghand
     isGroup: 0
-    parentIndex: 19
+    parentIndex: 22
     spriteID: 7dc6d0127cb84e4418356c201e1571a4
     layerID: 28
-    mosaicPosition: {x: 367, y: 53}
+    mosaicPosition: {x: 213, y: 355}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie innerarm screendoor
     spriteName: Zombie innerarm screendoor
     isGroup: 0
-    parentIndex: 19
+    parentIndex: 22
     spriteID: d4f5664849820724d85affccf76b54dc
     layerID: 35
-    mosaicPosition: {x: 183, y: 132}
+    mosaicPosition: {x: 183, y: 252}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1204,7 +1276,7 @@ ScriptedImporter:
   - name: Zombie Head Others
     spriteName: 
     isGroup: 1
-    parentIndex: 26
+    parentIndex: 29
     spriteID: 88e08810bd02ef04982fd629ef3c2901
     layerID: 205
     mosaicPosition: {x: 0, y: 0}
@@ -1214,7 +1286,7 @@ ScriptedImporter:
   - name: bucket
     spriteName: 
     isGroup: 1
-    parentIndex: 27
+    parentIndex: 30
     spriteID: f2c9c3aa0dcf9fd49a5c6963e46f1541
     layerID: 262
     mosaicPosition: {x: 0, y: 0}
@@ -1224,7 +1296,7 @@ ScriptedImporter:
   - name: anim bucket
     spriteName: anim bucket
     isGroup: 0
-    parentIndex: 28
+    parentIndex: 31
     spriteID: 2216a168f432b6e44a88e672b4502b7b
     layerID: 196
     mosaicPosition: {x: 93, y: 185}
@@ -1234,17 +1306,17 @@ ScriptedImporter:
   - name: anim bucket3
     spriteName: anim bucket3
     isGroup: 0
-    parentIndex: 28
+    parentIndex: 31
     spriteID: fdcdd386c42b128479ab5dd42ea9aba1
     layerID: 261
-    mosaicPosition: {x: 4, y: 260}
+    mosaicPosition: {x: 226, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: anim bucket2
     spriteName: anim bucket2
     isGroup: 0
-    parentIndex: 28
+    parentIndex: 31
     spriteID: f514cab692115224489c0e0b09d1334c
     layerID: 260
     mosaicPosition: {x: 93, y: 89}
@@ -1254,7 +1326,7 @@ ScriptedImporter:
   - name: cone
     spriteName: 
     isGroup: 1
-    parentIndex: 27
+    parentIndex: 30
     spriteID: 61d6d5f31cac0a24eb6ecb0d6169065a
     layerID: 266
     mosaicPosition: {x: 0, y: 0}
@@ -1264,7 +1336,7 @@ ScriptedImporter:
   - name: anim cone3
     spriteName: anim cone3
     isGroup: 0
-    parentIndex: 32
+    parentIndex: 35
     spriteID: 8c8f6224a792be44c91002722c6370e8
     layerID: 265
     mosaicPosition: {x: 93, y: 362}
@@ -1274,7 +1346,7 @@ ScriptedImporter:
   - name: anim cone2
     spriteName: anim cone2
     isGroup: 0
-    parentIndex: 32
+    parentIndex: 35
     spriteID: 6355f021e4d536645b9b3fc617c82d5a
     layerID: 264
     mosaicPosition: {x: 93, y: 281}
@@ -1284,17 +1356,17 @@ ScriptedImporter:
   - name: anim cone
     spriteName: anim cone
     isGroup: 0
-    parentIndex: 32
+    parentIndex: 35
     spriteID: b9fd18b7a996f96488497b1bdb4bb522
     layerID: 189
-    mosaicPosition: {x: 4, y: 338}
+    mosaicPosition: {x: 312, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: mustache
     spriteName: 
     isGroup: 1
-    parentIndex: 27
+    parentIndex: 30
     spriteID: 528eb34db808602488105b10cef8436e
     layerID: 268
     mosaicPosition: {x: 0, y: 0}
@@ -1304,27 +1376,27 @@ ScriptedImporter:
   - name: Zombie mustache
     spriteName: Zombie mustache
     isGroup: 0
-    parentIndex: 36
+    parentIndex: 39
     spriteID: 08789691756466e4b8473e0437a22705
     layerID: 133
-    mosaicPosition: {x: 4, y: 483}
+    mosaicPosition: {x: 183, y: 484}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: anim hair
     spriteName: anim hair
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 29
     spriteID: a58ae0f2fab3bf14990f1c70db31935a
     layerID: 182
-    mosaicPosition: {x: 367, y: 4}
+    mosaicPosition: {x: 335, y: 89}
     flatten: 0
     isImported: 1
     isVisible: 0
   - name: anim head1
     spriteName: anim head1
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 29
     spriteID: a661f47f4f94e7644bce9158d6d87485
     layerID: 49
     mosaicPosition: {x: 93, y: 440}
@@ -1344,10 +1416,10 @@ ScriptedImporter:
   - name: Zombie neck
     spriteName: Zombie neck
     isGroup: 0
-    parentIndex: 40
+    parentIndex: 43
     spriteID: 241bc27284d2ac44a98f5c298bf56bbd
     layerID: 42
-    mosaicPosition: {x: 315, y: 89}
+    mosaicPosition: {x: 258, y: 470}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1364,30 +1436,30 @@ ScriptedImporter:
   - name: Zombie outerleg lower
     spriteName: Zombie outerleg lower
     isGroup: 0
-    parentIndex: 42
+    parentIndex: 45
     spriteID: 774295f18cebbb844946f3fce2b0a6bb
     layerID: 91
-    mosaicPosition: {x: 183, y: 365}
+    mosaicPosition: {x: 258, y: 150}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie outerleg foot
     spriteName: Zombie outerleg foot
     isGroup: 0
-    parentIndex: 42
+    parentIndex: 45
     spriteID: ff35ba62c776f69439e2407b17d4bc82
     layerID: 84
-    mosaicPosition: {x: 183, y: 328}
+    mosaicPosition: {x: 183, y: 447}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie outerleg upper
     spriteName: Zombie outerleg upper
     isGroup: 0
-    parentIndex: 42
+    parentIndex: 45
     spriteID: e745c09685ed4c64e8ac515f78f745d3
     layerID: 77
-    mosaicPosition: {x: 213, y: 175}
+    mosaicPosition: {x: 213, y: 295}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1404,30 +1476,30 @@ ScriptedImporter:
   - name: Zombie innerleg foot
     spriteName: Zombie innerleg foot
     isGroup: 0
-    parentIndex: 46
+    parentIndex: 49
     spriteID: 663d71cf252cc454c957a66bcd9e8c5a
     layerID: 70
-    mosaicPosition: {x: 404, y: 53}
+    mosaicPosition: {x: 335, y: 166}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie innerleg lower
     spriteName: Zombie innerleg lower
     isGroup: 0
-    parentIndex: 46
+    parentIndex: 49
     spriteID: 4dd5fbadefd9ffa4c8b44c12820d57aa
     layerID: 63
-    mosaicPosition: {x: 457, y: 4}
+    mosaicPosition: {x: 183, y: 393}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: Zombie innerleg upper
     spriteName: Zombie innerleg upper
     isGroup: 0
-    parentIndex: 46
+    parentIndex: 49
     spriteID: 3677a8d09435b5046a408827b1cadaac
     layerID: 56
-    mosaicPosition: {x: 249, y: 184}
+    mosaicPosition: {x: 335, y: 197}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -1444,30 +1516,30 @@ ScriptedImporter:
   - name: anim innerarm1
     spriteName: anim innerarm1
     isGroup: 0
-    parentIndex: 50
+    parentIndex: 53
     spriteID: bd293bf8731aa2e4da6b28e5a0d5a79e
     layerID: 21
-    mosaicPosition: {x: 214, y: 456}
+    mosaicPosition: {x: 258, y: 295}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: anim innerarm2
     spriteName: anim innerarm2
     isGroup: 0
-    parentIndex: 50
+    parentIndex: 53
     spriteID: 0f7c03e507dc3d841b9fcc6bf29b3651
     layerID: 14
-    mosaicPosition: {x: 281, y: 89}
+    mosaicPosition: {x: 258, y: 391}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: anim innerarm3
     spriteName: anim innerarm3
     isGroup: 0
-    parentIndex: 50
+    parentIndex: 53
     spriteID: 679730395ef740f429f1d77509d2762f
     layerID: 7
-    mosaicPosition: {x: 213, y: 235}
+    mosaicPosition: {x: 258, y: 432}
     flatten: 0
     isImported: 1
     isVisible: 1

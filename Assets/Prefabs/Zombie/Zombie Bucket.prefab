@@ -2722,7 +2722,7 @@ GameObject:
   - component: {fileID: 7688825822940095207}
   - component: {fileID: 8704390686937820989}
   m_Layer: 7
-  m_Name: ZombieBucket
+  m_Name: Zombie Bucket
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

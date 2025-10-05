@@ -23,8 +23,8 @@ public class ZombieCone : ZombieCommon {
     }
 
     // 重写受伤逻辑（新增路障状态随生命值变化的处理）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage); // 先执行父类受伤逻辑（扣血、身体部位隐藏等）
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
 
         // 根据生命值区间切换路障状态
         if (HP < 200) {

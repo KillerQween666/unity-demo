@@ -46,7 +46,13 @@ public class PeaBullet : MonoBehaviour {
             ObjectPoolManager.Instance.PlayPeaBulletParticalIEnumrator(transform);
 
             // 给命中的僵尸造成伤害
-            collision.GetComponent<Zombie>().TakeDamage(atkValue);
+            if (collision != null) {
+                Zombie zombie = collision.GetComponent<Zombie>();
+                if (zombie != null) {
+                    zombie.TakeDamage(atkValue);
+                }
+            }
+            
 
             // 伤害处理完成后，将子弹回收到对象池
             ObjectPoolManager.Instance.ReleasePeaBullet(this.gameObject);

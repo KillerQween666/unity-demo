@@ -28,8 +28,9 @@ public class ZombieCommon : Zombie {
     }
 
     // 重写受伤逻辑（增加身体部位隐藏判断）
-    public override void TakeDamage(float damage) {
-        base.TakeDamage(damage); // 执行父类的受伤处理（扣血、闪烁等）
+    public override void TakeCommonDamage(float damage) {
+        base.TakeCommonDamage(damage);
+
         // 生命值低于对应阈值时隐藏手部/头部
         if (HP <= 70) HideHand();
         if (HP <= 20) HideHead();
