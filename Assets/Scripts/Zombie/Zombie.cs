@@ -60,6 +60,15 @@ public class Zombie : MonoBehaviour {
         }
     }
 
+    private void FixedUpdate() {
+        if (isHaveHead == false) {
+            HP -= 0.25f;
+            if (HP <= 0) {
+                ToDead();
+            }
+        }
+    }
+
     // 设置动画播放速度（影响移动和攻击快慢）
     public void SetAnimatorSpeed(float speed) {
         animator.speed = speed;

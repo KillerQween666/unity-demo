@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5102307951642423936}
   - component: {fileID: 3403927828411643417}
   - component: {fileID: 228281492715007513}
+  - component: {fileID: -6577520378168631936}
   - component: {fileID: 2637714918749178634}
   - component: {fileID: 1557536738661514725}
   - component: {fileID: 2067166185630586742}
-  - component: {fileID: -6577520378168631936}
   - component: {fileID: 1791986999562065754}
   - component: {fileID: -1974286201322020791}
   m_Layer: 0
@@ -89,6 +89,23 @@ MeshRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 100
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6577520378168631936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579356668895940821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81acea2e965c9ef49bca1b045aff71f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDuration: 1
+  point: 50
+  liveTimer: 0
+  isClick: 0
+  sunCollider2D: {fileID: 0}
 --- !u!210 &2637714918749178634
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -137,23 +154,6 @@ MonoBehaviour:
   _groupName: 
   _playMode: 0
   _loopMode: 1
---- !u!114 &-6577520378168631936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6579356668895940821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81acea2e965c9ef49bca1b045aff71f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDuration: 1
-  point: 50
-  liveTimer: 0
-  isClick: 0
-  sunCollider2D: {fileID: 0}
 --- !u!58 &1791986999562065754
 CircleCollider2D:
   m_ObjectHideFlags: 0

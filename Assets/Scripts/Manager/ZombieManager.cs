@@ -42,6 +42,7 @@ public class ZombieManager : MonoBehaviour {
     private float spawnZombieTimer;
 
     private int spawnlowerLevel = 0;
+    private int spawnUpperLevel = 4;
 
     // 初始化单例
     private void Awake() {
@@ -139,7 +140,7 @@ public class ZombieManager : MonoBehaviour {
         int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
         // 实例化普通僵尸到选中的生成点
 
-        int ran = Random.Range(spawnlowerLevel, zombiePrefabs.Count);
+        int ran = Random.Range(spawnlowerLevel, spawnUpperLevel);
         Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
         spawnZombieTime = spawnZombieSpeed * spawnWeights[ran];
 
@@ -205,8 +206,9 @@ public class ZombieManager : MonoBehaviour {
         spawnZombieSpeed = speed;
     }
 
-    public void setSpawnLowerLevel(int lowerLevel) {
+    public void setSpawnLevel(int lowerLevel, int upperLevel) {
         spawnlowerLevel = lowerLevel;
+        spawnUpperLevel = upperLevel;
     }
 
     // 移除一只僵尸（僵尸死亡时调用，减少总数）

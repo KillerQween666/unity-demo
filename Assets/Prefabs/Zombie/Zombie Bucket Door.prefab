@@ -2913,7 +2913,7 @@ MonoBehaviour:
   - {fileID: 3347778686607396969}
   - {fileID: 6928338845672260474}
   - {fileID: 3454284361549345649}
-  HP: 375
+  HP: 475
   minSpeed: 0.8
   maxSpeed: 1.2
   atkValue: 20
