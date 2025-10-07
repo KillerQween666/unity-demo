@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour {
     public MenuUI menuUI;           // 菜单界面UI
     public CardChooserUI CardChooserUI;
     public HugeWaveUI hugeWaveUI;
+    public ScreenFlashUI screenFlashUI;
 
     // 初始化单例
     private void Awake() {

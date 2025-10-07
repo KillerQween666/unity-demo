@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2122240770114539096}
   m_Layer: 0
   m_Name: HypnoShroom
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.04, y: -1.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5716533713268429548}
   - {fileID: 6674132427871254942}
@@ -51,6 +51,7 @@ MonoBehaviour:
   animator: {fileID: 323160270373671485}
   grandAnimator: {fileID: 0}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 1473225365932868613}
@@ -86,7 +87,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20033097, y: 0.06522399}
+  m_Offset: {x: 0.20033097, y: 0.101679415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -97,7 +98,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.66456175, y: 0.95341146}
+  m_Size: {x: 0.66456175, y: 1.0263221}
   m_EdgeRadius: 0
 --- !u!1 &1473225365932868613
 GameObject:
@@ -316,6 +317,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: -9156867838365188483, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     - target: {fileID: -8653719598885068355, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
       propertyPath: m_Name
       value: HypnoShroom
@@ -392,6 +397,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: -4691381383639723871, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     - target: {fileID: 683650805199822136, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -400,6 +409,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: 683650805199822136, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     - target: {fileID: 5638863962959275187, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -408,6 +421,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: 5638863962959275187, guid: 04ae0410db3472a47a2a6ccd87f7a33e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

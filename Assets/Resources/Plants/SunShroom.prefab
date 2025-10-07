@@ -135,9 +135,14 @@ MonoBehaviour:
   animator: {fileID: 1219233150462218064}
   grandAnimator: {fileID: 1346573898898458087}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 7666443505086114647}
+  produceDuration: 10
+  jumpMinDistance: 0
+  jumpMaxDistance: 0.8
+  glowDuration: 25
 --- !u!61 &2468420004350461412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170,7 +175,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14067078, y: 0.4888869}
+  m_Offset: {x: 0.13868076, y: 0.17494053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -181,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53547335, y: 0.70812213}
+  m_Size: {x: 0.5314933, y: 0.76289403}
   m_EdgeRadius: 0
 --- !u!1 &2623617217282075324
 GameObject:

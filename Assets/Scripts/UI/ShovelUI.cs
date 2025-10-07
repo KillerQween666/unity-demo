@@ -30,7 +30,7 @@ public class ShovelUI : MonoBehaviour {
         mouseWorldPosition.z = 0;
 
         // 射线检测点击的单元格
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("OnClick"));
 
         if (hit) {
             if (hit.collider.CompareTag("Cell")) {

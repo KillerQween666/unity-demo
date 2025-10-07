@@ -91,4 +91,10 @@ public class Config : MonoBehaviour {
     public const string bucket2 = "Audio/Sound/shieldhit2";
     // ÒôĞ§Â·¾¶£º ³Å¸ËÌø½©Ê¬ÌøÔ¾ÒôĞ§
     public const string jump = "Audio/Sound/polevault";
+    public const string doomShroomBoom = "Audio/Sound/DoomShroom";
+    public const string puff = "Audio/Sound/puff";
+    public const string fume = "Audio/Sound/fume";
+    public const string paper = "Audio/Sound/paper";
+    public const string paperCry = "Audio/Sound/newspaper_rarrgh";
+    public const string paperCry2 = "Audio/Sound/newspaper_rarrgh2";
 }

@@ -27,11 +27,6 @@ public class ZombieBucketDoor : ZombieCommon {
     bool isDoorWorst = false;
     bool isDoorDead = false; // 
 
-    private float doorHp = 375;
-
-    // 受伤闪烁效果的亮度参数
-    public Coroutine flashCoroutine2; // 闪烁效果的协程
-
     private new void Awake() {
         base.Awake(); // 调用父类的初始化方法
         // 初始状态：只显示完好的桶和旗帜，隐藏破损状态
@@ -43,32 +38,7 @@ public class ZombieBucketDoor : ZombieCommon {
 
     // 重写受伤逻辑（增加桶和旗帜的状态变化）
     public override void TakeCommonDamage(float damage) {
-        if (isDoorDead == false) {
-            doorHp -= damage;
-
-            if (flashCoroutine2 != null) StopCoroutine(flashCoroutine2);
-            flashCoroutine2 = StartCoroutine(PlayDoorFlash());
-
-            // 播放铁门被攻击的音效（随机选择）
-            AudioManager.Instance.PlayClip(Random.value > 0.5f ? Config.bucket : Config.bucket2);
-
-            if (doorHp < 250) {
-                DoorBad();
-            }
-
-            if (doorHp < 125) {
-                DoorWorst();
-            }
-
-            if (doorHp < 0) {
-                // 切换僵尸的显示状态（隐藏部分渲染器，显示另一部分）
-                hideSprite.ForEach(r => r.enabled = true);
-                showSprite.ForEach(r => r.enabled = false);
-                DoorDead();
-            }
-        } else {
-            base.TakeCommonDamage(damage);
-        }
+        base.TakeCommonDamage(damage);
 
         // 根据生命值区间切换桶的状态
         if (HP < 350) {
@@ -115,7 +85,7 @@ public class ZombieBucketDoor : ZombieCommon {
     }
 
     // 重写受击音效（根据桶的状态播放不同音效）
-    protected override void PlayAttackSource() {
+    public override void PlayAttackSource() {
         if (isBucketDead == true) {
             base.PlayAttackSource(); // 桶损坏后使用父类的默认音效
         }
@@ -126,14 +96,15 @@ public class ZombieBucketDoor : ZombieCommon {
     }
 
     // 旗帜破损处理
-    private void DoorBad() {
+    public void DoorBad() {
         if (isDoorBad) return; // 已处于该状态则不重复执行
         isDoorBad = true;
+
         goodDoor.enabled = false;
         badDoor.enabled = true; // 显示破损的旗帜
     }
 
-    private void DoorWorst() {
+    public void DoorWorst() {
         if (isDoorWorst) return; // 已处于该状态则不重复执行
         isDoorWorst = true;
 
@@ -142,12 +113,15 @@ public class ZombieBucketDoor : ZombieCommon {
     }
 
     // 旗帜消失处理
-    private void DoorDead() {
+    public void DoorDead() {
         if (isDoorDead) return; // 已处于该状态则不重复执行
         isDoorDead = true;
         worstDoor.enabled = false; // 隐藏旗帜
         // 播放旗帜消失的特效
-        ObjectPoolManager.Instance.PlayDoorEmissionIEnumrator(doorEmissionTransfrom, spriteList[0].sortingOrder + 100);
+    }
+
+    public void PlayDoorEmission() {
+        ObjectPoolManager.Instance.PlayDoorEmissionIEnumrator(doorEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
     }
 
     public virtual IEnumerator PlayDoorFlash() {

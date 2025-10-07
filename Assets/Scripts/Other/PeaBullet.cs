@@ -47,12 +47,11 @@ public class PeaBullet : MonoBehaviour {
 
             // 给命中的僵尸造成伤害
             if (collision != null) {
-                Zombie zombie = collision.GetComponent<Zombie>();
-                if (zombie != null) {
-                    zombie.TakeDamage(atkValue);
+                Enemy enemy = collision.GetComponent<Enemy>();
+                if (enemy != null) {
+                    enemy.TakeDamage(atkValue);
                 }
             }
-            
 
             // 伤害处理完成后，将子弹回收到对象池
             ObjectPoolManager.Instance.ReleasePeaBullet(this.gameObject);

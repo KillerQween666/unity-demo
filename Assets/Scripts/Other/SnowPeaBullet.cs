@@ -16,9 +16,18 @@ public class SnowPeaBullet : PeaBullet {
 
             // 获取命中的僵尸组件，执行伤害和减速
             if (collision != null) {
-                Zombie zombie = collision.GetComponent<Zombie>();
-                if (zombie != null) {
-                    zombie.TakeDamage(atkValue, 3);
+                Enemy enemy = collision.GetComponent<Enemy>();
+                if (enemy != null) {
+                    if (collision.TryGetComponent<Zombie>(out var zombie)) {
+                        // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
+                        if (zombie.IsCroze() == false) AudioManager.Instance.PlayClip(Config.Frozen);
+                        zombie.TakeDamage(atkValue, 3);
+                    } else {
+                        enemy.TakeDamage(atkValue, 3);
+                    }
+
+
+                        
                 }
             }
 

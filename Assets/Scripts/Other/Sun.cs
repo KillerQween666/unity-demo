@@ -13,7 +13,7 @@ public class Sun : MonoBehaviour {
     public int point = 50;
 
     // 阳光最大存活时间（超时未收集则自动回收）
-    private float liveTime = 5;
+    private float liveTime = 8;
     // 阳光存活计时器（记录已存活时间）
     public float liveTimer;
 
@@ -22,6 +22,8 @@ public class Sun : MonoBehaviour {
 
     // 阳光的碰撞体（用于检测点击，在Awake中自动获取）
     public Collider2D sunCollider2D;
+
+    public bool isSmall = false;
 
     // 初始化：获取阳光的碰撞体组件
     private void Awake() {
@@ -87,7 +89,12 @@ public class Sun : MonoBehaviour {
             .SetEase(Ease.Linear) // 线性移动，快速到达目标
             .OnComplete( // 移动完成后，将阳光回收到对象池
             () => {
-                ObjectPoolManager.Instance.ReleaseSun(this.gameObject);
+                if (isSmall) {
+                    ObjectPoolManager.Instance.ReleaseSmallSun(this.gameObject);
+                } else {
+                    ObjectPoolManager.Instance.ReleaseSun(this.gameObject);
+                }
+                    
             });
 
         SunManager.Instance.AddSun(point); // 增加玩家的阳光点数

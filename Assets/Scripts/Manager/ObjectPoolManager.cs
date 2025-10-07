@@ -16,10 +16,14 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 各类可复用对象的预制体（需在Inspector面板赋值，用于初始化对象池）
     public GameObject peaBulletPartical;         // 豌豆子弹命中粒子效果预制体
+    public GameObject puffPeaBulletPartical;
     public GameObject snowPeaBulletPartical;     // 寒冰豌豆子弹命中粒子效果预制体
+    public GameObject fumeAttackPartical;
     public GameObject peaBullet;                 // 豌豆子弹预制体
+    public GameObject puffPeaBullet;
     public GameObject snowPeaBullet;             // 寒冰豌豆子弹预制体
     public GameObject sun;                       // 阳光预制体
+    public GameObject smallSun;                       // 阳光预制体
     public GameObject headEmissionPartical;      // 头部发射粒子效果预制体（emission：发射）
     public GameObject handEmissionPartical;      // 手部发射粒子效果预制体（emission：发射）
     public GameObject poleHeadEmissionPartical;  // 撑杆僵尸头部发射粒子预制体
@@ -28,6 +32,9 @@ public class ObjectPoolManager : MonoBehaviour {
     public GameObject bucketEmissionPartical;    // 铁桶僵尸发射粒子预制体
     public GameObject flagEmissionPartical;      // 旗帜僵尸发射粒子预制体
     public GameObject potatoBoomPartical;        // 土豆地雷爆炸粒子预制体
+    public GameObject iceShroomBoomPartical;
+    public GameObject doomShroomBoomPartical;
+    public GameObject iceCrackPartical;
     public GameObject wallnutHurtSmallPartical;  // 坚果墙轻伤粒子预制体
     public GameObject wallnutHurtLargePartical;  // 坚果墙重伤粒子预制体
     public GameObject zombieBoomSwf;             // 僵尸被炸飞动画预制体
@@ -42,10 +49,14 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 各类对象对应的对象池（管理对象的创建、复用、销毁全生命周期）
     private ObjectPool<GameObject> peaBulletParticalPool;
+    private ObjectPool<GameObject> puffPeaBulletParticalPool;
     private ObjectPool<GameObject> snowPeaBulletParticalPool;
+    private ObjectPool<GameObject> fumeAttackParticalPool;
     private ObjectPool<GameObject> peaBulletPool;
+    private ObjectPool<GameObject> puffPeaBulletPool;
     private ObjectPool<GameObject> snowPeaBulletPool;
     private ObjectPool<GameObject> sunPool;
+    private ObjectPool<GameObject> smallSunPool;
     private ObjectPool<GameObject> headEmissionParticalPool;      // 头部发射粒子池
     private ObjectPool<GameObject> handEmissionParticalPool;      // 手部发射粒子池
     private ObjectPool<GameObject> sourcePool;                    // 音频源对象池
@@ -55,6 +66,9 @@ public class ObjectPoolManager : MonoBehaviour {
     private ObjectPool<GameObject> bucketEmissionParticalPool;    // 铁桶僵尸发射粒子池
     private ObjectPool<GameObject> flagEmissionParticalPool;      // 旗帜僵尸发射粒子池
     private ObjectPool<GameObject> potatoBoomParticalPool;        // 土豆地雷爆炸粒子池
+    private ObjectPool<GameObject> iceShroomBoomParticalPool;
+    private ObjectPool<GameObject> doomShroomBoomParticalPool;
+    private ObjectPool<GameObject> iceCrackParticalPool;
     private ObjectPool<GameObject> wallnutHurtSmallParticalPool;  // 坚果墙轻伤粒子池
     private ObjectPool<GameObject> wallnutHurtLargeParticalPool;  // 坚果墙重伤粒子池
     private ObjectPool<GameObject> zombieBoomSwfPool;             // 僵尸被炸飞动画池
@@ -85,9 +99,25 @@ public class ObjectPoolManager : MonoBehaviour {
             true, 10, 300              // 允许池自动收缩、初始容量、最大容量
         );
 
+        puffPeaBulletParticalPool = new ObjectPool<GameObject>(
+            CreatePuffPeaBulletPartical,  // 创建新对象的方法
+            ActionOnGet,               // 从池获取对象时的回调（激活对象）
+            ActionOnRelease,           // 回收对象到池时的回调（禁用对象）
+            ActionOnDestroy,           // 对象超出池最大容量时的销毁回调
+            true, 10, 300              // 允许池自动收缩、初始容量、最大容量
+        );
+
         // 寒冰豌豆子弹粒子池：配置同普通豌豆粒子池
         snowPeaBulletParticalPool = new ObjectPool<GameObject>(
             CreateSnowPeaBulletPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        fumeAttackParticalPool = new ObjectPool<GameObject>(
+            CreateFumeAttackPartical,
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
@@ -106,6 +136,30 @@ public class ObjectPoolManager : MonoBehaviour {
         // 土豆地雷爆炸粒子池：基础对象池配置
         potatoBoomParticalPool = new ObjectPool<GameObject>(
             CreatePotatoBoomPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        iceShroomBoomParticalPool = new ObjectPool<GameObject>(
+            CreateIceShroomBoomPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        iceCrackParticalPool = new ObjectPool<GameObject>(
+            CreateIceCrackPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        doomShroomBoomParticalPool = new ObjectPool<GameObject>(
+            CreateDoomShroomBoomPartical,
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
@@ -139,6 +193,14 @@ public class ObjectPoolManager : MonoBehaviour {
             true, 10, 300
         );
 
+        puffPeaBulletPool = new ObjectPool<GameObject>(
+            CreatePuffPeaBullet,
+            ActionOnGetPeaBullet,  // 子弹专属获取回调（重置计时器等）
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
         // 寒冰豌豆子弹池：配置同普通豌豆子弹池
         snowPeaBulletPool = new ObjectPool<GameObject>(
             CreateSnowPeaBullet,
@@ -151,6 +213,14 @@ public class ObjectPoolManager : MonoBehaviour {
         // 阳光池：获取时需重置阳光状态（生命周期、点击状态等）
         sunPool = new ObjectPool<GameObject>(
             CreateSun,
+            ActionOnGetSun,  // 阳光专属获取回调
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        smallSunPool = new ObjectPool<GameObject>(
+            CreateSmallSun,
             ActionOnGetSun,  // 阳光专属获取回调
             ActionOnRelease,
             ActionOnDestroy,
@@ -301,6 +371,10 @@ public class ObjectPoolManager : MonoBehaviour {
         return Instantiate(peaBullet);
     }
 
+    GameObject CreatePuffPeaBullet() {
+        return Instantiate(puffPeaBullet);
+    }
+
     // 创建寒冰豌豆子弹实例
     GameObject CreateSnowPeaBullet() {
         return Instantiate(snowPeaBullet);
@@ -309,6 +383,18 @@ public class ObjectPoolManager : MonoBehaviour {
     // 创建土豆地雷爆炸粒子实例
     GameObject CreatePotatoBoomPartical() {
         return Instantiate(potatoBoomPartical);
+    }
+
+    GameObject CreateIceShroomBoomPartical() {
+        return Instantiate(iceShroomBoomPartical);
+    }
+
+    GameObject CreateIceCrackPartical() {
+        return Instantiate(iceCrackPartical);
+    }
+
+    GameObject CreateDoomShroomBoomPartical() {
+        return Instantiate(doomShroomBoomPartical);
     }
 
     // 创建樱桃炸弹爆炸粒子实例
@@ -331,6 +417,14 @@ public class ObjectPoolManager : MonoBehaviour {
         return Instantiate(peaBulletPartical);
     }
 
+    GameObject CreatePuffPeaBulletPartical() {
+        return Instantiate(puffPeaBulletPartical);
+    }
+
+    GameObject CreateFumeAttackPartical() {
+        return Instantiate(fumeAttackPartical);
+    }
+
     // 创建寒冰豌豆子弹命中粒子实例
     GameObject CreateSnowPeaBulletPartical() {
         return Instantiate(snowPeaBulletPartical);
@@ -339,6 +433,10 @@ public class ObjectPoolManager : MonoBehaviour {
     // 创建阳光实例
     GameObject CreateSun() {
         return Instantiate(sun);
+    }
+
+    GameObject CreateSmallSun() {
+        return Instantiate(smallSun);
     }
 
     // 创建头部发射粒子实例（emission：发射）
@@ -460,6 +558,15 @@ public class ObjectPoolManager : MonoBehaviour {
         gameObject.GetComponent<PeaBullet>().isRelease = true; // 标记子弹为已回收状态
     }
 
+    public GameObject GetPuffPeaBullet() {
+        return puffPeaBulletPool.Get();
+    }
+
+    public void ReleasePuffPeaBullet(GameObject gameObject) {
+        puffPeaBulletPool.Release(gameObject);              // 将子弹回收到对象池
+        gameObject.GetComponent<PeaBullet>().isRelease = true; // 标记子弹为已回收状态
+    }
+
     // 对外提供：获取寒冰豌豆子弹（如寒冰射手发射时调用）
     public GameObject GetSnowPeaBullet() {
         return snowPeaBulletPool.Get();
@@ -481,6 +588,14 @@ public class ObjectPoolManager : MonoBehaviour {
         peaBulletParticalPool.Release(gameObject);
     }
 
+    public GameObject GetPuffPeaBulletPartical() {
+        return puffPeaBulletParticalPool.Get();
+    }
+
+    public void ReleasePuffPeaBulletPartical(GameObject gameObject) {
+        puffPeaBulletParticalPool.Release(gameObject);
+    }
+
     // 对外提供：获取寒冰豌豆子弹命中粒子（如子弹命中僵尸时调用）
     public GameObject GetSnowPeaBulletPartical() {
         return snowPeaBulletParticalPool.Get();
@@ -491,6 +606,14 @@ public class ObjectPoolManager : MonoBehaviour {
         snowPeaBulletParticalPool.Release(gameObject);
     }
 
+    public GameObject GetFumeAttackPartical() {
+        return fumeAttackParticalPool.Get();
+    }
+
+    public void ReleaseFumeAttackPartical(GameObject gameObject) {
+        fumeAttackParticalPool.Release(gameObject);
+    }
+
     // 对外提供：获取阳光对象（如向日葵生成阳光时调用）
     public GameObject GetSun() {
         return sunPool.Get();
@@ -499,6 +622,16 @@ public class ObjectPoolManager : MonoBehaviour {
     // 对外提供：回收阳光对象（如阳光被收集或超时消失后调用）
     public void ReleaseSun(GameObject gameObject) {
         sunPool.Release(gameObject);
+    }
+
+    // 对外提供：获取阳光对象（如向日葵生成阳光时调用）
+    public GameObject GetSmallSun() {
+        return smallSunPool.Get();
+    }
+
+    // 对外提供：回收阳光对象（如阳光被收集或超时消失后调用）
+    public void ReleaseSmallSun(GameObject gameObject) {
+        smallSunPool.Release(gameObject);
     }
 
     // 对外提供：获取头部发射粒子（如普通僵尸攻击时调用）
@@ -641,6 +774,33 @@ public class ObjectPoolManager : MonoBehaviour {
         potatoBoomParticalPool.Release(gameObject);
     }
 
+    public GameObject GetIceShroomBoomPartical() {
+        return iceShroomBoomParticalPool.Get();
+    }
+
+    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
+    public void ReleaseIceShroomBoomPartical(GameObject gameObject) {
+        iceShroomBoomParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetIceCrackPartical() {
+        return iceCrackParticalPool.Get();
+    }
+
+    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
+    public void ReleaseIceCrackPartical(GameObject gameObject) {
+        iceCrackParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetDoomShroomBoomPartical() {
+        return doomShroomBoomParticalPool.Get();
+    }
+
+    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
+    public void ReleaseDoomShroomBoomPartical(GameObject gameObject) {
+        doomShroomBoomParticalPool.Release(gameObject);
+    }
+
     // 对外提供：获取坚果墙轻伤粒子（如坚果墙受轻微攻击时调用）
     public GameObject GetWallnutHurtSmallPartical() {
         return wallnutHurtSmallParticalPool.Get();
@@ -693,6 +853,14 @@ public class ObjectPoolManager : MonoBehaviour {
         StartCoroutine(PlayPeaBulletPartical(transform));
     }
 
+    public void PlayPuffPeaBulletParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayPuffPeaBulletPartical(transform));
+    }
+
+    public void PlayFumeAttackParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayFumeAttackPartical(transform));
+    }
+
     // 对外提供：播放寒冰豌豆子弹命中粒子（启动协程控制播放逻辑）
     // 参数：粒子播放位置（如子弹命中点）
     public void PlaySnowPeaBulletParticalIEnumrator(Transform transform) {
@@ -711,8 +879,8 @@ public class ObjectPoolManager : MonoBehaviour {
         StartCoroutine(PlayHandEmissionPartical(transform, sort, isCroze));
     }
 
-    public void PlayDoorEmissionIEnumrator(Transform transform, int sort) {
-        StartCoroutine(PlayDoorEmissionPartical(transform, sort));
+    public void PlayDoorEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
+        StartCoroutine(PlayDoorEmissionPartical(transform, sort, isCroze));
     }
 
     public void PlayFootballHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
@@ -773,6 +941,18 @@ public class ObjectPoolManager : MonoBehaviour {
     // 参数：粒子播放位置（如地雷位置）
     public void PlayPotatoBoomParticalIEnumrator(Transform transform) {
         StartCoroutine(PlayPotatoBoomPartical(transform));
+    }
+
+    public void PlayIceShroomBoomParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayIceShroomBoomPartical(transform));
+    }
+
+    public void PlayIceCrackParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayIceCrackPartical(transform));
+    }
+
+    public void PlayDoomShroomBoomParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayDoomShroomBoomPartical(transform));
     }
 
     // 对外提供：播放樱桃炸弹爆炸粒子（启动协程控制播放逻辑）
@@ -864,6 +1044,63 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleasePotatoBoomPartical(obj);                  // 将粒子组合对象回收到池
     }
 
+    public IEnumerator PlayIceShroomBoomPartical(Transform transform) {
+        GameObject obj = GetIceShroomBoomPartical();       // 从对象池获取土豆地雷爆炸粒子对象
+        // 获取对象下所有粒子系统（含子物体，支持多粒子叠加的爆炸效果），true表示包含非激活状态的组件
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = transform.position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }
+        ReleaseIceShroomBoomPartical(obj);                  // 将粒子组合对象回收到池
+    }
+
+    public IEnumerator PlayIceCrackPartical(Transform transform) {
+        GameObject obj = GetIceCrackPartical();       // 从对象池获取土豆地雷爆炸粒子对象
+        // 获取对象下所有粒子系统（含子物体，支持多粒子叠加的爆炸效果），true表示包含非激活状态的组件
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = transform.position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }
+        ReleaseIceCrackPartical(obj);                  // 将粒子组合对象回收到池
+    }
+
+    public IEnumerator PlayDoomShroomBoomPartical(Transform transform) {
+        GameObject obj = GetDoomShroomBoomPartical();       // 从对象池获取土豆地雷爆炸粒子对象
+        // 获取对象下所有粒子系统（含子物体，支持多粒子叠加的爆炸效果），true表示包含非激活状态的组件
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = transform.position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }
+        ReleaseDoomShroomBoomPartical(obj);                  // 将粒子组合对象回收到池
+    }
+
     // 坚果墙轻伤粒子播放协程（控制多粒子组合系统的播放与回收）
     // 参数：transform - 粒子播放的目标位置（坚果墙的位置）
     public IEnumerator PlayWallnutHurtSmallPartical(Transform transform) {
@@ -916,6 +1153,18 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleasePeaBulletPartical(obj);                  // 回收粒子对象到池
     }
 
+    public IEnumerator PlayPuffPeaBulletPartical(Transform transform) {
+        GameObject obj = GetPuffPeaBulletPartical();       // 从对象池获取普通豌豆子弹命中粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        particle.transform.position = transform.position; // 设为子弹命中点位置，确保效果贴合碰撞处
+        particle.Play();                                // 启动命中粒子（如火花、冲击效果）
+
+        yield return new WaitForSeconds(0.3f);          // 固定等待0.6秒（命中效果较短，用固定时长更高效）
+
+        particle.Clear();                               // 清除残留粒子
+        ReleasePuffPeaBulletPartical(obj);                  // 回收粒子对象到池
+    }
+
     // 寒冰豌豆子弹粒子播放协程：控制寒冰子弹命中粒子的播放（固定等待时长）
     // 参数：transform - 粒子播放的目标位置（子弹命中点）
     public IEnumerator PlaySnowPeaBulletPartical(Transform transform) {
@@ -928,6 +1177,20 @@ public class ObjectPoolManager : MonoBehaviour {
 
         particle.Clear();                               // 清除残留粒子
         ReleaseSnowPeaBulletPartical(obj);              // 回收粒子对象到池
+    }
+
+    public IEnumerator PlayFumeAttackPartical(Transform transform) {
+        GameObject obj = GetFumeAttackPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitUntil(() => particle.isStopped && particle.particleCount == 0);
+
+        particle.Clear();                               // 清除残留粒子
+        ReleaseFumeAttackPartical(obj);               // 回收粒子对象到池
     }
 
     // 普通僵尸头部发射粒子播放协程：支持渲染层级与颜色切换的粒子控制
@@ -1100,7 +1363,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseHandEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayDoorEmissionPartical(Transform transform, int sort) {
+    public IEnumerator PlayDoorEmissionPartical(Transform transform, int sort, bool isCroze) {
         GameObject obj = GetDoorEmissionPartical();      // 从对象池获取手部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1108,8 +1371,13 @@ public class ObjectPoolManager : MonoBehaviour {
         particle.transform.position = transform.position; // 设为僵尸手部位置，贴合攻击动作
         particle.Play();                                // 启动手部发射粒子（如攻击闪光、挥拳特效）
 
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+
         yield return new WaitForSeconds(particle.main.duration); // 等待粒子播放完成
 
+        mainModule.startColor = originColor;
         particle.Clear();                               // 清除残留粒子
         ReleaseDoorEmissionPartical(obj);               // 回收粒子对象到池
     }

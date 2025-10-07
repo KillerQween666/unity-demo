@@ -19,8 +19,6 @@ public class SunManager : MonoBehaviour {
     public float produceTime;
     // 阳光生成计时器
     private float produceTimer;
-    // 阳光预制体（从对象池获取，在Inspector赋值）
-    public Sun sunPrefab;
 
     // 是否开始自动生成阳光的标记（由GameManager控制启动）
     private bool isStartProduce = false;

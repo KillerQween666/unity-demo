@@ -9,9 +9,6 @@ public class SunFlower : Plant {
     // 产生阳光的计时器
     private float produceTimer;
 
-    // 阳光预制体（从对象池获取，无需手动实例化）
-    public Sun sunPrefab;
-
     // 阳光跳跃的最小/最大距离（左右随机）
     public float jumpMinDistance = 0.6f;
     public float jumpMaxDistance = 2f;

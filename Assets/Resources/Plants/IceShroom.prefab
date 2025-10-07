@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: -1204781926510902917, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     - target: {fileID: 1627473652323543646, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -392,6 +396,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: 1627473652323543646, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     - target: {fileID: 3325806442642678506, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -400,6 +408,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1444100059
       objectReference: {fileID: 0}
+    - target: {fileID: 3325806442642678506, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 671f55f8a06f6fb4dbc46b40682b5849, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -407,6 +419,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 980237376093252303}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5683138865399774790}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}
 --- !u!1 &2851922518730879974 stripped
 GameObject:
@@ -434,6 +449,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5683138865399774790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851922518730879974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11d8f3a10532654a9b13bcce8320308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fatherPlant: {fileID: 188178049721920584}
 --- !u!4 &3989074087957719941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: e515e4c5357d6db428539bf3f4a4765e, type: 3}

@@ -175,7 +175,7 @@ public class Card : MonoBehaviour {
         mouseWorldPosition.z = 0;
 
         // 射线检测：判断鼠标是否点击在可种植的单元格上
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("OnClick"));
 
         if (hit) {
             if (hit.collider.CompareTag("Cell")) {

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2067166185630586742}
   - component: {fileID: 1791986999562065754}
   - component: {fileID: -1974286201322020791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
   liveTimer: 0
   isClick: 0
   sunCollider2D: {fileID: 0}
+  isSmall: 0
 --- !u!210 &2637714918749178634
 SortingGroup:
   m_ObjectHideFlags: 0

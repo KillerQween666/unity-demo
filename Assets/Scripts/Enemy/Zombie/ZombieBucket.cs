@@ -71,7 +71,7 @@ public class ZombieBucket : ZombieCommon {
     }
 
     // 重写受击音效（根据桶是否损坏播放不同音效）
-    protected override void PlayAttackSource() {
+    public override void PlayAttackSource() {
         if (isBucketDead == true) {
             base.PlayAttackSource(); // 桶损坏后用父类的默认音效
         }
