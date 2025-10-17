@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8516391288091954853}
   - component: {fileID: 1719799102800332556}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: shadow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719885043422507178}
   - component: {fileID: 1163905444552714492}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerarm screendoor_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7005506866787391606}
   - component: {fileID: 7586737813727452216}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerleg upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2243609752022961320}
   - component: {fileID: 3347778686607396969}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerarm hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9001315121793798761}
   - component: {fileID: 8502126760775952027}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8018845552762325639}
   - component: {fileID: 2945657350667431680}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim bucket3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3680836256858780433}
   - component: {fileID: 1600485406641720948}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim head1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4185595726300717514}
   - component: {fileID: 3783971580401674053}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie duckytube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7583287519447154797}
   - component: {fileID: 9063025125782552585}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3797967995065576438}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: mustache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5618855330085450175}
   - component: {fileID: 819471770400466258}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerarm screendoor hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7037452629967718082}
   - component: {fileID: 5084071971524337882}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim head1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3452093528969518281}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3866919874551393436}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Head1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,7 +1201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5286674650118851283}
   - component: {fileID: 3725184619808047387}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerleg lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1286,6 +1286,7 @@ GameObject:
   - component: {fileID: 1107801157332329983}
   - component: {fileID: 1576144168925466476}
   - component: {fileID: 8213843923618668883}
+  - component: {fileID: 3173715419019514824}
   m_Layer: 7
   m_Name: doorBox
   m_TagString: Zombie
@@ -1334,11 +1335,11 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1354,7 +1355,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.44464827, y: 0.9046307}
+  m_Offset: {x: -0.32809108, y: 0.81365544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1365,8 +1366,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54952955, y: 1.3665072}
+  m_Size: {x: 0.36348116, y: 1.2733127}
   m_EdgeRadius: 0
+--- !u!50 &3173715419019514824
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373424596561260261}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2486153000067832858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2547352129250882432}
   - component: {fileID: 8882243674269475505}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerleg upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149589307753956126}
   - component: {fileID: 8340859675504793638}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie_flag3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1545,7 +1573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859265909140410398}
   - component: {fileID: 1897091162456255605}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerleg lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1629,7 +1657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5303420147795447810}
   - component: {fileID: 6020189450038458128}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerarm screendoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7695764495156723717}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Right Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1747,7 +1775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7392227418199652054}
   - component: {fileID: 1503810672727034810}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,7 +1859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6162101013397182939}
   - component: {fileID: 9003183693709565287}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie_flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1915,7 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7020566411322516819}
   - component: {fileID: 5567686073325967625}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie tie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1998,7 +2026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145675444024291711}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Head2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3926093325709622716}
   - component: {fileID: 4759217067355178412}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim innerarm3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2116,7 +2144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7527171873580868500}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2005567010885866035}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Left Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2271,7 +2299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8636548897216001046}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2305,7 +2333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8630771630442363407}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2340,7 +2368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6006987781991983021}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2374,7 +2402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8726428317942285050}
   - component: {fileID: 8529969405269568455}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim cone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2457,7 +2485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7898834582523069412}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2492,7 +2520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2304903950358247288}
   - component: {fileID: 2504584133955112994}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerarm upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2576,7 +2604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6677815093830298890}
   - component: {fileID: 997753233608021155}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie mustache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2660,7 +2688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7603900401784140414}
   - component: {fileID: 2576629209659583230}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2743,7 +2771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3724042286856876163}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Swim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2775,7 +2803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3119879883092836100}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5809705396932843135}
   - component: {fileID: 1463995710000704455}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2893,7 +2921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7752497464328665114}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Head Others
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2928,7 +2956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6186130905562616039}
   - component: {fileID: 5823465459851021133}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim cone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,6 +3129,9 @@ MonoBehaviour:
   shadow: {fileID: 4669769665523193532}
   isHaveHead: 1
   Ice: {fileID: 620583896304519319}
+  enemy: {fileID: 1576144168925466476}
+  row: 0
+  selfCollider: {fileID: 0}
   hideRenderers:
   - {fileID: 6020189450038458128}
   - {fileID: 819471770400466258}
@@ -3151,7 +3182,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3171,7 +3202,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.069034636, y: 1.0373391}
+  m_Offset: {x: -0.031882048, y: 0.90382034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3182,7 +3213,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34985435, y: 0.9865167}
+  m_Size: {x: 0.76338863, y: 1.0833808}
   m_EdgeRadius: 0
 --- !u!50 &5395155450376445745
 Rigidbody2D:
@@ -3221,7 +3252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7613899506058625416}
   - component: {fileID: 4028116462140267818}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim innerarm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,7 +3336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7469927206086083629}
   - component: {fileID: 4216027872947059438}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim bucket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3472,7 +3503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6386519429241820006}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim screendoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3506,7 +3537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8458128097747565113}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3541,7 +3572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4286034850895796771}
   - component: {fileID: 3454284361549345649}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie eat hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3625,7 +3656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8140961838395823354}
   - component: {fileID: 6928338845672260474}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerarm lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3709,7 +3740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7574271548514022858}
   - component: {fileID: 6829464120592556605}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie flaghand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3793,7 +3824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7501438189352700826}
   - component: {fileID: 5413895872376790355}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim tongue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3877,7 +3908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4133602984428751299}
   - component: {fileID: 7372787364546955516}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerarm screendoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3961,7 +3992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7581953858517037364}
   - component: {fileID: 5469313642787730586}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie_flagpole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4045,7 +4076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3785920133441675109}
   - component: {fileID: 657814048269614205}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie innerleg foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4128,7 +4159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2164360225410647987}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4161,7 +4192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3133249257006936221}
   - component: {fileID: 5739531248694189683}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: shadow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4245,7 +4276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7196623692191723239}
   - component: {fileID: 5173451904077299005}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie outerleg foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4328,7 +4359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8167660617117478884}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4361,7 +4392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5458377196159382364}
   - component: {fileID: 4949081379426651426}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: anim innerarm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4444,7 +4475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4369736394417028570}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zombie Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

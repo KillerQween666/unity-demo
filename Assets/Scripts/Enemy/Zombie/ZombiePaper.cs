@@ -74,12 +74,12 @@ public class ZombiePaper : Zombie {
         worstPaper.enabled = false; // 隐藏桶
         if (isHideHand == false) hideHandSprite.ForEach(r => r.enabled = true);
 
-        // 播放桶破碎的特效
+        // 播放报纸破碎的特效
         animator.SetTrigger("losePaperTrigger");  
     }
 
     public void PlayPaperEmission() {
-        ObjectPoolManager.Instance.PlayPaperEmissionIEnumrator(paperEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayPaperEmissionIEnumrator(paperEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 隐藏头部处理（含状态更新和特效）
@@ -92,7 +92,7 @@ public class ZombiePaper : Zombie {
         headRenderers.ForEach(r => r.enabled = false); // 隐藏所有头部渲染器
 
         // 播放头部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayPaperHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayPaperHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 隐藏手部处理（含特效）
@@ -107,12 +107,18 @@ public class ZombiePaper : Zombie {
         handRenderers.ForEach(r => r.enabled = false); // 隐藏所有手部渲染器
 
         // 播放手部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayPaperHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayPaperHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     public void EnterCrazy() {
         if (isCraze) return;
         isCraze = true;
+
+        if (isIceCroze) IceCrack();
+
+        if (isPaperDead == false) {
+            Destroy(enemy);
+        }
 
         showSprite.ForEach(r => r.enabled = false);
         if (isHideHead == false) hideHeadSprite.ForEach(r => r.enabled = true);
@@ -123,6 +129,7 @@ public class ZombiePaper : Zombie {
         originSpeed *= 3f;
         atkValue = 50;
         SetAnimatorSpeed(originSpeed);
+            
     }
 
     public virtual IEnumerator PlayPaperFlash() {

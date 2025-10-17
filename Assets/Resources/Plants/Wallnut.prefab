@@ -218,6 +218,10 @@ PrefabInstance:
       value: Wallnut
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: 1bd0500f91f93524f990eb37dada2e67, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 1bd0500f91f93524f990eb37dada2e67, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -239,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1bd0500f91f93524f990eb37dada2e67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.63
+      value: 2.0475063
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1bd0500f91f93524f990eb37dada2e67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: -0.4584843
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1bd0500f91f93524f990eb37dada2e67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -443,6 +447,8 @@ MonoBehaviour:
   animator: {fileID: 5948262963906223436}
   grandAnimator: {fileID: 432337768660823452}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 900
   isBrighten: 0
   shadow: {fileID: 8965239850260548754}
@@ -502,7 +508,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26268297, y: 0.008164167}
+  m_Offset: {x: -0.15657568, y: -0.2538724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -513,7 +519,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.820465, y: 2.2413297}
+  m_Size: {x: 2.6589823, y: 3.3942904}
   m_EdgeRadius: 0
 --- !u!4 &9019345291272468039 stripped
 Transform:

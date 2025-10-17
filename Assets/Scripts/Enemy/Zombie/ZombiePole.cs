@@ -33,7 +33,7 @@ public class ZombiePole : Zombie {
         headRenderers.ForEach(r => r.enabled = false); // 隐藏所有头部渲染器
 
         // 播放头部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayPoleHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayPoleHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 隐藏手部处理（含特效）
@@ -44,18 +44,25 @@ public class ZombiePole : Zombie {
         handRenderers.ForEach(r => r.enabled = false); // 隐藏所有手部渲染器
 
         // 播放手部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayPoleHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayPoleHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 重写碰撞进入逻辑（增加撑杆跳触发）
     protected override void OnTriggerEnter2D(Collider2D collision) {
         // 未使用过撑杆且碰撞到植物时，触发撑杆跳动画
-        if (collision.CompareTag("Plant") && isUsePole == false) {
-            isUsePole = true; // 标记撑杆已使用
-            animator.SetTrigger("jumpTrigger"); // 触发跳转动画
-            return;
-        }
-        else {
+        if (isUsePole == false) {
+            if (isHypno) {
+                if (collision.CompareTag("Zombie")) {
+                    isUsePole = true; // 标记撑杆已使用
+                    animator.SetTrigger("jumpTrigger"); // 触发跳转动画 
+                }
+            } else {
+                if (collision.CompareTag("Plant") && !collision.TryGetComponent<HypnoShroom>(out var hypnoShroom)) {
+                    isUsePole = true; // 标记撑杆已使用
+                    animator.SetTrigger("jumpTrigger"); // 触发跳转动画 
+                }
+            }
+        } else {
             base.OnTriggerEnter2D(collision); // 其他情况执行父类碰撞逻辑（如攻击植物/房子）
         }
 

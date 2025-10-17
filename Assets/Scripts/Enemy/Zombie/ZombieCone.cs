@@ -67,6 +67,6 @@ public class ZombieCone : ZombieCommon {
         worstCone.enabled = false; // 隐藏路障
 
         // 播放路障破碎特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayConeEmissionIEnumrator(coneEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayConeEmissionIEnumrator(coneEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 }

@@ -62,6 +62,8 @@ public class DoomShroom : Plant {
         }
 
         yield return new WaitForSeconds(1.5f); // 等待爆炸特效播放完成
+
+        selfCell.StartHole();
         Dead(); // 销毁樱桃炸弹自身
     }
 }

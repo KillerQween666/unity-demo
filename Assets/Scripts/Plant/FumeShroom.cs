@@ -48,7 +48,7 @@ public class FumeShroom : Plant {
         ObjectPoolManager.Instance.PlayFumeAttackParticalIEnumrator(shootPointTransform);
         AudioManager.Instance.PlayClip(Config.fume);
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.3f);
 
         // ¼ì²â±¬Õ¨·¶Î§ÄÚµÄËùÓÐ½©Ê¬£¨½ö¼ì²â"Zombie"²ã£©
         Bounds bounds = attackBox.bounds;

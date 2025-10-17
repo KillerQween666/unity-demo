@@ -26,10 +26,6 @@ public class CardListUI : MonoBehaviour {
         shovelUI.SetActive(false);
     }
 
-    private void OnMouseDown() {
-        OnClick();
-    }
-
     // 点击卡牌列表时：取消当前选中的植物或铲子
     public void OnClick() {
         // 取消选中的植物

@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 375715678019538362}
   - component: {fileID: 3974244659201337594}
   - component: {fileID: 1677188059943123026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PeaShooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -854,6 +854,8 @@ MonoBehaviour:
   animator: {fileID: 1710716334884741706}
   grandAnimator: {fileID: 2063732147553449180}
   grandCollider2D: {fileID: 62852831529449312}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 2904412048384217433}
@@ -892,7 +894,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19798413, y: 0.033926427}
+  m_Offset: {x: -0.024569392, y: -0.032096356}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -903,7 +905,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8340542, y: 0.9321468}
+  m_Size: {x: 1.2791612, y: 1.429034}
   m_EdgeRadius: 0
 --- !u!1 &6875107361242160888
 GameObject:

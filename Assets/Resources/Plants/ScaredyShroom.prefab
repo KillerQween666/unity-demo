@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 9200760833972106847}
   - component: {fileID: 3264675017545227680}
   - component: {fileID: 2845989053197165610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScaredyShroom
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -215,6 +215,7 @@ MonoBehaviour:
   grandAnimator: {fileID: 0}
   grandCollider2D: {fileID: 8514127154044315953}
   grand2Collider2d: {fileID: 8379496582518854974}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 6076115331494573331}
@@ -254,7 +255,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06935412, y: 0.15167361}
+  m_Offset: {x: -0.009451866, y: -0.022355735}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -265,7 +266,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5789648, y: 0.9590813}
+  m_Size: {x: 1.0912023, y: 1.4253486}
   m_EdgeRadius: 0
 --- !u!1 &6076115331494573331
 GameObject:

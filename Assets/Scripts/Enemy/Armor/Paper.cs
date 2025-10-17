@@ -33,7 +33,7 @@ public class Paper : Enemy {
 
         if (HP <= 0) {
             zombie.PaperDead(); // ±¨Ö½ÍêÈ«Ëð»µ
-            if (hurtType == 0 || hurtType == 3) {
+            if (hurtType != 1 && hurtType != 2) {
                 AudioManager.Instance.PlayClip(Config.paper);
                 zombie.PlayPaperEmission();
             }

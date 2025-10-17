@@ -54,7 +54,6 @@ public class HandManager : MonoBehaviour {
         // 选中植物则让植物跟随鼠标
         if (currentPlant != null) {
             currentPlant.transform.position = mouseWorldPosition;
-            //currentPlant.transform.position = mouseWorldPosition;
         }
         // 选中铲子则让铲子跟随鼠标
         else if (shovel.activeSelf) {
@@ -89,6 +88,7 @@ public class HandManager : MonoBehaviour {
     public void OnCellClick(Cell cell) {
         // 单元格没有植物时，种植当前选中的植物
         if (cell.currentPlant == null) {
+            
             cell.AddPlant(); // 单元格添加植物
 
             // 种植成功后，处理卡牌冷却、扣阳光、销毁跟随鼠标的植物

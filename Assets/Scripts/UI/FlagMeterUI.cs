@@ -15,53 +15,25 @@ public class FlagMeterUI : MonoBehaviour {
     public float gameTime = 10;     // 游戏总时长（秒）
     private float gameTimer;        // 计时器
 
-    private bool isGameStart = false; // 游戏是否开始
-    private bool isGameEnd = false;   // 游戏是否结束
-    private bool isHugeWave = false;
-
-    private int setSpeed;
+    public bool isGameing = false;
 
     private void Start() {
         Hide(); // 初始隐藏
     }
 
     private void Update() {
-        if (isGameStart && !isGameEnd) {
+        if (isGameing) {
             gameTimer += Time.deltaTime;
             // 更新进度遮罩比例（随时间减少）
             filgMeterMask.fillAmount = (gameTime - gameTimer) / gameTime;
 
-            if (gameTimer > gameTime * 0.25 && setSpeed == 0) {
-                setSpeed++;
-                ZombieManager.Instance.setSpawnZombieSpeed(1.5f);
-                ZombieManager.Instance.setSpawnLevel(2, 7);
-            }
-
-            if (gameTimer > gameTime * 0.45 && isHugeWave == false) {
-                isHugeWave = true;
-
-                UIManager.Instance.hugeWaveUI.Show();
-            }
-
-            if (gameTimer > gameTime * 0.75 && setSpeed == 1) {
-                setSpeed++;
-                ZombieManager.Instance.setSpawnZombieSpeed(0.5f);
-                ZombieManager.Instance.setSpawnLevel(4, 7);
-            }
-
-            // 时间到，显示结束界面
-            if (gameTimer > gameTime && isGameEnd == false) {
-                isGameEnd = true;
-   
-                UIManager.Instance.finalWaveUI.Show();
-                
-            }
+            LevelManager.Instance.level.GameController(gameTime, gameTimer);
         }
     }
 
     // 游戏开始：显示进度条并启动头部图标动画
     public void GameStart() {
-        isGameStart = true;
+        isGameing = true;
         Show();
         // 头部图标从起点移动到终点（时长=游戏总时间）
         filgMeterHead.transform.DOMove(endPosition.position, gameTime).SetEase(Ease.Linear);

@@ -7,8 +7,10 @@ public class Config : MonoBehaviour {
 
     // 背景音乐路径 (1)
     public const string bgm1 = "Audio/Music/bgm1";
+    // 背景音乐路径 (1)
+    public const string bgm2 = "Audio/Music/bgm2";
     // 背景音乐路径 (3)
-    public const string bgm3 = "Audio/Music/bgm3";
+    public const string prepareBgm = "Audio/Music/prepareBgm";
     // 音效路径：阳光收集音效
     public const string sunClick = "Audio/Sound/points";
     // 音效路径：游戏胜利音效
@@ -97,4 +99,9 @@ public class Config : MonoBehaviour {
     public const string paper = "Audio/Sound/paper";
     public const string paperCry = "Audio/Sound/newspaper_rarrgh";
     public const string paperCry2 = "Audio/Sound/newspaper_rarrgh2";
+    public const string graveButton = "Audio/Sound/gravebutton";
+    public const string hypnoZombie = "Audio/Sound/mindcontrolled";
+    public const string dance = "Audio/Sound/Dancer";
+    public const string spawnGrave = "Audio/Sound/gravestone_rumble";
+    public const string busterGrave = "Audio/Sound/gravebusterchomp";
 }

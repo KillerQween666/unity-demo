@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,7 +43,9 @@ public class ZombieManager : MonoBehaviour {
     private float spawnZombieTimer;
 
     private int spawnlowerLevel = 0;
-    private int spawnUpperLevel = 4;
+    private int spawnUpperLevel = 2;
+
+    public string[] layerNames = new string[] { "Row1", "Row2", "Row3", "Row4", "Row5" };
 
     // 初始化单例
     private void Awake() {
@@ -100,62 +103,42 @@ public class ZombieManager : MonoBehaviour {
         spawnState = SpawnState.Spawning; // 切换到生成中状态
     }
 
-    public void SpawnHugeWaveZombie() {
-        StartCoroutine(HugeWaveSpawn());
+    public void HugeWaveSpawnLast1() {
+        LevelManager.Instance.level.HugeWaveLast1();
     }
 
-    public void SpawnFinalWaveZombie() {
-        StartCoroutine(FinalWaveSpawn());
+    public void HugeWaveSpawnLast2() {
+        LevelManager.Instance.level.HugeWaveLast2();
     }
 
-    private IEnumerator HugeWaveSpawn() {
-        SpawnFlagZombie();
-
-        for (int i = 0; i < 2; i ++) {
-            yield return new WaitForSeconds(0.5f);
-            SpawnRowZombie(0);
-            yield return new WaitForSeconds(0.25f);
-            SpawnRowZombie(1);
-        }
-        
-    }
-
-    public IEnumerator FinalWaveSpawn() {
-        
-        SpawnFlagBucketZombie();
-
-        for (int i = 0; i < 3; i ++) {
-            yield return new WaitForSeconds(0.5f);
-            SpawnRowZombie(2);
-            yield return new WaitForSeconds(0.25f);
-            SpawnRowZombie(3);
-        }
-
+    public void FinalWaveSpawn() {
+        LevelManager.Instance.level.FinalWave();
         spawnState = SpawnState.End;
     }
 
     // 随机生成一只僵尸（随机选择一个生成点）
-    private void SpawnRandomZombie() {
+    public void SpawnRandomZombie(int ran = -1) {
 
         int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
         // 实例化普通僵尸到选中的生成点
 
-        int ran = Random.Range(spawnlowerLevel, spawnUpperLevel);
+        if (ran == -1)   ran = Random.Range(spawnlowerLevel, spawnUpperLevel);
+
         Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
         spawnZombieTime = spawnZombieSpeed * spawnWeights[ran];
 
         // 调整僵尸所有子物体的渲染层级（按生成点行号和排序值，避免同屏僵尸遮挡）
         SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
-            sprite.sortingOrder += index * 1000 + sortOrder;
+            sprite.sortingLayerName = layerNames[index];
+            sprite.sortingOrder += sortOrder;
         }
-        sortOrder += 100; // 每生成一只僵尸，排序值递增（后生成的显示在上面）
-
-        zombieCount++; // 僵尸总数+1
+        zombie.row = index;
+        AddZombie();
     }
 
     // 生成一只旗帜僵尸（随机选择一个生成点）
-    private void SpawnFlagBucketZombie() {
+    public void SpawnFlagBucketZombie() {
         int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
         // 实例化旗帜僵尸到选中的生成点
         Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
@@ -163,14 +146,14 @@ public class ZombieManager : MonoBehaviour {
         // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
         SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
-            sprite.sortingOrder += index * 1000 + sortOrder;
+            sprite.sortingLayerName = layerNames[index];
+            sprite.sortingOrder += sortOrder;
         }
-        sortOrder += 100;
-
-        zombieCount++; // 僵尸总数+1
+        zombie.row = index;
+        AddZombie();
     }
 
-    private void SpawnFlagZombie() {
+    public void SpawnFlagZombie() {
         int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
         // 实例化旗帜僵尸到选中的生成点
         Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
@@ -178,15 +161,15 @@ public class ZombieManager : MonoBehaviour {
         // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
         SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
-            sprite.sortingOrder += index * 1000 + sortOrder;
+            sprite.sortingLayerName = layerNames[index];
+            sprite.sortingOrder += sortOrder;
         }
-        sortOrder += 100;
-
-        zombieCount++; // 僵尸总数+1
+        zombie.row = index;
+        AddZombie();
     }
 
     // 生成一整行选定的僵尸（覆盖所有生成点，每行5只）
-    private void SpawnRowZombie(int ran) {
+    public void SpawnRowZombie(int ran) {
         // 遍历所有生成点，每个点生成一只铁桶僵尸
         for (int i = 0; i < 5; i++) {
             Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
@@ -194,11 +177,12 @@ public class ZombieManager : MonoBehaviour {
             // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
             SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
             foreach (var sprite in sprites) {
-                sprite.sortingOrder += i * 1000 + sortOrder;
+                sprite.sortingLayerName = layerNames[i];
+                sprite.sortingOrder += sortOrder;
             }
-            sortOrder += 100;
 
-            zombieCount++; // 僵尸总数+1
+            zombie.row = i;
+            AddZombie();
         }
     }
 
@@ -211,9 +195,58 @@ public class ZombieManager : MonoBehaviour {
         spawnUpperLevel = upperLevel;
     }
 
+    public void AddZombie() {
+        sortOrder += 100;
+        zombieCount++;
+    }
+
     // 移除一只僵尸（僵尸死亡时调用，减少总数）
     public void RemoveZombie() {
         zombieCount--;
+    }
+
+    public void SpawnAllTombstoneZombiesIenumerator(int ran, int ran2 = -1) {
+        StartCoroutine(SpawnAllTombstoneZombies(ran, ran2));
+    }
+
+    public IEnumerator SpawnAllTombstoneZombies(int ran, int ran2 = -1) {
+        List<Cell> cellList = CellManager.Instance.GetAllHaveBraveCell();
+        AudioManager.Instance.PlayClip(Config.spawnGrave);
+
+        foreach (var cell in cellList) {
+
+            Vector3 dirtPosition = cell.transform.position;
+            dirtPosition.y -= 0.5f;
+
+            ObjectPoolManager.Instance.PlayDirtSmallParticalIEnumrator(dirtPosition);
+            ObjectPoolManager.Instance.PlayDirtBigParticalIEnumrator(cell.transform.position);
+        }
+
+        yield return new WaitForSeconds(1);
+
+        foreach (var cell in cellList) {
+            Zombie zombie;
+
+            Vector3 position = cell.transform.position, position2 = cell.transform.position;
+            position.y -= 2f;
+            position2.y -= 1f;
+
+            if (ran2 != -1) {
+                zombie = Instantiate(zombiePrefabs[Random.Range(ran, ran2)], position, Quaternion.identity);
+            } else {
+               zombie = Instantiate(zombiePrefabs[ran], position, Quaternion.identity);
+            }
+
+            zombie.transform.DOMoveY(position2.y, 0.2f);  
+
+            SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = layerNames[cell.row];
+                sprite.sortingOrder += sortOrder;
+            }
+
+            AddZombie();
+        }
     }
 
 }

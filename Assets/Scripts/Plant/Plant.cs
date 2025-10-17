@@ -18,6 +18,8 @@ public class Plant : MonoBehaviour {
     public Collider2D grandCollider2D; // 子物体碰撞体（如攻击判定区域）
     public Collider2D grand2Collider2d;
 
+    public Cell selfCell;
+
     public int HP = 100; // 植物生命值
 
     protected List<SpriteRenderer> spriteList = new List<SpriteRenderer>(); // 所有渲染器列表（用于受击闪烁）
@@ -32,7 +34,7 @@ public class Plant : MonoBehaviour {
     public GameObject shadow; // 植物的影子对象
 
     // 初始化：收集所有子物体的渲染器（含未激活的）
-    private void Start() {
+    protected void Start() {
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
             spriteList.Add(sprite);

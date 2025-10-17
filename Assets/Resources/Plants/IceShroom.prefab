@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 608711427537847722}
   - component: {fileID: 188178049721920584}
   - component: {fileID: 7563911999084347933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceShroom
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   animator: {fileID: 980237376093252303}
   grandAnimator: {fileID: 0}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 774887885479146894}
@@ -86,7 +88,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2363149, y: 0.059910893}
+  m_Offset: {x: -0.0799135, y: -0.078439176}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -97,7 +99,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.846894, y: 1.0133135}
+  m_Size: {x: 1.294884, y: 1.540361}
   m_EdgeRadius: 0
 --- !u!1 &774887885479146894
 GameObject:

@@ -87,7 +87,7 @@ public class ZombieBucketFlag : ZombieCommon {
         worstBucket.enabled = false; // Òş²ØÍ°
 
         // ²¥·ÅÍ°ÆÆËéµÄÌØĞ§
-        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // ÖØĞ´ÊÜ»÷ÒôĞ§£¨¸ù¾İÍ°µÄ×´Ì¬²¥·Å²»Í¬ÒôĞ§£©
@@ -115,7 +115,7 @@ public class ZombieBucketFlag : ZombieCommon {
         isFlagDead = true;
         badFlag.enabled = false; // Òş²ØÆìÖÄ
         // ²¥·ÅÆìÖÄÏûÊ§µÄÌØĞ§
-        ObjectPoolManager.Instance.PlayFlagEmissionIEnumrator(flagEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayFlagEmissionIEnumrator(flagEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze, isHypno);
 
         // ÇĞ»»½©Ê¬µÄÏÔÊ¾×´Ì¬£¨Òş²Ø²¿·ÖäÖÈ¾Æ÷£¬ÏÔÊ¾ÁíÒ»²¿·Ö£©
         hideSprite.ForEach(r => r.enabled = true);

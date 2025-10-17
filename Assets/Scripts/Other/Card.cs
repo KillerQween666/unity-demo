@@ -149,12 +149,15 @@ public class Card : MonoBehaviour {
 
     // 卡牌点击事件（UI按钮绑定）
     public void OnClick() {
+        if (HandManager.Instance.currentPlant != null || HandManager.Instance.shovel.activeSelf) return;
+
         if (cardState == CardState.Ready) {
             // 准备就绪时：选中卡牌，让植物跟随鼠标
             TransitionToPlanting();
             HandManager.Instance.AddPlant(plantType);
         } else if (cardState == CardState.select) {
             // 选中状态时：切换卡牌在卡槽/卡池的位置
+            if (GameManager.Instance.isGameStart == true) return;
             if (isInSlot) {
                 isInSlot = false;
                 CardSlotManager.Instance.MoveToPool(this); // 移回卡池

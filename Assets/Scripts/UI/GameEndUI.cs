@@ -14,7 +14,6 @@ public class GameEndUI : MonoBehaviour {
     // œ‘ æΩ· ¯ΩÁ√Ê
     public void Show() {
         isGameEnd = true;
-        AudioManager.Instance.StopBgm(); // Õ£÷π±≥æ∞“Ù¿÷
         gameEndImage.SetActive(true);
     }
 

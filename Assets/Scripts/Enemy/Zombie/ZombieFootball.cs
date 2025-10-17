@@ -75,7 +75,7 @@ public class ZombieFootball : Zombie {
         worstHelmet.enabled = false; // 隐藏桶
 
         // 播放桶破碎的特效
-        ObjectPoolManager.Instance.PlayFootballHelmetEmissionIEnumrator(helmetEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayFootballHelmetEmissionIEnumrator(helmetEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 隐藏头部处理（含状态更新和特效）
@@ -88,7 +88,7 @@ public class ZombieFootball : Zombie {
         headRenderers.ForEach(r => r.enabled = false); // 隐藏所有头部渲染器
 
         // 播放头部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayFootballHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayFootballHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 隐藏手部处理（含特效）
@@ -99,7 +99,7 @@ public class ZombieFootball : Zombie {
         handRenderers.ForEach(r => r.enabled = false); // 隐藏所有手部渲染器
 
         // 播放手部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayFootballHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayFootballHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
 }

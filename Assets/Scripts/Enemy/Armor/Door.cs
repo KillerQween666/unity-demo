@@ -34,7 +34,7 @@ public class Door : Enemy {
             zombie.hideSprite.ForEach(r => r.enabled = true);
             zombie.showSprite.ForEach(r => r.enabled = false);
             zombie.DoorDead();
-            if (hurtType == 0 || hurtType == 3) zombie.PlayDoorEmission();
+            if (hurtType != 1 && hurtType != 2) zombie.PlayDoorEmission();
             Destroy(this.gameObject);
         }
     }

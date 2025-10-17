@@ -23,8 +23,7 @@ public class MenuUI : MonoBehaviour {
     public void Show() {
         if (menuImage.activeSelf) return; // ÒÑÏÔÊ¾ÔòÍË³ö
 
-        AudioManager.Instance.PlayClip(Config.buttonClick);
-        AudioManager.Instance.StopBgm(); // Í£Ö¹±³¾°ÒôÀÖ
+        AudioManager.Instance.PlayClip(Config.graveButton);
         GameManager.Instance.PauseGame(); // ÔİÍ£ÓÎÏ·
         menuImage.SetActive(true);
     }
@@ -33,8 +32,7 @@ public class MenuUI : MonoBehaviour {
     public void Hide() {
         if (!menuImage.activeSelf) return; // ÒÑÒş²ØÔòÍË³ö
 
-        AudioManager.Instance.PlayClip(Config.buttonClick);
-        AudioManager.Instance.PlayBgm(); // »Ö¸´±³¾°ÒôÀÖ
+        AudioManager.Instance.PlayClip(Config.graveButton);
         GameManager.Instance.ResumeGame(); // »Ö¸´ÓÎÏ·
         menuImage.SetActive(false);
     }

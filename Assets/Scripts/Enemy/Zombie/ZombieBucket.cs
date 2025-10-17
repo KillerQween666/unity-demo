@@ -67,7 +67,7 @@ public class ZombieBucket : ZombieCommon {
         worstBucket.enabled = false; // 隐藏桶
 
         // 播放桶破碎的特效
-        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 重写受击音效（根据桶是否损坏播放不同音效）

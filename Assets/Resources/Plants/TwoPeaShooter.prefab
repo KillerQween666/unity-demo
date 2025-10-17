@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 4392531706381407325}
   - component: {fileID: 5434062111979037028}
   - component: {fileID: 8936677734294789503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TwoPeaShooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -822,6 +822,8 @@ MonoBehaviour:
   animator: {fileID: 7572281291578219740}
   grandAnimator: {fileID: 5544585212621026728}
   grandCollider2D: {fileID: 198126345362348561}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 1711495851387925192}
@@ -860,7 +862,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23460597, y: -0.007956564}
+  m_Offset: {x: 0.042945027, y: -0.06785059}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -871,7 +873,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7695538, y: 0.79583514}
+  m_Size: {x: 1.1528757, y: 1.3468604}
   m_EdgeRadius: 0
 --- !u!1 &3686560343415242059
 GameObject:
@@ -1946,6 +1948,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   grandAnimator: {fileID: 0}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 0}

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using FTRuntime;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,6 +36,10 @@ public class ObjectPoolManager : MonoBehaviour {
     public GameObject iceShroomBoomPartical;
     public GameObject doomShroomBoomPartical;
     public GameObject iceCrackPartical;
+    public GameObject hypnoPartical;
+    public GameObject dirtSmallPartical;
+    public GameObject dirtBigPartical;
+    public GameObject rockSmallPartical;
     public GameObject wallnutHurtSmallPartical;  // 坚果墙轻伤粒子预制体
     public GameObject wallnutHurtLargePartical;  // 坚果墙重伤粒子预制体
     public GameObject zombieBoomSwf;             // 僵尸被炸飞动画预制体
@@ -46,6 +51,10 @@ public class ObjectPoolManager : MonoBehaviour {
     public GameObject paperHeadEmissionPartical;
     public GameObject paperHandEmissionPartical;
     public GameObject paperEmissionPartical;
+    public GameObject dancerHeadEmissionPartical;
+    public GameObject dancerHandEmissionPartical;
+    public GameObject jaksonHeadEmissionPartical;
+    public GameObject jaksonHandEmissionPartical;
 
     // 各类对象对应的对象池（管理对象的创建、复用、销毁全生命周期）
     private ObjectPool<GameObject> peaBulletParticalPool;
@@ -69,6 +78,10 @@ public class ObjectPoolManager : MonoBehaviour {
     private ObjectPool<GameObject> iceShroomBoomParticalPool;
     private ObjectPool<GameObject> doomShroomBoomParticalPool;
     private ObjectPool<GameObject> iceCrackParticalPool;
+    private ObjectPool<GameObject> hypnoParticalPool;
+    private ObjectPool<GameObject> dirtSmallParticalPool;
+    private ObjectPool<GameObject> dirtBigParticalPool;
+    private ObjectPool<GameObject> rockSmallParticalPool;
     private ObjectPool<GameObject> wallnutHurtSmallParticalPool;  // 坚果墙轻伤粒子池
     private ObjectPool<GameObject> wallnutHurtLargeParticalPool;  // 坚果墙重伤粒子池
     private ObjectPool<GameObject> zombieBoomSwfPool;             // 僵尸被炸飞动画池
@@ -80,8 +93,13 @@ public class ObjectPoolManager : MonoBehaviour {
     private ObjectPool<GameObject> paperHeadEmissionParticalPool;
     private ObjectPool<GameObject> paperHandEmissionParticalPool;
     private ObjectPool<GameObject> paperEmissionParticalPool;
+    private ObjectPool<GameObject> dancerHeadEmissionParticalPool;
+    private ObjectPool<GameObject> dancerHandEmissionParticalPool;
+    private ObjectPool<GameObject> jaksonHeadEmissionParticalPool;
+    private ObjectPool<GameObject> jaksonHandEmissionParticalPool;
 
     private Color crozeColor = new Color(0.4f, 0.5568f, 1);  // 特殊发射粒子颜色（如冰冻效果）
+    private Color hypnoColor = new Color(0.9320f, 0, 0.6588f);
 
     // 初始化单例，确保全局唯一实例
     private void Awake() {
@@ -160,6 +178,38 @@ public class ObjectPoolManager : MonoBehaviour {
 
         doomShroomBoomParticalPool = new ObjectPool<GameObject>(
             CreateDoomShroomBoomPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        hypnoParticalPool = new ObjectPool<GameObject>(
+            CreateHypnoPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        dirtSmallParticalPool = new ObjectPool<GameObject>(
+            CreateDirtSmallPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        dirtBigParticalPool = new ObjectPool<GameObject>(
+            CreateDirtBigPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        rockSmallParticalPool = new ObjectPool<GameObject>(
+            CreateRockSmallPartical,
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
@@ -296,7 +346,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         // 僵尸被炸飞动画池：基础对象池配置
@@ -313,7 +363,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         footballHeadEmissionParticalPool = new ObjectPool<GameObject>(
@@ -321,7 +371,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         footballHandEmissionParticalPool = new ObjectPool<GameObject>(
@@ -329,7 +379,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         footballHelmetEmissionParticalPool = new ObjectPool<GameObject>(
@@ -337,7 +387,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         paperHeadEmissionParticalPool = new ObjectPool<GameObject>(
@@ -345,7 +395,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
         paperHandEmissionParticalPool = new ObjectPool<GameObject>(
@@ -353,7 +403,39 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
+        );
+
+        dancerHeadEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateDancerHeadEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        dancerHandEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateDancerHandEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        jaksonHeadEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateJaksonHeadEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
+        );
+
+        jaksonHandEmissionParticalPool = new ObjectPool<GameObject>(
+            CreateJaksonHandEmissionPartical,
+            ActionOnGet,
+            ActionOnRelease,
+            ActionOnDestroy,
+            true, 10, 300
         );
 
         paperEmissionParticalPool = new ObjectPool<GameObject>(
@@ -361,7 +443,7 @@ public class ObjectPoolManager : MonoBehaviour {
             ActionOnGet,
             ActionOnRelease,
             ActionOnDestroy,
-            true, 2, 300
+            true, 10, 300
         );
 
     }
@@ -395,6 +477,22 @@ public class ObjectPoolManager : MonoBehaviour {
 
     GameObject CreateDoomShroomBoomPartical() {
         return Instantiate(doomShroomBoomPartical);
+    }
+
+    GameObject CreateHypnoPartical() {
+        return Instantiate(hypnoPartical);
+    }
+
+    GameObject CreateDirtSmallPartical() {
+        return Instantiate(dirtSmallPartical);
+    }
+
+    GameObject CreateDirtBigPartical() {
+        return Instantiate(dirtBigPartical);
+    }
+
+    GameObject CreateRockSmallPartical() {
+        return Instantiate(rockSmallPartical);
     }
 
     // 创建樱桃炸弹爆炸粒子实例
@@ -501,6 +599,22 @@ public class ObjectPoolManager : MonoBehaviour {
 
     GameObject CreatePaperHandEmissionPartical() {
         return Instantiate(paperHandEmissionPartical);
+    }
+
+    GameObject CreateDancerHeadEmissionPartical() {
+        return Instantiate(dancerHeadEmissionPartical);
+    }
+
+    GameObject CreateDancerHandEmissionPartical() {
+        return Instantiate(dancerHandEmissionPartical);
+    }
+
+    GameObject CreateJaksonHeadEmissionPartical() {
+        return Instantiate(jaksonHeadEmissionPartical);
+    }
+
+    GameObject CreateJaksonHandEmissionPartical() {
+        return Instantiate(jaksonHandEmissionPartical);
     }
 
     GameObject CreatePaperEmissionPartical() {
@@ -757,6 +871,34 @@ public class ObjectPoolManager : MonoBehaviour {
         paperHandEmissionParticalPool.Release(gameObject);
     }
 
+    public GameObject GetDancerHeadEmissionPartical() {
+        return dancerHeadEmissionParticalPool.Get();
+    }
+    public void ReleaseDancerHeadEmissionPartical(GameObject gameObject) {
+        dancerHeadEmissionParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetJaksonHeadEmissionPartical() {
+        return jaksonHeadEmissionParticalPool.Get();
+    }
+    public void ReleaseJaksonHeadEmissionPartical(GameObject gameObject) {
+        jaksonHeadEmissionParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetDancerHandEmissionPartical() {
+        return dancerHandEmissionParticalPool.Get();
+    }
+    public void ReleaseDancerHandEmissionPartical(GameObject gameObject) {
+        dancerHandEmissionParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetJaksonHandEmissionPartical() {
+        return jaksonHandEmissionParticalPool.Get();
+    }
+    public void ReleaseJaksonHandEmissionPartical(GameObject gameObject) {
+        jaksonHandEmissionParticalPool.Release(gameObject);
+    }
+
     public GameObject GetPaperEmissionPartical() {
         return paperEmissionParticalPool.Get();
     }
@@ -787,7 +929,6 @@ public class ObjectPoolManager : MonoBehaviour {
         return iceCrackParticalPool.Get();
     }
 
-    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
     public void ReleaseIceCrackPartical(GameObject gameObject) {
         iceCrackParticalPool.Release(gameObject);
     }
@@ -796,9 +937,40 @@ public class ObjectPoolManager : MonoBehaviour {
         return doomShroomBoomParticalPool.Get();
     }
 
-    // 对外提供：回收土豆地雷爆炸粒子（爆炸效果播放完成后调用）
     public void ReleaseDoomShroomBoomPartical(GameObject gameObject) {
         doomShroomBoomParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetHypnoPartical() {
+        return hypnoParticalPool.Get();
+    }
+
+    public void ReleaseHypnoPartical(GameObject gameObject) {
+        hypnoParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetDirtSmallPartical() {
+        return dirtSmallParticalPool.Get();
+    }
+
+    public void ReleaseDirtSmallPartical(GameObject gameObject) {
+        dirtSmallParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetDirtBigPartical() {
+        return dirtBigParticalPool.Get();
+    }
+
+    public void ReleaseDirtBigPartical(GameObject gameObject) {
+        dirtBigParticalPool.Release(gameObject);
+    }
+
+    public GameObject GetRockSmallPartical() {
+        return rockSmallParticalPool.Get();
+    }
+
+    public void ReleaseRockSmallPartical(GameObject gameObject) {
+        rockSmallParticalPool.Release(gameObject);
     }
 
     // 对外提供：获取坚果墙轻伤粒子（如坚果墙受轻微攻击时调用）
@@ -869,72 +1041,88 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 对外提供：播放普通僵尸头部发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色（如冰冻效果）
-    public void PlayHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayHeadEmissionPartical(transform, sort, isCroze));
+    public void PlayHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayHeadEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放普通僵尸手部发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayHandEmissionPartical(transform, sort, isCroze));
+    public void PlayHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayHandEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayDoorEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayDoorEmissionPartical(transform, sort, isCroze));
+    public void PlayDoorEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayDoorEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayFootballHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayFootballHeadEmissionPartical(transform, sort, isCroze));
+    public void PlayFootballHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayFootballHeadEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayFootballHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayFootballHandEmissionPartical(transform, sort, isCroze));
+    public void PlayFootballHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayFootballHandEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayFootballHelmetEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayFootballHelmetEmissionPartical(transform, sort, isCroze));
+    public void PlayFootballHelmetEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayFootballHelmetEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayPaperHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayPaperHeadEmissionPartical(transform, sort, isCroze));
+    public void PlayPaperHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayPaperHeadEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayPaperHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayPaperHandEmissionPartical(transform, sort, isCroze));
+    public void PlayPaperHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayPaperHandEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
-    public void PlayPaperEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayPaperEmissionPartical(transform, sort, isCroze));
+    public void PlayDancerHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayDancerHeadEmissionPartical(transform, sort, isCroze, isHypno));
+    }
+
+    public void PlayDancerHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayDancerHandEmissionPartical(transform, sort, isCroze, isHypno));
+    }
+
+    public void PlayJaksonHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayJaksonHeadEmissionPartical(transform, sort, isCroze, isHypno));
+    }
+
+    public void PlayJaksonHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayJaksonHandEmissionPartical(transform, sort, isCroze, isHypno));
+    }
+
+    public void PlayPaperEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayPaperEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放撑杆僵尸头部发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayPoleHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayPoleHeadEmissionPartical(transform, sort, isCroze));
+    public void PlayPoleHeadEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayPoleHeadEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放撑杆僵尸手部发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayPoleHandEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayPoleHandEmissionPartical(transform, sort, isCroze));
+    public void PlayPoleHandEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayPoleHandEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放路障僵尸发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayConeEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayConeEmissionPartical(transform, sort, isCroze));
+    public void PlayConeEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayConeEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放铁桶僵尸发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayBucketEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayBucketEmissionPartical(transform, sort, isCroze));
+    public void PlayBucketEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayBucketEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放旗帜僵尸发射粒子（启动协程控制播放逻辑）
     // 参数：粒子位置、渲染层级、是否使用特殊颜色
-    public void PlayFlagEmissionIEnumrator(Transform transform, int sort, bool isCroze) {
-        StartCoroutine(PlayFlagEmissionPartical(transform, sort, isCroze));
+    public void PlayFlagEmissionIEnumrator(Transform transform, int sort, bool isCroze, bool isHypno) {
+        StartCoroutine(PlayFlagEmissionPartical(transform, sort, isCroze, isHypno));
     }
 
     // 对外提供：播放土豆地雷爆炸粒子（启动协程控制播放逻辑）
@@ -953,6 +1141,22 @@ public class ObjectPoolManager : MonoBehaviour {
 
     public void PlayDoomShroomBoomParticalIEnumrator(Transform transform) {
         StartCoroutine(PlayDoomShroomBoomPartical(transform));
+    }
+
+    public void PlayHypnoParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayHypnoPartical(transform));
+    }
+
+    public void PlayDirtSmallParticalIEnumrator(Vector3 position) {
+        StartCoroutine(PlayDirtSmallPartical(position));
+    }
+
+    public void PlayDirtBigParticalIEnumrator(Vector3 position) {
+        StartCoroutine(PlayDirtBigPartical(position));
+    }
+
+    public void PlayRockSmallParticalIEnumrator(Transform transform) {
+        StartCoroutine(PlayRockSmallPartical(transform));
     }
 
     // 对外提供：播放樱桃炸弹爆炸粒子（启动协程控制播放逻辑）
@@ -1101,6 +1305,82 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseDoomShroomBoomPartical(obj);                  // 将粒子组合对象回收到池
     }
 
+    public IEnumerator PlayHypnoPartical(Transform transform) {
+        GameObject obj = GetHypnoPartical();       // 从对象池获取樱桃炸弹爆炸粒子对象
+        obj.transform.position = transform.position;        // 将粒子位置设置为爆炸发生的位置
+        var partical = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件，用于控制播放逻辑
+
+        partical.Play();                                    // 启动粒子播放（触发爆炸效果）
+
+        // 等待粒子播放完成：根据粒子系统自身配置的"总时长"等待，确保效果完整显示
+        yield return new WaitForSeconds(partical.main.duration);
+
+        partical.Clear();                                   // 清除粒子系统中残留的粒子，避免下次复用时有残影
+
+        ReleaseHypnoPartical(obj);                // 将粒子组合对象回收到池
+    }
+
+    public IEnumerator PlayDirtSmallPartical(Vector3 position) {
+        GameObject obj = GetDirtSmallPartical();       // 从对象池获取樱桃炸弹爆炸粒子对象
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }                              // 清除粒子系统中残留的粒子，避免下次复用时有残影
+
+        ReleaseDirtSmallPartical(obj);                // 将粒子组合对象回收到池
+    }
+
+    public IEnumerator PlayDirtBigPartical(Vector3 position) {
+        GameObject obj = GetDirtBigPartical();       // 从对象池获取樱桃炸弹爆炸粒子对象
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }                              // 清除粒子系统中残留的粒子，避免下次复用时有残影
+
+        ReleaseDirtBigPartical(obj);                // 将粒子组合对象回收到池
+    }
+
+    public IEnumerator PlayRockSmallPartical(Transform transform) {
+        GameObject obj = GetRockSmallPartical();       // 从对象池获取樱桃炸弹爆炸粒子对象
+        obj.transform.position = transform.position;        // 将粒子位置设置为爆炸发生的位置
+        var particals = obj.GetComponentsInChildren<ParticleSystem>(true);
+        obj.transform.position = transform.position;    // 将粒子组合的位置设置为爆炸发生的位置
+
+        obj.transform.DOMoveY(obj.transform.position.y - 0.5f, 5f)
+            .SetEase(Ease.Linear);
+
+        foreach (var ps in particals) {
+            ps.Play();                                  // 遍历并启动所有粒子系统，触发完整爆炸效果
+        }
+
+        // 等待粒子播放完成：默认所有子粒子时长一致，取第一个粒子的时长作为等待依据
+        yield return new WaitForSeconds(particals[0].main.duration);
+
+        foreach (var ps in particals) {
+            ps.Clear();                                 // 清除所有粒子系统的残留粒子
+        }                          // 清除粒子系统中残留的粒子，避免下次复用时有残影
+
+        ReleaseRockSmallPartical(obj);                // 将粒子组合对象回收到池
+    }
+
     // 坚果墙轻伤粒子播放协程（控制多粒子组合系统的播放与回收）
     // 参数：transform - 粒子播放的目标位置（坚果墙的位置）
     public IEnumerator PlayWallnutHurtSmallPartical(Transform transform) {
@@ -1195,7 +1475,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 普通僵尸头部发射粒子播放协程：支持渲染层级与颜色切换的粒子控制
     // 参数：transform - 粒子位置（僵尸头部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1207,6 +1487,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1216,7 +1497,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseHeadEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayFootballHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayFootballHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetFootballHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1228,6 +1509,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1237,7 +1519,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseFootballHeadEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayFootballHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayFootballHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetFootballHandEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1249,6 +1531,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1258,7 +1541,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseFootballHandEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayPaperHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayPaperHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetPaperHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1270,6 +1553,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1279,7 +1563,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleasePaperHandEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayPaperHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayPaperHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetPaperHandEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1291,6 +1575,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1300,7 +1585,95 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleasePaperHandEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayPaperEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayDancerHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
+        GameObject obj = GetDancerHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，确保粒子在正确的视觉层级显示
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitForSeconds(particle.main.duration);
+
+        mainModule.startColor = originColor;            // 恢复粒子原始颜色，确保下次复用正常
+        particle.Clear();                               // 清除残留粒子
+        ReleaseDancerHandEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    public IEnumerator PlayDancerHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
+        GameObject obj = GetDancerHandEmissionPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，确保粒子在正确的视觉层级显示
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitForSeconds(particle.main.duration);
+
+        mainModule.startColor = originColor;            // 恢复粒子原始颜色，确保下次复用正常
+        particle.Clear();                               // 清除残留粒子
+        ReleaseDancerHandEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    public IEnumerator PlayJaksonHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
+        GameObject obj = GetJaksonHeadEmissionPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，确保粒子在正确的视觉层级显示
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitForSeconds(particle.main.duration);
+
+        mainModule.startColor = originColor;            // 恢复粒子原始颜色，确保下次复用正常
+        particle.Clear();                               // 清除残留粒子
+        ReleaseJaksonHandEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    public IEnumerator PlayJaksonHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
+        GameObject obj = GetJaksonHandEmissionPartical();      // 从对象池获取头部发射粒子对象
+        ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
+        // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
+        ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
+        renderer.sortingOrder = sort;                   // 设置渲染层级，确保粒子在正确的视觉层级显示
+        particle.transform.position = transform.position; // 设为僵尸头部位置，贴合攻击动作
+        particle.Play();                                // 启动头部发射粒子（如攻击闪光、唾沫效果）
+
+        var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
+        Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
+        if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
+
+        // 等待粒子自然播放完成：根据粒子自身配置的时长等待
+        yield return new WaitForSeconds(particle.main.duration);
+
+        mainModule.startColor = originColor;            // 恢复粒子原始颜色，确保下次复用正常
+        particle.Clear();                               // 清除残留粒子
+        ReleaseJaksonHandEmissionPartical(obj);               // 回收粒子对象到池
+    }
+
+    public IEnumerator PlayPaperEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetPaperEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1312,6 +1685,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1321,7 +1695,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleasePaperEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayFootballHelmetEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayFootballHelmetEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetFootballHelmetEmissionPartical();      // 从对象池获取头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         // 获取粒子渲染组件，用于控制显示层级（避免被僵尸模型或其他元素遮挡）
@@ -1333,6 +1707,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         // 等待粒子自然播放完成：根据粒子自身配置的时长等待
         yield return new WaitForSeconds(particle.main.duration);
@@ -1344,7 +1719,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 普通僵尸手部发射粒子播放协程：支持渲染层级与颜色切换的粒子控制
     // 参数：transform - 粒子位置（僵尸手部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetHandEmissionPartical();      // 从对象池获取手部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1355,6 +1730,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色（如冰冻状态）
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待粒子播放完成
 
@@ -1363,7 +1739,7 @@ public class ObjectPoolManager : MonoBehaviour {
         ReleaseHandEmissionPartical(obj);               // 回收粒子对象到池
     }
 
-    public IEnumerator PlayDoorEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayDoorEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetDoorEmissionPartical();      // 从对象池获取手部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();  // 获取粒子系统组件
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1374,6 +1750,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;                 // 获取粒子系统的"主模块"（控制颜色、时长等核心参数）
         Color originColor = mainModule.startColor.color; // 保存粒子原始颜色（避免复用后颜色被篡改）
         if (isCroze) mainModule.startColor = crozeColor; // 若需特殊颜色（如僵尸被冰冻时），切换为预设的crozeColor
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待粒子播放完成
 
@@ -1384,7 +1761,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 撑杆僵尸头部发射粒子播放协程：支持渲染层级与颜色切换
     // 参数：transform - 粒子位置（撑杆僵尸头部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayPoleHeadEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayPoleHeadEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetPoleHeadEmissionPartical();  // 从对象池获取撑杆僵尸头部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1395,6 +1772,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
 
@@ -1405,7 +1783,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 撑杆僵尸手部发射粒子播放协程：支持渲染层级与颜色切换
     // 参数：transform - 粒子位置（撑杆僵尸手部）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayPoleHandEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayPoleHandEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetPoleHandEmissionPartical();  // 从对象池获取撑杆僵尸手部发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1416,6 +1794,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
 
@@ -1426,7 +1805,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 路障僵尸发射粒子播放协程：支持渲染层级与颜色切换
     // 参数：transform - 粒子位置（路障僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayConeEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayConeEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetConeEmissionPartical();      // 从对象池获取路障僵尸发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1437,6 +1816,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
 
@@ -1447,7 +1827,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 铁桶僵尸发射粒子播放协程：支持渲染层级与颜色切换
     // 参数：transform - 粒子位置（铁桶僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayBucketEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayBucketEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetBucketEmissionPartical();    // 从对象池获取铁桶僵尸发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1458,6 +1838,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
 
@@ -1468,7 +1849,7 @@ public class ObjectPoolManager : MonoBehaviour {
 
     // 旗帜僵尸发射粒子播放协程：支持渲染层级与颜色切换
     // 参数：transform - 粒子位置（旗帜僵尸攻击部位）；sort - 渲染层级；isCroze - 是否启用特殊颜色
-    public IEnumerator PlayFlagEmissionPartical(Transform transform, int sort, bool isCroze) {
+    public IEnumerator PlayFlagEmissionPartical(Transform transform, int sort, bool isCroze, bool isHypno) {
         GameObject obj = GetFlagEmissionPartical();      // 从对象池获取旗帜僵尸发射粒子对象
         ParticleSystem particle = obj.GetComponent<ParticleSystem>();
         ParticleSystemRenderer renderer = particle.GetComponent<ParticleSystemRenderer>();
@@ -1479,6 +1860,7 @@ public class ObjectPoolManager : MonoBehaviour {
         var mainModule = particle.main;
         Color originColor = mainModule.startColor.color; // 保存原始颜色
         if (isCroze) mainModule.startColor = crozeColor; // 切换特殊颜色
+        if (isHypno) mainModule.startColor = hypnoColor; // 切换特殊颜色
 
         yield return new WaitForSeconds(particle.main.duration); // 等待播放完成
 

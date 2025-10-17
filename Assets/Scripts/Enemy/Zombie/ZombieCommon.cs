@@ -58,7 +58,7 @@ public class ZombieCommon : Zombie {
 
         headRenderers.ForEach(r => r.enabled = false); // 隐藏所有头部渲染器
         // 播放头部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayHeadEmissionIEnumrator(headEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 手部隐藏处理（含特效播放）
@@ -68,7 +68,7 @@ public class ZombieCommon : Zombie {
 
         handRenderers.ForEach(r => r.enabled = false); // 隐藏所有手部渲染器
         // 播放手部掉落特效（指定位置、层级和冻结状态）
-        ObjectPoolManager.Instance.PlayHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayHandEmissionIEnumrator(handEmissionTransform, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 重写死亡处理（先随机死亡动画，再执行父类逻辑）

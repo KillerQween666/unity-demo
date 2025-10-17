@@ -81,7 +81,7 @@ public class ZombieBucketDoor : ZombieCommon {
         worstBucket.enabled = false; // 隐藏桶
 
         // 播放桶破碎的特效
-        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayBucketEmissionIEnumrator(bucketEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     // 重写受击音效（根据桶的状态播放不同音效）
@@ -121,7 +121,7 @@ public class ZombieBucketDoor : ZombieCommon {
     }
 
     public void PlayDoorEmission() {
-        ObjectPoolManager.Instance.PlayDoorEmissionIEnumrator(doorEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayDoorEmissionIEnumrator(doorEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze, isHypno);
     }
 
     public virtual IEnumerator PlayDoorFlash() {

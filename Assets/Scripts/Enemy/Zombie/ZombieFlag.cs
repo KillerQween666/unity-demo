@@ -47,7 +47,7 @@ public class ZombieFlag : ZombieCommon {
         isFlagDead = true;
         badFlag.enabled = false;
         // ²¥·ÅÆìÖÄÌØĞ§
-        ObjectPoolManager.Instance.PlayFlagEmissionIEnumrator(flagEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze);
+        ObjectPoolManager.Instance.PlayFlagEmissionIEnumrator(flagEmissionTransfrom, spriteList[0].sortingOrder + 100, isCroze, isHypno);
 
         // ÇĞ»»äÖÈ¾Æ÷ÏÔÊ¾×´Ì¬
         hideSprite.ForEach(r => r.enabled = true);

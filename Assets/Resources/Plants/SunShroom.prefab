@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2356310954587695134}
   - component: {fileID: 7583920850733803591}
   - component: {fileID: 2468420004350461412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SunShroom
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -136,6 +136,7 @@ MonoBehaviour:
   grandAnimator: {fileID: 1346573898898458087}
   grandCollider2D: {fileID: 0}
   grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 7666443505086114647}
@@ -175,7 +176,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13868076, y: 0.17494053}
+  m_Offset: {x: -0.023033082, y: 0.07611537}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -186,7 +187,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5314933, y: 0.76289403}
+  m_Size: {x: 1.0346035, y: 1.2719934}
   m_EdgeRadius: 0
 --- !u!1 &2623617217282075324
 GameObject:
