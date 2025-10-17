@@ -22,7 +22,7 @@ public class PotatoMine : Plant {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (potateState != PotateState.Ready) return; // 非就绪状态不响应碰撞
 
-        if (collision.CompareTag("Zombie")) { // 检测到僵尸
+        if (collision.CompareTag("Zombie") && collision.TryGetComponent<Zombie>(out var zombie)) { // 检测到僵尸
             ObjectPoolManager.Instance.PlayPotatoBoomParticalIEnumrator(transform); // 播放爆炸前特效
             StartCoroutine(Boom()); // 启动爆炸协程
         }
@@ -101,8 +101,11 @@ public class PotatoMine : Plant {
         // 对爆炸范围内的所有僵尸执行死亡逻辑
         foreach (var coll in hitColliders) {
             if (coll != null) { // 避免空引用
-                if (coll.TryGetComponent<Zombie>(out var zombie)) { // 获取僵尸组件
-                    zombie.Dead(); // 直接杀死僵尸
+                Enemy enemy = coll.GetComponent<Enemy>();
+                if (enemy != null) {
+                    if (coll.TryGetComponent<Zombie>(out var zombie)) { // 获取僵尸组件
+                        zombie.TakeDamage(600, 2);
+                    }
                 }
             }
         }

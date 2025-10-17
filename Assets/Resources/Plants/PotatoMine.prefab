@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 2228146315715290314}
   - component: {fileID: 602900706666372761}
   - component: {fileID: 1638810365969899837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PotatoMine
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -169,6 +169,8 @@ MonoBehaviour:
   animator: {fileID: 321389447588400859}
   grandAnimator: {fileID: 6289885956021662812}
   grandCollider2D: {fileID: 3664986696788481580}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 3518021676449178954}
@@ -206,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12344837, y: 0.06571832}
+  m_Offset: {x: 0.0114507675, y: 0.1052469}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -217,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9897566, y: 0.6014717}
+  m_Size: {x: 1.2137518, y: 1.3525143}
   m_EdgeRadius: 0
 --- !u!1 &8162350063254127693
 GameObject:
@@ -367,7 +369,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.29601932, y: 0.06096831}
+  m_Offset: {x: 0.18094116, y: 0.099327624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -378,7 +380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3352971, y: 0.610972}
+  m_Size: {x: 1.5654534, y: 1.3562392}
   m_EdgeRadius: 0
 --- !u!1 &9196424368311682237
 GameObject:

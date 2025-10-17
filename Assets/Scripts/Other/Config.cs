@@ -7,8 +7,10 @@ public class Config : MonoBehaviour {
 
     // ±³¾°ÒôÀÖÂ·¾¶ (1)
     public const string bgm1 = "Audio/Music/bgm1";
+    // ±³¾°ÒôÀÖÂ·¾¶ (1)
+    public const string bgm2 = "Audio/Music/bgm2";
     // ±³¾°ÒôÀÖÂ·¾¶ (3)
-    public const string bgm3 = "Audio/Music/bgm3";
+    public const string prepareBgm = "Audio/Music/prepareBgm";
     // ÒôĞ§Â·¾¶£ºÑô¹âÊÕ¼¯ÒôĞ§
     public const string sunClick = "Audio/Sound/points";
     // ÒôĞ§Â·¾¶£ºÓÎÏ·Ê¤ÀûÒôĞ§
@@ -91,4 +93,15 @@ public class Config : MonoBehaviour {
     public const string bucket2 = "Audio/Sound/shieldhit2";
     // ÒôĞ§Â·¾¶£º ³Å¸ËÌø½©Ê¬ÌøÔ¾ÒôĞ§
     public const string jump = "Audio/Sound/polevault";
+    public const string doomShroomBoom = "Audio/Sound/DoomShroom";
+    public const string puff = "Audio/Sound/puff";
+    public const string fume = "Audio/Sound/fume";
+    public const string paper = "Audio/Sound/paper";
+    public const string paperCry = "Audio/Sound/newspaper_rarrgh";
+    public const string paperCry2 = "Audio/Sound/newspaper_rarrgh2";
+    public const string graveButton = "Audio/Sound/gravebutton";
+    public const string hypnoZombie = "Audio/Sound/mindcontrolled";
+    public const string dance = "Audio/Sound/Dancer";
+    public const string spawnGrave = "Audio/Sound/gravestone_rumble";
+    public const string busterGrave = "Audio/Sound/gravebusterchomp";
 }

@@ -40,11 +40,14 @@ public class Car : MonoBehaviour {
 
     // 触发碰撞时执行：启动小车移动，并对碰撞到的僵尸执行"推开"逻辑
     private void OnTriggerEnter2D(Collider2D collision) {
-        CarMove(); // 启动小车移动（播放动画、音效，标记为移动状态）
 
         // 如果碰撞到的是僵尸，调用僵尸的"压扁"方法
-        if (collision.CompareTag("Zombie")) {
-            collision.GetComponent<Zombie>().Push();
+        if (collision != null && collision.CompareTag("Zombie")) {
+            if (collision.TryGetComponent<Zombie>(out var zombie)) {
+                // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
+                CarMove();
+                zombie.Push();
+            }
         }
     }
 

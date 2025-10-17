@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6230524407221896022}
   - component: {fileID: 6295529187976391667}
   - component: {fileID: 8631489951957590915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chomper
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -136,6 +136,8 @@ MonoBehaviour:
   animator: {fileID: 2047617515194474459}
   grandAnimator: {fileID: 0}
   grandCollider2D: {fileID: 5457795948818705987}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 4693453318623515122}
@@ -173,7 +175,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20708495, y: 0.03734052}
+  m_Offset: {x: -0.009238303, y: 0.028588891}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -184,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7644185, y: 0.9328973}
+  m_Size: {x: 1.1214253, y: 1.5546429}
   m_EdgeRadius: 0
 --- !u!1 &4693453318623515122
 GameObject:

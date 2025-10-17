@@ -1,0 +1,601 @@
+fileFormatVersion: 2
+guid: f8222588fc18bae478c71ed02d9af0bc
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Gravebuster leaf5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 407
+      width: 47
+      height: 43
+    spriteID: a885ce9c06d439b4082d8f5ec1b84fe1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 407}
+    spritePosition: {x: 75, y: 230}
+  - name: Gravebuster leaf4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 392
+      y: 113
+      width: 42
+      height: 55
+    spriteID: ff09f5833ad31dd4f827a38c3afb533f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 392, y: 113}
+    spritePosition: {x: 177, y: 246}
+  - name: Gravebuster leaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 411
+      y: 356
+      width: 50
+      height: 41
+    spriteID: 39bd3ecd219f3004398f0824a626a0f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 411, y: 356}
+    spritePosition: {x: 299, y: 226}
+  - name: Gravebuster leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 356
+      width: 53
+      height: 43
+    spriteID: 29bfdcf10516f9644bf42c2867f6bb2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 356}
+    spritePosition: {x: 352, y: 156}
+  - name: Gravebuster leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 117
+      width: 59
+      height: 63
+    spriteID: 2a04145d054287c4d87fd8ebc097bd10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 117}
+    spritePosition: {x: 1, y: 168}
+  - name: Gravebuster eyebrows
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 356
+      width: 213
+      height: 46
+    spriteID: d25e1a627e1551e489ea3d5dbc2b113c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 356}
+    spritePosition: {x: 92, y: 194}
+  - name: Gravebuster head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 301
+      height: 189
+    spriteID: 2f6348c0a737d12439f5eb49998a76f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 54, y: 44}
+  - name: Gravebuster vines
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 201
+      width: 339
+      height: 147
+    spriteID: 61936800c6112ce41a005794189ffea2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 201}
+    spritePosition: {x: 33, y: 119}
+  - name: Gravebuster tooth4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 351
+      y: 201
+      width: 71
+      height: 109
+    spriteID: 1ddf0650b8bf12846a384afc27cfb06f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 351, y: 201}
+    spritePosition: {x: 200, y: 10}
+  - name: Gravebuster tooth5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 430
+      y: 201
+      width: 71
+      height: 109
+    spriteID: 3590ee7a03df01046a78d6ee9024a04a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 430, y: 201}
+    spritePosition: {x: 246, y: 12}
+  - name: Gravebuster tooth6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 356
+      width: 54
+      height: 101
+    spriteID: 48ecc5f3527dfa64695a5a517970dc18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 356}
+    spritePosition: {x: 288, y: 4}
+  - name: Gravebuster tooth3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 392
+      y: 4
+      width: 63
+      height: 101
+    spriteID: 8c99e6b8ed953b94da5482e2e757b25e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 392, y: 4}
+    spritePosition: {x: 152, y: 15}
+  - name: Gravebuster tooth2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 4
+      width: 71
+      height: 105
+    spriteID: 1b551cfc52f64d94680deab64deb90b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 4}
+    spritePosition: {x: 92, y: 12}
+  - name: Gravebuster tooth1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 356
+      width: 55
+      height: 105
+    spriteID: 41d3071f9f020174d869efd7b53c9a06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 356}
+    spritePosition: {x: 72, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Gravebuster leaf5
+    spriteName: Gravebuster leaf5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a885ce9c06d439b4082d8f5ec1b84fe1
+    layerID: 93
+    mosaicPosition: {x: 350, y: 407}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster leaf4
+    spriteName: Gravebuster leaf4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ff09f5833ad31dd4f827a38c3afb533f
+    layerID: 86
+    mosaicPosition: {x: 392, y: 113}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster leaf3
+    spriteName: Gravebuster leaf3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 39bd3ecd219f3004398f0824a626a0f1
+    layerID: 79
+    mosaicPosition: {x: 411, y: 356}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster leaf2
+    spriteName: Gravebuster leaf2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 29bfdcf10516f9644bf42c2867f6bb2c
+    layerID: 72
+    mosaicPosition: {x: 350, y: 356}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster leaf1
+    spriteName: Gravebuster leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2a04145d054287c4d87fd8ebc097bd10
+    layerID: 65
+    mosaicPosition: {x: 313, y: 117}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster eyebrows
+    spriteName: Gravebuster eyebrows
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d25e1a627e1551e489ea3d5dbc2b113c
+    layerID: 58
+    mosaicPosition: {x: 4, y: 356}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster head
+    spriteName: Gravebuster head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2f6348c0a737d12439f5eb49998a76f1
+    layerID: 51
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster vines
+    spriteName: Gravebuster vines
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 61936800c6112ce41a005794189ffea2
+    layerID: 44
+    mosaicPosition: {x: 4, y: 201}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth4
+    spriteName: Gravebuster tooth4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1ddf0650b8bf12846a384afc27cfb06f
+    layerID: 37
+    mosaicPosition: {x: 351, y: 201}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth5
+    spriteName: Gravebuster tooth5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3590ee7a03df01046a78d6ee9024a04a
+    layerID: 30
+    mosaicPosition: {x: 430, y: 201}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth6
+    spriteName: Gravebuster tooth6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 48ecc5f3527dfa64695a5a517970dc18
+    layerID: 23
+    mosaicPosition: {x: 288, y: 356}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth3
+    spriteName: Gravebuster tooth3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8c99e6b8ed953b94da5482e2e757b25e
+    layerID: 16
+    mosaicPosition: {x: 392, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth2
+    spriteName: Gravebuster tooth2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1b551cfc52f64d94680deab64deb90b1
+    layerID: 9
+    mosaicPosition: {x: 313, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gravebuster tooth1
+    spriteName: Gravebuster tooth1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 41d3071f9f020174d869efd7b53c9a06
+    layerID: 2
+    mosaicPosition: {x: 225, y: 356}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

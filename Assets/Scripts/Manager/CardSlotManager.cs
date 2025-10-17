@@ -53,7 +53,7 @@ public class CardSlotManager : MonoBehaviour {
 
         // 卡牌回到原始父物体和位置
         card.transform.SetParent(card.originParent);
-        card.GetComponent<RectTransform>().DOAnchorPos(card.originPosition, 0.3f);
+        card.GetComponent<RectTransform>().DOAnchorPos(card.originPosition, 0.1f);
 
         // 移除卡牌并调整后续卡牌位置
         int removeIndex = slotCards.IndexOf(card);
@@ -61,7 +61,7 @@ public class CardSlotManager : MonoBehaviour {
 
         // 后面的卡牌向前补位，播放移动动画
         for (int i = removeIndex; i < slotCards.Count; i++) {
-            slotCards[i].transform.DOMove(slotTransformList[i].position, 0.3f);
+            slotCards[i].transform.DOMove(slotTransformList[i].position, 0.1f);
         }
     }
 

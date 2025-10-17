@@ -34,3 +34,21 @@
 ![](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250925075430343.png
 
 ![image-20250925075805535](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20250925075805535.png)
+
+## 项目更新（10.17）
+
+1、新增关卡为黑夜的1-9，新增8个植物和五个僵尸，会随着时间生成墓碑并且晚上无阳光
+
+2、选择卡片白天会跳过并且可用为8个，黑夜为了演示植物将卡片槽改为了10个
+
+3、白天难度降低了一点，黑夜难度比起之前高了不少，有想挑战不丢车通关的可以尝试看看，
+
+下次更新会给黑夜关卡降低一点难度
+
+
+
+![image-20251017104845893](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251017104845893.png)
+
+![image-20251017105138200](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251017105138200.png)
+
+![image-20251017105247533](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251017105247533.png)

@@ -34,6 +34,6 @@ public class FinalWaveUI : MonoBehaviour {
     public void PlayFianlWaveAudio() {
         AudioManager.Instance.PlayClip(Config.finalwave);
         AudioManager.Instance.PlayClip(Config.waveSiren);
-        ZombieManager.Instance.SpawnFinalWaveZombie();
+        ZombieManager.Instance.FinalWaveSpawn();
     }
 }

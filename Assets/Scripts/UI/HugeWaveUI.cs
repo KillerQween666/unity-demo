@@ -7,22 +7,16 @@ public class HugeWaveUI : MonoBehaviour {
 
     private Animator animator; // 控制界面动画
 
+    private int waveIndex;
+
     private void Awake() {
         animator = GetComponent<Animator>();
     }
 
-    private void Start() {
-        Hide(); // 初始隐藏
-    }
-
-    // 隐藏界面（禁用动画组件）
-    public void Hide() {
-        animator.enabled = false;
-    }
-
     // 显示界面（启用动画组件）
-    public void Show() {
-        animator.enabled = true;
+    public void Show(int index) {
+        waveIndex = index;
+        animator.SetTrigger("isTrigger");
     }
 
     // 播放"巨浪"音效（动画事件调用）
@@ -33,6 +27,11 @@ public class HugeWaveUI : MonoBehaviour {
     // 播放"一大波"音效（动画事件调用）
     public void PlayWaveSirenAudio() {
         AudioManager.Instance.PlayClip(Config.waveSiren);
-        ZombieManager.Instance.SpawnHugeWaveZombie();
+        if (waveIndex == 1) {
+            ZombieManager.Instance.HugeWaveSpawnLast1();
+        } else if (waveIndex == 2) {
+            ZombieManager.Instance.HugeWaveSpawnLast2();
+        }
+        
     }
 }

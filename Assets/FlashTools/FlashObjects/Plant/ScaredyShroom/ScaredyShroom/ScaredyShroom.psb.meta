@@ -1,0 +1,755 @@
+fileFormatVersion: 2
+guid: d93af713abd4c3e4f98caae1cce32f42
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: sweat2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 218
+      y: 359
+      width: 24
+      height: 45
+    spriteID: 8272669b9c248eb4cac9da2b8752258c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 218, y: 359}
+    spritePosition: {x: 118, y: 126}
+  - name: sweat1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 4
+      width: 24
+      height: 45
+    spriteID: e7a89aa1d03f8a54ca47773d78142b1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 4}
+    spritePosition: {x: 73, y: 126}
+  - name: ScaredyShroom eyebrow2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 412
+      width: 38
+      height: 38
+    spriteID: 1b989db1c123fa149827c27a4caf1ae1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 412}
+    spritePosition: {x: 140, y: 175}
+  - name: ScaredyShroom eyebrow1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 412
+      width: 48
+      height: 24
+    spriteID: 017f58ef7fddedb4f8ddd03d9192c6b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 412}
+    spritePosition: {x: 96, y: 175}
+  - name: ScaredyShroom head2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 186
+      width: 153
+      height: 116
+    spriteID: d1703649c06ee6446abda8c2bb65e2ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+    spritePosition: {x: 26, y: 148}
+  - name: ScaredyShroom head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 204
+      height: 174
+    spriteID: a5c6ab49d0fcb954fa7f1f49fec6af37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 122}
+  - name: Blink2Eye1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 412
+      width: 30
+      height: 36
+    spriteID: 4c07c8e2af6039a4b9e042f0f6e685e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 412}
+    spritePosition: {x: 118, y: 138}
+  - name: Blink1Eye1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 412
+      width: 30
+      height: 36
+    spriteID: ffc9c74eb7ab00d4598a4336f5e6e4cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 412}
+    spritePosition: {x: 118, y: 138}
+  - name: BigEye1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 186
+      width: 38
+      height: 53
+    spriteID: cc8c559ec11e4e4419a97e0509b64136
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 186}
+    spritePosition: {x: 109, y: 27}
+  - name: anim eye1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 57
+      width: 27
+      height: 34
+    spriteID: 91281278f6703554b961506f8721a6f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 57}
+    spritePosition: {x: 118, y: 145}
+  - name: ScaredyShroom lips
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 186
+      width: 37
+      height: 81
+    spriteID: 95875bdfde406b34b9d35d74fa282682
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 186}
+    spritePosition: {x: 160, y: 78}
+  - name: ScaredyShroom mouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 247
+      width: 34
+      height: 44
+    spriteID: 0306e770770b45f48867364bede4ed76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 247}
+    spritePosition: {x: 139, y: 98}
+  - name: Blink2Eye2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 141
+      width: 16
+      height: 9
+    spriteID: 43ab4b9951814cf4e968943ba0e13607
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 141}
+    spritePosition: {x: 147, y: 167}
+  - name: Blink1Eye2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 275
+      width: 21
+      height: 14
+    spriteID: 9bb10ccded88d8741a71ddfcb7c8afed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 275}
+    spritePosition: {x: 144, y: 163}
+  - name: BigEye2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 218
+      y: 310
+      width: 29
+      height: 41
+    spriteID: 767bf5ba581217e429d76839917d4202
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 218, y: 310}
+    spritePosition: {x: 144, y: 55}
+  - name: anim eye2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 99
+      width: 24
+      height: 34
+    spriteID: 8e893bd79f177be458a84098462505a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 99}
+    spritePosition: {x: 143, y: 152}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 70
+      height: 177
+    spriteID: bfb8a2e53beb03c44873e80eebda392f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+    spritePosition: {x: 94, y: 0}
+  - name: ScaredyShroom head inner
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 310
+      width: 128
+      height: 94
+    spriteID: 7d6b6d8ec98aabf488411fc7a2e04fa4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 310}
+    spritePosition: {x: 72, y: 123}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: ScaredyShroom
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3dc2ac1b822b6684099c2d9b8ac0c5e1
+    layerID: 81
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: sweat2
+    spriteName: sweat2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8272669b9c248eb4cac9da2b8752258c
+    layerID: 87
+    mosaicPosition: {x: 218, y: 359}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sweat1
+    spriteName: sweat1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e7a89aa1d03f8a54ca47773d78142b1b
+    layerID: 86
+    mosaicPosition: {x: 216, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom eyebrow2
+    spriteName: ScaredyShroom eyebrow2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1b989db1c123fa149827c27a4caf1ae1
+    layerID: 58
+    mosaicPosition: {x: 82, y: 412}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom eyebrow1
+    spriteName: ScaredyShroom eyebrow1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 017f58ef7fddedb4f8ddd03d9192c6b4
+    layerID: 51
+    mosaicPosition: {x: 128, y: 412}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom head2
+    spriteName: ScaredyShroom head2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d1703649c06ee6446abda8c2bb65e2ec
+    layerID: 83
+    mosaicPosition: {x: 4, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom head
+    spriteName: ScaredyShroom head
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a5c6ab49d0fcb954fa7f1f49fec6af37
+    layerID: 44
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom Eye1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 63f04c645fb4e9f4ab91ce6fce0821f3
+    layerID: 74
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2Eye1
+    spriteName: Blink2Eye1
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 4c07c8e2af6039a4b9e042f0f6e685e5
+    layerID: 73
+    mosaicPosition: {x: 184, y: 412}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1Eye1
+    spriteName: Blink1Eye1
+    isGroup: 0
+    parentIndex: 7
+    spriteID: ffc9c74eb7ab00d4598a4336f5e6e4cb
+    layerID: 72
+    mosaicPosition: {x: 222, y: 412}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: BigEye1
+    spriteName: BigEye1
+    isGroup: 0
+    parentIndex: 7
+    spriteID: cc8c559ec11e4e4419a97e0509b64136
+    layerID: 70
+    mosaicPosition: {x: 210, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim eye1
+    spriteName: anim eye1
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 91281278f6703554b961506f8721a6f0
+    layerID: 37
+    mosaicPosition: {x: 216, y: 57}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom lips
+    spriteName: ScaredyShroom lips
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 95875bdfde406b34b9d35d74fa282682
+    layerID: 30
+    mosaicPosition: {x: 165, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom mouth
+    spriteName: ScaredyShroom mouth
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0306e770770b45f48867364bede4ed76
+    layerID: 23
+    mosaicPosition: {x: 210, y: 247}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroomEye2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: b5b63a686ca448842ab4cbcb63729271
+    layerID: 79
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2Eye2
+    spriteName: Blink2Eye2
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 43ab4b9951814cf4e968943ba0e13607
+    layerID: 78
+    mosaicPosition: {x: 216, y: 141}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1Eye2
+    spriteName: Blink1Eye2
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 9bb10ccded88d8741a71ddfcb7c8afed
+    layerID: 77
+    mosaicPosition: {x: 165, y: 275}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: BigEye2
+    spriteName: BigEye2
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 767bf5ba581217e429d76839917d4202
+    layerID: 71
+    mosaicPosition: {x: 218, y: 310}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim eye2
+    spriteName: anim eye2
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 8e893bd79f177be458a84098462505a0
+    layerID: 16
+    mosaicPosition: {x: 216, y: 99}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bfb8a2e53beb03c44873e80eebda392f
+    layerID: 9
+    mosaicPosition: {x: 4, y: 310}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ScaredyShroom head inner
+    spriteName: ScaredyShroom head inner
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7d6b6d8ec98aabf488411fc7a2e04fa4
+    layerID: 2
+    mosaicPosition: {x: 82, y: 310}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

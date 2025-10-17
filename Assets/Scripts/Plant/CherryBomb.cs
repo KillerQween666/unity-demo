@@ -48,11 +48,16 @@ public class CherryBomb : Plant {
         foreach (var coll in hitColliders) {
             if (coll != null) { // 避免空引用异常
                 // 尝试获取碰撞体上的Zombie组件
-                if (coll.TryGetComponent<Zombie>(out var zombie)) {
-                    // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
-                    ObjectPoolManager.Instance.PlayZombieBoomSwfIEnumrator(zombie.transform, zombie.isHaveHead, zombie.spriteList[0].sortingOrder + 100);
-                    zombie.Dead(); // 直接杀死僵尸
+                Enemy enemy = coll.GetComponent<Enemy>();
+                if (enemy != null) {
+                    if (coll.TryGetComponent<Zombie>(out var zombie)) {
+                        // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
+                        zombie.TakeDamage(600, 1);
+                    } else {
+                        enemy.TakeDamage(600, 1);
+                    }
                 }
+                
             }
         }
 

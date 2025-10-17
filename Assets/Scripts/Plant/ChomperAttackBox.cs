@@ -11,9 +11,7 @@ public class ChomperAttackBox : MonoBehaviour {
     // 碰撞检测：检测到僵尸时触发攻击
     private void OnTriggerEnter2D(Collider2D collision) {
         // 仅对标签为"Zombie"的对象执行攻击逻辑
-        if (collision.CompareTag("Zombie")) {
-
-            Zombie zombie = collision.GetComponent<Zombie>(); // 获取碰撞到的僵尸组件
+        if (collision.CompareTag("Zombie") && collision.TryGetComponent<Zombie>(out var zombie)) {
             chomper.animator.SetTrigger("attackTrigger"); // 触发食人花的攻击动画
             chomper.TranstionToAttack(); // 将食人花切换到攻击状态
 
@@ -30,7 +28,7 @@ public class ChomperAttackBox : MonoBehaviour {
 
         if (zombie != null) { // 若僵尸仍存在（未被其他攻击消灭）
             if (isAttack == false) { // 未触发过攻击，执行吞噬逻辑
-                zombie.Dead(); // 杀死僵尸
+                zombie.TakeDamage(10000, 2);
                 chomper.TranstionToEat(); // 将食人花切换到进食状态
             }
             isAttack = true; // 标记为已攻击，防止重复触发  

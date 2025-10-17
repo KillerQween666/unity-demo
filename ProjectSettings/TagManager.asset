@@ -14,12 +14,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - OnClick
   - Water
   - UI
   - Front
   - Zombie
-  - 
+  - Plant
   - 
   - 
   - 
@@ -44,11 +44,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 3266185483
+    locked: 0
+  - name: Row1
+    uniqueID: 1230945085
+    locked: 0
+  - name: Row2
+    uniqueID: 638086561
+    locked: 0
+  - name: Row3
+    uniqueID: 3087261929
+    locked: 0
+  - name: Row4
+    uniqueID: 3897262253
+    locked: 0
+  - name: Row5
+    uniqueID: 2790397785
     locked: 0
   - name: Game
     uniqueID: 1444100059
@@ -58,4 +70,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 267906783
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

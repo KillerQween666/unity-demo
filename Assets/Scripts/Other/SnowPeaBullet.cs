@@ -15,9 +15,21 @@ public class SnowPeaBullet : PeaBullet {
             ObjectPoolManager.Instance.PlaySnowPeaBulletParticalIEnumrator(transform);
 
             // 获取命中的僵尸组件，执行伤害和减速
-            Zombie zombie = collision.GetComponent<Zombie>();
-            zombie.TakeDamage(atkValue); // 造成基础伤害
-            zombie.PlaySlowSpeed(); // 触发僵尸减速效果
+            if (collision != null) {
+                Enemy enemy = collision.GetComponent<Enemy>();
+                if (enemy != null) {
+                    if (collision.TryGetComponent<Zombie>(out var zombie)) {
+                        // 播放僵尸被炸飞的特效（传入僵尸位置、是否有头、特效层级）
+                        if (zombie.IsCroze() == false) AudioManager.Instance.PlayClip(Config.Frozen);
+                        zombie.TakeDamage(atkValue, 3);
+                    } else {
+                        enemy.TakeDamage(atkValue, 3);
+                    }
+
+
+                        
+                }
+            }
 
             // 子弹完成使命，回收到对象池（复用，减少性能消耗）
             ObjectPoolManager.Instance.ReleaseSnowPeaBullet(this.gameObject);

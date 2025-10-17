@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 1227575385153608268}
   - component: {fileID: -7870378885609773273}
   - component: {fileID: 6817114140621764671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SunFlower
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -952,11 +952,12 @@ MonoBehaviour:
   animator: {fileID: 8463740387923448661}
   grandAnimator: {fileID: 8701567320157863718}
   grandCollider2D: {fileID: 0}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 4320242165507931829}
   produceDuration: 12
-  sunPrefab: {fileID: -6577520378168631936, guid: 4c105f9b786e12842a874e37d5868447, type: 3}
   jumpMinDistance: 0
   jumpMaxDistance: 0.8
 --- !u!61 &6817114140621764671
@@ -991,7 +992,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055652693, y: -0.0065663457}
+  m_Offset: {x: -0.14732188, y: -0.05408892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1002,7 +1003,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8801398, y: 1.0194589}
+  m_Size: {x: 1.3260175, y: 1.523354}
   m_EdgeRadius: 0
 --- !u!1 &3395010686325965646
 GameObject:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6449103395611292050}
   - component: {fileID: 2155954586363444802}
   - component: {fileID: 916152580055683124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowPeaShooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -52,13 +52,15 @@ MonoBehaviour:
   animator: {fileID: 686568302147690122}
   grandAnimator: {fileID: 7276983181367138428}
   grandCollider2D: {fileID: 4425904431709449302}
+  grand2Collider2d: {fileID: 0}
+  selfCell: {fileID: 0}
   HP: 100
   isBrighten: 0
   shadow: {fileID: 2534224349885091310}
   shootDuration: 1.5
   shootPointTransform: {fileID: 4256538046351856921}
   coll2D: {fileID: 4425904431709449302}
-  snowPeaBullet: {fileID: 2088587274605499107, guid: 8bc43e66487903c47be96d59316e8bbf, type: 3}
+  snowPeaBullet: {fileID: 0}
 --- !u!61 &916152580055683124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91,7 +93,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1745894, y: 0.05781603}
+  m_Offset: {x: 0.0008966327, y: -0.049993277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -102,7 +104,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84613466, y: 0.88436794}
+  m_Size: {x: 1.1935202, y: 1.3156049}
   m_EdgeRadius: 0
 --- !u!1 &2534224349885091310
 GameObject:

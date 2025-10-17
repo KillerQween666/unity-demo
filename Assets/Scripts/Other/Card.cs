@@ -22,7 +22,15 @@ public enum PlantType {
     Wallnut,          // 坚果墙
     PotatoMine,       // 土豆地雷
     CherryBomb,       // 樱桃炸弹
-    Chomper           // 食人花
+    Chomper,           // 食人花
+    SunShroom,
+    PuffShroom,
+    FumeShroom,
+    ScaredyShroom,
+    IceShroom,
+    DoomShroom,
+    HypnoShroom,
+    Gravebuster,
 }
 
 // 植物卡牌核心脚本：控制卡牌状态、UI显示、点击种植及冷却逻辑
@@ -141,13 +149,15 @@ public class Card : MonoBehaviour {
 
     // 卡牌点击事件（UI按钮绑定）
     public void OnClick() {
+        if (HandManager.Instance.currentPlant != null || HandManager.Instance.shovel.activeSelf) return;
+
         if (cardState == CardState.Ready) {
             // 准备就绪时：选中卡牌，让植物跟随鼠标
             TransitionToPlanting();
             HandManager.Instance.AddPlant(plantType);
-        }
-        else if (cardState == CardState.select) {
+        } else if (cardState == CardState.select) {
             // 选中状态时：切换卡牌在卡槽/卡池的位置
+            if (GameManager.Instance.isGameStart == true) return;
             if (isInSlot) {
                 isInSlot = false;
                 CardSlotManager.Instance.MoveToPool(this); // 移回卡池
@@ -161,12 +171,14 @@ public class Card : MonoBehaviour {
 
     // 鼠标抬起事件（检测是否种植植物）
     public void OnPointerUp() {
+        if (cardState != CardState.Ready) return;
+
         // 将鼠标屏幕坐标转换为2D世界坐标（Z轴设0，避免层级偏差）
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPosition.z = 0;
 
         // 射线检测：判断鼠标是否点击在可种植的单元格上
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("OnClick"));
 
         if (hit) {
             if (hit.collider.CompareTag("Cell")) {

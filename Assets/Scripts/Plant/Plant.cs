@@ -16,6 +16,9 @@ public class Plant : MonoBehaviour {
     public Animator animator; // 植物自身动画组件（如整体动作、发光）
     public Animator grandAnimator; // 子物体动画组件（如局部细节动作）
     public Collider2D grandCollider2D; // 子物体碰撞体（如攻击判定区域）
+    public Collider2D grand2Collider2d;
+
+    public Cell selfCell;
 
     public int HP = 100; // 植物生命值
 
@@ -31,7 +34,7 @@ public class Plant : MonoBehaviour {
     public GameObject shadow; // 植物的影子对象
 
     // 初始化：收集所有子物体的渲染器（含未激活的）
-    private void Start() {
+    protected void Start() {
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
             spriteList.Add(sprite);
@@ -63,6 +66,7 @@ public class Plant : MonoBehaviour {
         animator.enabled = false; // 停止自身动画
         if (grandAnimator != null) grandAnimator.enabled = false; // 停止子物体动画
         if (grandCollider2D != null) grandCollider2D.enabled = false; // 关闭子物体碰撞
+        if (grand2Collider2d != null) grand2Collider2d.enabled = false;
         shadow.SetActive(false); // 隐藏影子
     }
 
@@ -73,6 +77,7 @@ public class Plant : MonoBehaviour {
         animator.enabled = true; // 启动自身动画
         if (grandAnimator != null) grandAnimator.enabled = true; // 启动子物体动画
         if (grandCollider2D != null) grandCollider2D.enabled = true; // 开启子物体碰撞
+        if (grand2Collider2d != null) grand2Collider2d.enabled = true;
         shadow.SetActive(true); // 显示影子
     }
 

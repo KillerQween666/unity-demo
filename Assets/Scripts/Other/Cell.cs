@@ -12,6 +12,36 @@ public class Cell : MonoBehaviour {
     // 鼠标hover时的植物预览实例（仅用于显示，不实际生效）
     private Plant plantPreview;
 
+    public bool isHole = false;
+
+    public float holeTime = 10;
+    private float holeTimer;
+
+    public GameObject nightHole;
+    public GameObject nightHole2;
+
+    public bool canSpawnBrave;
+    public GameObject bravePrefab;
+    public bool isBrave = false;
+
+    public int row;
+
+    private void Update() {
+        if (isHole) {
+
+            holeTimer += Time.deltaTime;
+            if (holeTimer >= holeTime * 0.5 && !nightHole2.activeSelf) {
+                nightHole.SetActive(false);
+                nightHole2.SetActive(true);
+            }
+            if (holeTimer >= holeTime) {
+                nightHole2.SetActive(false);
+                holeTimer = 0;
+                isHole = false;
+            }
+        }
+    }
+
     // 单元格点击事件（种植植物/使用铲子，由HandManager处理）
     public void OnClick() {
         // 先销毁可能存在的预览植物，避免残留
@@ -22,6 +52,8 @@ public class Cell : MonoBehaviour {
 
     // 鼠标进入单元格时触发（显示植物预览/高亮已有植物）
     public void OnPointerEnter(BaseEventData data) {
+        if (isHole) return;
+
         // 若单元格有植物且选中了铲子，让植物高亮（提示可铲除）
         if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
             currentPlant.isBrighten = true;
@@ -30,6 +62,8 @@ public class Cell : MonoBehaviour {
 
         // 若没有选中植物，或单元格已有植物，不显示预览
         if (HandManager.Instance.currentPlant == null || currentPlant != null) return;
+        if (isBrave && HandManager.Instance.currentPlant.plantType != PlantType.Gravebuster) return;
+        if (HandManager.Instance.currentPlant.plantType == PlantType.Gravebuster && !isBrave) return;
 
         // 生成植物预览实例（复制当前选中的植物）
         plantPreview = Instantiate(HandManager.Instance.currentPlant);
@@ -48,6 +82,7 @@ public class Cell : MonoBehaviour {
 
     // 鼠标离开单元格时触发（销毁预览/取消植物高亮）
     public void OnPointerExit(BaseEventData data) {
+
         // 若单元格有植物且选中了铲子，取消植物高亮
         if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
             currentPlant.isBrighten = false;
@@ -63,19 +98,23 @@ public class Cell : MonoBehaviour {
     // 移除单元格上的植物（铲子功能）
     public void SubPlant() {
         // 无植物或未选中铲子，不执行移除
-        if (currentPlant == null || !HandManager.Instance.shovel.activeSelf) return;
+        if (currentPlant == null) return;
 
         HandManager.Instance.ReturnShovel(); // 归还铲子（取消选中状态）
         AudioManager.Instance.PlayClip(Random.value > 0.5f ? Config.plant : Config.plant2); // 播放移除音效
 
-        Destroy(currentPlant.gameObject); // 销毁植物实例
+        currentPlant.Dead(); // 销毁植物实例
         currentPlant = null; // 清空当前植物引用
     }
 
     // 在单元格上种植植物（选中植物后点击单元格触发）
     public void AddPlant() {
-        // 已有植物或未选中植物，不执行种植
-        if (currentPlant != null || HandManager.Instance.currentPlant == null) return;
+        Plant plant = HandManager.Instance.currentPlant;
+
+        if (currentPlant != null || HandManager.Instance.currentPlant == null || isHole) return;
+
+        if (plant.plantType == PlantType.Gravebuster && !isBrave ) return;
+        if (isBrave && plant.plantType != PlantType.Gravebuster) return;
 
         // 调整植物种植位置（Z轴设为-2，确保显示在正确层级）
         Vector3 position = transform.position;
@@ -83,14 +122,34 @@ public class Cell : MonoBehaviour {
 
         // 生成植物实例到单元格位置
         currentPlant = Instantiate(HandManager.Instance.currentPlant, position, Quaternion.identity);
+        currentPlant.selfCell = this;
 
         // 调整植物渲染层级为"Game"（与游戏场景其他物体一致）
         SpriteRenderer[] sprites = currentPlant.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
-            sprite.sortingLayerName = "Game";
+            sprite.sortingLayerName = ZombieManager.Instance.layerNames[row];
         }
 
         // 激活植物（设置为启用状态，让植物开始工作）
         currentPlant.TransitionToEnable();
+    }
+
+
+    public void StartHole() {
+        isHole = true;
+        nightHole.SetActive(true);
+    }
+
+    public void BadTombstone() {
+        bravePrefab.GetComponent<Grave>().BadGrave();
+    }
+
+    public void GoodTombstone() {
+        bravePrefab.GetComponent<Grave>().GoodGrave();
+    }
+
+    public void BusterTombstone() {
+        isBrave = false;
+        Destroy(bravePrefab);
     }
 }
