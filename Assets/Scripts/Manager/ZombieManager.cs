@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 // 僵尸生成状态枚举：未开始、生成中、生成结束
@@ -29,6 +30,10 @@ public class ZombieManager : MonoBehaviour {
     public List<Zombie> zombiePrefabs = new List<Zombie>();
     public List<float> spawnWeights = new List<float>();
 
+    public bool isWaterLevel = false;
+    public List<Zombie> waterZombiePrefabs = new List<Zombie>();
+    public List<float> waterSpawnWeights = new List<float>();
+
     // 僵尸渲染层级排序值（控制僵尸显示先后，避免遮挡）
     public static int sortOrder = 100;
 
@@ -38,22 +43,25 @@ public class ZombieManager : MonoBehaviour {
     public float groanTime = 5f;
     private float groanTimer = 0;
 
-    private float spawnZombieSpeed;
-    private float spawnZombieTime;
+    private float spawnZombieSpeed = 3;
+    private float spawnZombieTime = 0;
     private float spawnZombieTimer;
 
-    private int spawnlowerLevel = 0;
+    private int spawnLowerLevel = 0;
     private int spawnUpperLevel = 2;
 
-    public string[] layerNames = new string[] { "Row1", "Row2", "Row3", "Row4", "Row5" };
+    private int waterSpawnLowerLevel = 0;
+    private int waterSpawnUpperLevel = 2;
+
+    public ZombieBobsled zombieBobsled;
+
+    public string[] layerNames = new string[] { "Row1", "Row2", "Row3", "Row4", "Row5", "Row6" };
+
+    private static System.Random random = new System.Random();
 
     // 初始化单例
     private void Awake() {
         Instance = this;
-    }
-
-    private void Start() {
-        setSpawnZombieSpeed(2.5f);
     }
 
     // 每帧更新：生成结束且所有僵尸被消灭时，触发游戏胜利
@@ -119,59 +127,171 @@ public class ZombieManager : MonoBehaviour {
     // 随机生成一只僵尸（随机选择一个生成点）
     public void SpawnRandomZombie(int ran = -1) {
 
+        spawnZombieTimer = 0;
         int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
         // 实例化普通僵尸到选中的生成点
 
-        if (ran == -1)   ran = Random.Range(spawnlowerLevel, spawnUpperLevel);
+        if (isWaterLevel) {
+            if (index == 2 || index == 3) {
+                if (ran == -1) ran = Random.Range(waterSpawnLowerLevel, waterSpawnUpperLevel);
 
-        Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
-        spawnZombieTime = spawnZombieSpeed * spawnWeights[ran];
+                if (ran > waterZombiePrefabs.Count) return;
 
-        // 调整僵尸所有子物体的渲染层级（按生成点行号和排序值，避免同屏僵尸遮挡）
-        SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
-        foreach (var sprite in sprites) {
-            sprite.sortingLayerName = layerNames[index];
-            sprite.sortingOrder += sortOrder;
+                Zombie zombie = Instantiate(waterZombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
+                spawnZombieTime = spawnZombieSpeed * waterSpawnWeights[ran];
+
+                // 调整僵尸所有子物体的渲染层级（按生成点行号和排序值，避免同屏僵尸遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            } else {
+                if (ran == -1) ran = Random.Range(spawnLowerLevel, spawnUpperLevel);
+
+                Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
+                spawnZombieTime = spawnZombieSpeed * spawnWeights[ran];
+
+                // 调整僵尸所有子物体的渲染层级（按生成点行号和排序值，避免同屏僵尸遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            }
+        } else {
+            if (ran == -1) ran = Random.Range(spawnLowerLevel, spawnUpperLevel);
+
+            Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[index].position, Quaternion.identity);
+            spawnZombieTime = spawnZombieSpeed * spawnWeights[ran];
+
+            // 调整僵尸所有子物体的渲染层级（按生成点行号和排序值，避免同屏僵尸遮挡）
+            SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = layerNames[index];
+                sprite.sortingOrder += sortOrder;
+            }
+            zombie.row = index;
         }
-        zombie.row = index;
         AddZombie();
     }
 
     // 生成一只旗帜僵尸（随机选择一个生成点）
     public void SpawnFlagBucketZombie() {
-        int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
-        // 实例化旗帜僵尸到选中的生成点
-        Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
+        if (isWaterLevel) {
+            if (Random.value > 0.5f) {
+                int index = UnityEngine.Random.Range(0, 2); // 随机选一个生成点
+                                                                                // 实例化旗帜僵尸到选中的生成点
+                Zombie zombie = Instantiate(zombieFlagBucketPrefab, spawnPointList[index].position, Quaternion.identity);
 
-        // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+                // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            } else {
+                int index = UnityEngine.Random.Range(4, 6); // 随机选一个生成点
+                                                                                // 实例化旗帜僵尸到选中的生成点
+                Zombie zombie = Instantiate(zombieFlagBucketPrefab, spawnPointList[index].position, Quaternion.identity);
+
+                // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            }
+            
+        } else {
+            int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
+                                                                            // 实例化旗帜僵尸到选中的生成点
+            Zombie zombie = Instantiate(zombieFlagBucketPrefab, spawnPointList[index].position, Quaternion.identity);
+
+            // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+            SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = layerNames[index];
+                sprite.sortingOrder += sortOrder;
+            }
+            zombie.row = index;
+        }
+        
+        AddZombie();
+    }
+
+    public void SpawnBobsledZombie(int row, float carTarget) {
+        Vector3 position = spawnPointList[row].position;
+        position.x -= 1;
+
+        ZombieBobsled zombie = Instantiate(zombieBobsled, position, Quaternion.identity);
+
         SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var sprite in sprites) {
-            sprite.sortingLayerName = layerNames[index];
+            sprite.sortingLayerName = layerNames[row];
             sprite.sortingOrder += sortOrder;
         }
-        zombie.row = index;
+        zombie.row = row;
+
+        zombie.carTarget = carTarget;
+
         AddZombie();
     }
 
     public void SpawnFlagZombie() {
-        int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
-        // 实例化旗帜僵尸到选中的生成点
-        Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
+        if (isWaterLevel) {
+            if (UnityEngine.Random.value > 0.5f) {
+                int index = UnityEngine.Random.Range(0, 2); // 随机选一个生成点
+                                                            // 实例化旗帜僵尸到选中的生成点
+                Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
 
-        // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
-        SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
-        foreach (var sprite in sprites) {
-            sprite.sortingLayerName = layerNames[index];
-            sprite.sortingOrder += sortOrder;
+                // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            }
+            else {
+                int index = UnityEngine.Random.Range(4, 6); // 随机选一个生成点
+                                                            // 实例化旗帜僵尸到选中的生成点
+                Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
+
+                // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[index];
+                    sprite.sortingOrder += sortOrder;
+                }
+                zombie.row = index;
+            }
+
         }
-        zombie.row = index;
+        else {
+            int index = UnityEngine.Random.Range(0, spawnPointList.Length); // 随机选一个生成点
+                                                                            // 实例化旗帜僵尸到选中的生成点
+            Zombie zombie = Instantiate(zombieFlagPrefab, spawnPointList[index].position, Quaternion.identity);
+
+            // 调整旗帜僵尸的渲染层级（同普通僵尸逻辑，避免遮挡）
+            SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = layerNames[index];
+                sprite.sortingOrder += sortOrder;
+            }
+            zombie.row = index;
+        }
         AddZombie();
     }
 
     // 生成一整行选定的僵尸（覆盖所有生成点，每行5只）
-    public void SpawnRowZombie(int ran) {
-        // 遍历所有生成点，每个点生成一只铁桶僵尸
-        for (int i = 0; i < 5; i++) {
+    public void SpawnLandRowZombie(int ran) {
+        for (int i = 0; i < spawnPointList.Length; i++) {
+            if (i == 2 || i == 3) continue;
             Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
 
             // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
@@ -186,13 +306,84 @@ public class ZombieManager : MonoBehaviour {
         }
     }
 
+    public void SpawnWaterRowZombie(int ran) {
+        for (int i = 0; i < spawnPointList.Length; i++) {
+            if (i == 2 || i == 3) {
+                Zombie zombie = Instantiate(waterZombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
+
+                // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[i];
+                    sprite.sortingOrder += sortOrder;
+                }
+
+                zombie.row = i;
+                AddZombie();
+            } 
+        }
+    }
+
+
+    public void SpawnRowZombie(int ran) {
+        // 遍历所有生成点，每个点生成一只铁桶僵尸
+        for (int i = 0; i < spawnPointList.Length; i++) {
+            if (isWaterLevel) {
+                if (i == 2 || i == 3) {
+                    if (ran > waterZombiePrefabs.Count) return;
+
+
+                    Zombie zombie = Instantiate(waterZombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
+
+                    // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
+                    SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                    foreach (var sprite in sprites) {
+                        sprite.sortingLayerName = layerNames[i];
+                        sprite.sortingOrder += sortOrder;
+                    }
+
+                    zombie.row = i;
+                } else {
+                    Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
+
+                    // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
+                    SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                    foreach (var sprite in sprites) {
+                        sprite.sortingLayerName = layerNames[i];
+                        sprite.sortingOrder += sortOrder;
+                    }
+
+                    zombie.row = i;
+                }
+            } else {
+                Zombie zombie = Instantiate(zombiePrefabs[ran], spawnPointList[i].position, Quaternion.identity);
+
+                // 调整渲染层级（按生成点行号区分，避免同行僵尸遮挡）
+                SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+                foreach (var sprite in sprites) {
+                    sprite.sortingLayerName = layerNames[i];
+                    sprite.sortingOrder += sortOrder;
+                }
+
+                zombie.row = i;
+            }
+            AddZombie();
+
+        }
+    }
+
     public void setSpawnZombieSpeed(float speed) {
         spawnZombieSpeed = speed;
     }
 
     public void setSpawnLevel(int lowerLevel, int upperLevel) {
-        spawnlowerLevel = lowerLevel;
+        spawnLowerLevel = lowerLevel;
         spawnUpperLevel = upperLevel;
+    }
+
+    public void setWaterSpawnLevel(int lowerLevel, int upperLevel) {
+        waterSpawnLowerLevel = lowerLevel;
+        waterSpawnUpperLevel = upperLevel;
     }
 
     public void AddZombie() {
@@ -207,6 +398,10 @@ public class ZombieManager : MonoBehaviour {
 
     public void SpawnAllTombstoneZombiesIenumerator(int ran, int ran2 = -1) {
         StartCoroutine(SpawnAllTombstoneZombies(ran, ran2));
+    }
+
+    public void SpawnAllWaterCellZombiesIenumerator(int count, int ran, int ran2 = -1) {
+        StartCoroutine(SpawnAllWaterCellZombies(count, ran, ran2));
     }
 
     public IEnumerator SpawnAllTombstoneZombies(int ran, int ran2 = -1) {
@@ -249,4 +444,43 @@ public class ZombieManager : MonoBehaviour {
         }
     }
 
+    private Cell[] RandomPickCells(int count, Cell[] cellList) {
+        return cellList.OrderBy(c => random.Next()).Take(count).ToArray();
+    }
+
+    public IEnumerator SpawnAllWaterCellZombies(int count, int ran, int ran2 = -1) {
+        List<Cell> cellList = CellManager.Instance.GetAllCanSpawnWaterZombieCell();
+        cellList = RandomPickCells(count, cellList.ToArray()).ToList();
+
+        foreach (var cell in cellList) {
+            Zombie zombie;
+
+            Vector3 position = cell.transform.position, position2 = cell.transform.position;
+            position.y -= 4f;
+            position2.y -= 1.35f;
+
+            if (ran2 != -1) {
+                zombie = Instantiate(waterZombiePrefabs[Random.Range(ran, ran2)], position, Quaternion.identity);
+            }
+            else {
+                zombie = Instantiate(waterZombiePrefabs[ran], position, Quaternion.identity);
+            }
+
+            zombie.transform.DOMoveY(position2.y, 0.5f);
+            zombie.GetComponent<ZombieCommonSwim>().isSpawnOnWaterCell = true;
+            zombie.GetComponent<ZombieCommonSwim>().SpawnSeaWeed();
+
+            SpriteRenderer[] sprites = zombie.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = layerNames[cell.row];
+                sprite.sortingOrder += sortOrder;
+            }
+
+            AddZombie();
+        }
+
+        yield return null;
+    }
+
+    
 }

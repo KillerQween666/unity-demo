@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: 08aea06860396ed4ba51245a21fcc6b7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: PoolCleaner frontwheel1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 688
+      width: 115
+      height: 115
+    spriteID: 575a46cdb34d18a4da0983f8ad581b42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 688}
+    spritePosition: {x: 118, y: 8}
+  - name: PoolCleaner frontwheel2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 811
+      width: 115
+      height: 115
+    spriteID: a61871263ce01b44981a63110378fc39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 811}
+    spritePosition: {x: 0, y: 0}
+  - name: PoolCleaner funnel overlay
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 522
+      width: 117
+      height: 158
+    spriteID: 5b1f0f1fb81fc4943aed4d1a8c4116e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 522}
+    spritePosition: {x: 154, y: 262}
+  - name: PoolCleaner funnel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 136
+      height: 162
+    spriteID: 892487a62274d924783bf82d8335d98a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 236}
+    spritePosition: {x: 153, y: 258}
+  - name: PoolCleaner bubble
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 219
+      y: 250
+      width: 96
+      height: 121
+    spriteID: e686605d5249ad9498e885cd96276900
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 219, y: 250}
+    spritePosition: {x: 99, y: 200}
+  - name: PoolCleaner tube
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 688
+      width: 50
+      height: 114
+    spriteID: ac31603bf3266ab4c910511ab94f4bcb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 688}
+    spritePosition: {x: 129, y: 235}
+  - name: PoolCleaner tubeend
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 811
+      width: 64
+      height: 67
+    spriteID: 2ac0995e255c69f40ab41ae351c122eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 811}
+    spritePosition: {x: 109, y: 200}
+  - name: PoolCleaner body2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 406
+      width: 175
+      height: 108
+    spriteID: 756432abf21164d48a46c1b0669c22ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 406}
+    spritePosition: {x: 22, y: 160}
+  - name: PoolCleaner body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 207
+      height: 224
+    spriteID: 90e5ea87fc145d3489418a961378103a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 27, y: 48}
+  - name: PoolCleaner backwheel2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 219
+      y: 127
+      width: 114
+      height: 115
+    spriteID: 0b21f9f3c06cdae4e8ec776c7e2079c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 219, y: 127}
+    spritePosition: {x: 19, y: 89}
+  - name: PoolCleaner backwheel1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 219
+      y: 4
+      width: 115
+      height: 115
+    spriteID: 0fdeadc899d0620499e994d5c747dd65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 219, y: 4}
+    spritePosition: {x: 137, y: 79}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: PoolCleaner frontwheel1
+    spriteName: PoolCleaner frontwheel1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 575a46cdb34d18a4da0983f8ad581b42
+    layerID: 58
+    mosaicPosition: {x: 4, y: 688}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner frontwheel2
+    spriteName: PoolCleaner frontwheel2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a61871263ce01b44981a63110378fc39
+    layerID: 51
+    mosaicPosition: {x: 4, y: 811}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner funnel overlay
+    spriteName: PoolCleaner funnel overlay
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b1f0f1fb81fc4943aed4d1a8c4116e3
+    layerID: 44
+    mosaicPosition: {x: 4, y: 522}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner funnel
+    spriteName: PoolCleaner funnel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 892487a62274d924783bf82d8335d98a
+    layerID: 37
+    mosaicPosition: {x: 4, y: 236}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner bubble
+    spriteName: PoolCleaner bubble
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e686605d5249ad9498e885cd96276900
+    layerID: 67
+    mosaicPosition: {x: 219, y: 250}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner tube
+    spriteName: PoolCleaner tube
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac31603bf3266ab4c910511ab94f4bcb
+    layerID: 30
+    mosaicPosition: {x: 127, y: 688}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner tubeend
+    spriteName: PoolCleaner tubeend
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2ac0995e255c69f40ab41ae351c122eb
+    layerID: 23
+    mosaicPosition: {x: 127, y: 811}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCar Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d1722aac533ac2242a40ee57b1b476b6
+    layerID: 69
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: PoolCleaner body2
+    spriteName: PoolCleaner body2
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 756432abf21164d48a46c1b0669c22ca
+    layerID: 68
+    mosaicPosition: {x: 4, y: 406}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner body
+    spriteName: PoolCleaner body
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 90e5ea87fc145d3489418a961378103a
+    layerID: 16
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner backwheel2
+    spriteName: PoolCleaner backwheel2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0b21f9f3c06cdae4e8ec776c7e2079c4
+    layerID: 9
+    mosaicPosition: {x: 219, y: 127}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PoolCleaner backwheel1
+    spriteName: PoolCleaner backwheel1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0fdeadc899d0620499e994d5c747dd65
+    layerID: 2
+    mosaicPosition: {x: 219, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

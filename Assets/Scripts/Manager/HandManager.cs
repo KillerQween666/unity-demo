@@ -87,19 +87,21 @@ public class HandManager : MonoBehaviour {
     // 点击单元格时执行（种植植物或使用铲子移除植物）
     public void OnCellClick(Cell cell) {
         // 单元格没有植物时，种植当前选中的植物
-        if (cell.currentPlant == null) {
-            
-            cell.AddPlant(); // 单元格添加植物
+       bool isSuccess = cell.AddPlant(); // 单元格添加植物
 
-            // 种植成功后，处理卡牌冷却、扣阳光、销毁跟随鼠标的植物
-            if (cell.currentPlant != null) {
-                card.TransitionToCooling(); // 卡牌进入冷却状态
-                SunManager.Instance.SubSun(card.needSunPoint); // 扣除种植所需阳光
+       // 种植成功后，处理卡牌冷却、扣阳光、销毁跟随鼠标的植物
+       if (isSuccess) {
+            card.TransitionToCooling(); // 卡牌进入冷却状态
+            SunManager.Instance.SubSun(card.needSunPoint); // 扣除种植所需阳光
+
+            if (currentPlant.isWaterPlant) {
+                AudioManager.Instance.PlayClip(Config.plantWater); // 播放种植音效
+            } else {
                 AudioManager.Instance.PlayClip(Config.plant); // 播放种植音效
-
-                Destroy(currentPlant.gameObject); // 销毁跟随鼠标的植物实例
-                currentPlant = null; // 清空当前选中植物
             }
+
+            Destroy(currentPlant.gameObject); // 销毁跟随鼠标的植物实例
+            currentPlant = null; // 清空当前选中植物
         }
 
         // 有选中的铲子时，移除单元格中的植物

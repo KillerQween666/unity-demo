@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodGrave: {fileID: 6350428537031209983}
   badGrave: {fileID: 6665750637433158753}
-  row: 3
+  row: 4
 --- !u!1 &6350428537031209983
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -397705043
+  m_SortingLayerID: -1504569511
   m_SortingLayer: -5
   m_SortingOrder: -32766
   m_Sprite: {fileID: 374411855, guid: b9693d40e8a9cdf4bb6d076d8b587f78, type: 3}
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -397705043
+  m_SortingLayerID: -1504569511
   m_SortingLayer: -5
   m_SortingOrder: -32766
   m_Sprite: {fileID: 503471268, guid: 66996180d4870ad4f82bc65450bacf40, type: 3}

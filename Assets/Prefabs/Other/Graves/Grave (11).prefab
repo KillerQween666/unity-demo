@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1207705367
-  m_SortingLayer: -6
+  m_SortingLayerID: 1230945085
+  m_SortingLayer: -9
   m_SortingOrder: -32766
   m_Sprite: {fileID: -810685978, guid: 66996180d4870ad4f82bc65450bacf40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodGrave: {fileID: 7482182812122413915}
   badGrave: {fileID: 3268731666593521341}
-  row: 2
+  row: 0
 --- !u!1 &7482182812122413915
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,8 +203,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1207705367
-  m_SortingLayer: -6
+  m_SortingLayerID: 1230945085
+  m_SortingLayer: -9
   m_SortingOrder: -32766
   m_Sprite: {fileID: 1488504086, guid: b9693d40e8a9cdf4bb6d076d8b587f78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

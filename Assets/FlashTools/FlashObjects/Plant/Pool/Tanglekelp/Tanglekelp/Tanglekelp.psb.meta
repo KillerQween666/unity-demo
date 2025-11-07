@@ -1,0 +1,890 @@
+fileFormatVersion: 2
+guid: 06f30b41ed3caff46914bc25a6df1d30
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Tanglekelp arm8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 961
+      y: 564
+      width: 57
+      height: 44
+    spriteID: 9c9a22fa819144f4bb45bcd482cf935e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 961, y: 564}
+    spritePosition: {x: 301, y: 159}
+  - name: Tanglekelp arm7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 879
+      y: 564
+      width: 74
+      height: 43
+    spriteID: 0a899e5b508dc4f46a7f2369153d4ba6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 879, y: 564}
+    spritePosition: {x: 291, y: 191}
+  - name: Tanglekelp arm6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 814
+      y: 564
+      width: 57
+      height: 57
+    spriteID: c147cdd4c2a783049ac1a457b842bf21
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 814, y: 564}
+    spritePosition: {x: 239, y: 207}
+  - name: Tanglekelp arm5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 681
+      y: 506
+      width: 104
+      height: 50
+    spriteID: cb2c22ef02eb2bf4981897a8d67c85d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 681, y: 506}
+    spritePosition: {x: 198, y: 249}
+  - name: Tanglekelp arm4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 483
+      width: 121
+      height: 64
+    spriteID: 26a86dd77d1a3f14aaf583b8b725761a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 483}
+    spritePosition: {x: 92, y: 237}
+  - name: Tanglekelp arm3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 923
+      y: 162
+      width: 70
+      height: 51
+    spriteID: 230e252eacd4ba947aa9831dc9ef47a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 923, y: 162}
+    spritePosition: {x: 87, y: 226}
+  - name: Tanglekelp arm2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 732
+      y: 564
+      width: 74
+      height: 44
+    spriteID: 5d897c458f1ce85469a7077276cb835e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 732, y: 564}
+    spritePosition: {x: 79, y: 189}
+  - name: Tanglekelp arm1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 681
+      y: 430
+      width: 94
+      height: 68
+    spriteID: f5e1dcfa071f7d346bec57016dff432f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 681, y: 430}
+    spritePosition: {x: 0, y: 152}
+  - name: Tanglekelp_grab_back1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 835
+      y: 269
+      width: 135
+      height: 145
+    spriteID: c81a32fdd6cea1246b04413ade74541d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 835, y: 269}
+    spritePosition: {x: 205, y: 60}
+  - name: Tanglekelp_grab_back2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 852
+      y: 4
+      width: 153
+      height: 150
+    spriteID: 385edcaf0b06d3448811bb8d3c71b657
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 852, y: 4}
+    spritePosition: {x: 198, y: 99}
+  - name: Tanglekelp_grab_back3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 269
+      width: 173
+      height: 206
+    spriteID: 33d7e5167179af54ea7c3f6e6c46e4ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 269}
+    spritePosition: {x: 147, y: 67}
+  - name: Tanglekelp_grab_back4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 4
+      width: 256
+      height: 248
+    spriteID: 19af89042b04cdc4f9ed9d33f8130d81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 4}
+    spritePosition: {x: 36, y: 44}
+  - name: Tanglekelp_grab_front1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 852
+      y: 162
+      width: 63
+      height: 79
+    spriteID: c5beb3daed7b33c4685c0ac4589ced5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 852, y: 162}
+    spritePosition: {x: 28, y: 12}
+  - name: Tanglekelp_grab_front2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 681
+      y: 269
+      width: 146
+      height: 153
+    spriteID: 5c186d515febfc145b0ddd55bcfae14c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 681, y: 269}
+    spritePosition: {x: 28, y: 9}
+  - name: Tanglekelp_grab_front3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 4
+      width: 240
+      height: 255
+    spriteID: 83a7a22ce5c87c04cbea85af1fdeb78d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 604, y: 4}
+    spritePosition: {x: 20, y: 5}
+  - name: Tanglekelp_grab_front4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 269
+      width: 240
+      height: 287
+    spriteID: 34618482be20765468c3a8dd84a1d9a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 269}
+    spritePosition: {x: 20, y: 5}
+  - name: Tanglekelp_grab_front5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 252
+      y: 269
+      width: 240
+      height: 264
+    spriteID: 54b2f3a1a09a47a41a50401ab1bf0a6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 252, y: 269}
+    spritePosition: {x: 20, y: 5}
+  - name: whitewater1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 564
+      width: 354
+      height: 59
+    spriteID: a231a96f4f982f24bb2698a60afdc64a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 564}
+    spritePosition: {x: 12, y: 117}
+  - name: whitewater2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 366
+      y: 564
+      width: 358
+      height: 52
+    spriteID: 8b7d61879fdbc6d4a9e5cae3aaf2e8dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 366, y: 564}
+    spritePosition: {x: 8, y: 117}
+  - name: whitewater3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 631
+      width: 350
+      height: 52
+    spriteID: 93a33d93b028b30439cbd8caa5392b25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 631}
+    spritePosition: {x: 16, y: 117}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 835
+      y: 422
+      width: 169
+      height: 88
+    spriteID: 2c322e8011682b9448b77cec160bb165
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 835, y: 422}
+    spritePosition: {x: 113, y: 58}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 691
+      width: 169
+      height: 88
+    spriteID: 506585affaf07114aaa45d1676d5219c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 691}
+    spritePosition: {x: 113, y: 59}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 328
+      height: 257
+    spriteID: 822f0eaa3b5df134a829c45ac7270e1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 35, y: 17}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Tanglekelp arm8
+    spriteName: Tanglekelp arm8
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9c9a22fa819144f4bb45bcd482cf935e
+    layerID: 65
+    mosaicPosition: {x: 961, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm7
+    spriteName: Tanglekelp arm7
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a899e5b508dc4f46a7f2369153d4ba6
+    layerID: 58
+    mosaicPosition: {x: 879, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm6
+    spriteName: Tanglekelp arm6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c147cdd4c2a783049ac1a457b842bf21
+    layerID: 51
+    mosaicPosition: {x: 814, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm5
+    spriteName: Tanglekelp arm5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb2c22ef02eb2bf4981897a8d67c85d3
+    layerID: 44
+    mosaicPosition: {x: 681, y: 506}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm4
+    spriteName: Tanglekelp arm4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 26a86dd77d1a3f14aaf583b8b725761a
+    layerID: 37
+    mosaicPosition: {x: 500, y: 483}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm3
+    spriteName: Tanglekelp arm3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 230e252eacd4ba947aa9831dc9ef47a5
+    layerID: 30
+    mosaicPosition: {x: 923, y: 162}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm2
+    spriteName: Tanglekelp arm2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5d897c458f1ce85469a7077276cb835e
+    layerID: 23
+    mosaicPosition: {x: 732, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp arm1
+    spriteName: Tanglekelp arm1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f5e1dcfa071f7d346bec57016dff432f
+    layerID: 16
+    mosaicPosition: {x: 681, y: 430}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_front1
+    spriteName: Tanglekelp_grab_front1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5beb3daed7b33c4685c0ac4589ced5a
+    layerID: 87
+    mosaicPosition: {x: 852, y: 162}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_front2
+    spriteName: Tanglekelp_grab_front2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c186d515febfc145b0ddd55bcfae14c
+    layerID: 88
+    mosaicPosition: {x: 681, y: 269}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_front3
+    spriteName: Tanglekelp_grab_front3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 83a7a22ce5c87c04cbea85af1fdeb78d
+    layerID: 89
+    mosaicPosition: {x: 604, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_front4
+    spriteName: Tanglekelp_grab_front4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 34618482be20765468c3a8dd84a1d9a7
+    layerID: 85
+    mosaicPosition: {x: 4, y: 269}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_front5
+    spriteName: Tanglekelp_grab_front5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 54b2f3a1a09a47a41a50401ab1bf0a6e
+    layerID: 86
+    mosaicPosition: {x: 252, y: 269}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_back1
+    spriteName: Tanglekelp_grab_back1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c81a32fdd6cea1246b04413ade74541d
+    layerID: 81
+    mosaicPosition: {x: 835, y: 269}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_back2
+    spriteName: Tanglekelp_grab_back2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 385edcaf0b06d3448811bb8d3c71b657
+    layerID: 82
+    mosaicPosition: {x: 852, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_back3
+    spriteName: Tanglekelp_grab_back3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 33d7e5167179af54ea7c3f6e6c46e4ec
+    layerID: 83
+    mosaicPosition: {x: 500, y: 269}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tanglekelp_grab_back4
+    spriteName: Tanglekelp_grab_back4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 19af89042b04cdc4f9ed9d33f8130d81
+    layerID: 84
+    mosaicPosition: {x: 340, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: whitewater1
+    spriteName: whitewater1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a231a96f4f982f24bb2698a60afdc64a
+    layerID: 78
+    mosaicPosition: {x: 4, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: whitewater2
+    spriteName: whitewater2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b7d61879fdbc6d4a9e5cae3aaf2e8dc
+    layerID: 79
+    mosaicPosition: {x: 366, y: 564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: whitewater3
+    spriteName: whitewater3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 93a33d93b028b30439cbd8caa5392b25
+    layerID: 80
+    mosaicPosition: {x: 4, y: 631}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: dd8353a8aa4e4e74f8ee00fb2108dd92
+    layerID: 76
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 2c322e8011682b9448b77cec160bb165
+    layerID: 75
+    mosaicPosition: {x: 835, y: 422}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 506585affaf07114aaa45d1676d5219c
+    layerID: 74
+    mosaicPosition: {x: 4, y: 691}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 822f0eaa3b5df134a829c45ac7270e1e
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

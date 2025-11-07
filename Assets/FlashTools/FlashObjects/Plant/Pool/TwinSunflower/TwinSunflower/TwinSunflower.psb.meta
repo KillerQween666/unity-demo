@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: fd61869363e4e3641966b336a1940861
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 462
+      width: 75
+      height: 40
+    spriteID: 5330c9c229a2e884c9b525657da9159e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 462}
+    spritePosition: {x: 70, y: 184}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 431
+      y: 105
+      width: 75
+      height: 40
+    spriteID: b98bb4507952f8645b8fcc58dffd8110
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 431, y: 105}
+    spritePosition: {x: 70, y: 184}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 105
+      width: 144
+      height: 97
+    spriteID: 0592b62a3cae5a84d97a06f0396746e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 105}
+    spritePosition: {x: 27, y: 147}
+  - name: Sunflower double petals2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 191
+      height: 148
+    spriteID: 5e896d277e9b93447b8d9d79e7261944
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 118}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 431
+      y: 153
+      width: 75
+      height: 40
+    spriteID: 1927151a513030b4490968bf4c4c9a17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 431, y: 153}
+    spritePosition: {x: 239, y: 258}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 431
+      y: 201
+      width: 75
+      height: 40
+    spriteID: c009caf86abe4584bb5e62d7008449d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 431, y: 201}
+    spritePosition: {x: 239, y: 258}
+  - name: anim face2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 210
+      width: 144
+      height: 97
+    spriteID: e1ce268007f52684694ae031f252721f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 210}
+    spritePosition: {x: 197, y: 220}
+  - name: Sunflower double petals1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 160
+      width: 191
+      height: 148
+    spriteID: ba2f27e74e9f5f74b9087c3afbd74531
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 160}
+    spritePosition: {x: 170, y: 191}
+  - name: frontleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 386
+      width: 52
+      height: 68
+    spriteID: 9db7ea70c4ea11246acf34c704965eaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 386}
+    spritePosition: {x: 97, y: 0}
+  - name: frontleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 460
+      y: 4
+      width: 36
+      height: 70
+    spriteID: 4c8eb86ad6633454c9ffbb9cd502b3be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 460, y: 4}
+    spritePosition: {x: 251, y: 21}
+  - name: frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 4
+      width: 156
+      height: 93
+    spriteID: 29838c6ca65868e45b18b62d0eed41ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 4}
+    spritePosition: {x: 111, y: 5}
+  - name: TwinSunflower leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 355
+      y: 105
+      width: 68
+      height: 50
+    spriteID: 8b5c5d8002d1d6644aaee981477d8d70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 355, y: 105}
+    spritePosition: {x: 158, y: 116}
+  - name: TwinSunflower leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 367
+      y: 4
+      width: 85
+      height: 79
+    spriteID: 0153c2024c9808b439352d785e259736
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 367, y: 4}
+    spritePosition: {x: 236, y: 100}
+  - name: TwinSunflower stem1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 316
+      width: 93
+      height: 181
+    spriteID: 05c51a55b89c7b741a00178b8d554397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 316}
+    spritePosition: {x: 187, y: 55}
+  - name: TwinSunflower leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 316
+      width: 61
+      height: 62
+    spriteID: 7ab303c9e7db67643941842a368b2092
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 316}
+    spritePosition: {x: 68, y: 58}
+  - name: TwinSunflower stem2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 315
+      width: 108
+      height: 124
+    spriteID: 4b8e6e0c331660c4e9c5a3931473c2e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 315}
+    spritePosition: {x: 90, y: 40}
+  - name: backleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 447
+      width: 28
+      height: 24
+    spriteID: ad5de93bcd73be54bb1d829632a31684
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 447}
+    spritePosition: {x: 213, y: 81}
+  - name: backleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 431
+      y: 249
+      width: 35
+      height: 28
+    spriteID: cff00a43dfd54764aa096ee4037e85ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 431, y: 249}
+    spritePosition: {x: 121, y: 72}
+  - name: backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 447
+      width: 102
+      height: 51
+    spriteID: 8ebef897ed00caf488f2e277ae627007
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 447}
+    spritePosition: {x: 132, y: 53}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: anim face
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 9b4bb242f589cea40a84cb8d7267bc70
+    layerID: 114
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5330c9c229a2e884c9b525657da9159e
+    layerID: 117
+    mosaicPosition: {x: 105, y: 462}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b98bb4507952f8645b8fcc58dffd8110
+    layerID: 116
+    mosaicPosition: {x: 431, y: 105}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0592b62a3cae5a84d97a06f0396746e4
+    layerID: 100
+    mosaicPosition: {x: 203, y: 105}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sunflower double petals2
+    spriteName: Sunflower double petals2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5e896d277e9b93447b8d9d79e7261944
+    layerID: 93
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 963e5bcdd5733504e9d97cd3471f11c9
+    layerID: 118
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 1927151a513030b4490968bf4c4c9a17
+    layerID: 111
+    mosaicPosition: {x: 431, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 5
+    spriteID: c009caf86abe4584bb5e62d7008449d4
+    layerID: 110
+    mosaicPosition: {x: 431, y: 201}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim face2
+    spriteName: anim face2
+    isGroup: 0
+    parentIndex: 5
+    spriteID: e1ce268007f52684694ae031f252721f
+    layerID: 86
+    mosaicPosition: {x: 203, y: 210}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sunflower double petals1
+    spriteName: Sunflower double petals1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ba2f27e74e9f5f74b9087c3afbd74531
+    layerID: 79
+    mosaicPosition: {x: 4, y: 160}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf left tip
+    spriteName: frontleaf left tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9db7ea70c4ea11246acf34c704965eaf
+    layerID: 72
+    mosaicPosition: {x: 105, y: 386}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf right tip
+    spriteName: frontleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4c8eb86ad6633454c9ffbb9cd502b3be
+    layerID: 65
+    mosaicPosition: {x: 460, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf
+    spriteName: frontleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 29838c6ca65868e45b18b62d0eed41ee
+    layerID: 58
+    mosaicPosition: {x: 203, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TwinSunflower leaf1
+    spriteName: TwinSunflower leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b5c5d8002d1d6644aaee981477d8d70
+    layerID: 51
+    mosaicPosition: {x: 355, y: 105}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TwinSunflower leaf1
+    spriteName: TwinSunflower leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0153c2024c9808b439352d785e259736
+    layerID: 44
+    mosaicPosition: {x: 367, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TwinSunflower stem1
+    spriteName: TwinSunflower stem1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 05c51a55b89c7b741a00178b8d554397
+    layerID: 37
+    mosaicPosition: {x: 4, y: 316}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TwinSunflower leaf1
+    spriteName: TwinSunflower leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7ab303c9e7db67643941842a368b2092
+    layerID: 30
+    mosaicPosition: {x: 105, y: 316}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TwinSunflower stem2
+    spriteName: TwinSunflower stem2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4b8e6e0c331660c4e9c5a3931473c2e5
+    layerID: 23
+    mosaicPosition: {x: 203, y: 315}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf right tip
+    spriteName: backleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ad5de93bcd73be54bb1d829632a31684
+    layerID: 16
+    mosaicPosition: {x: 313, y: 447}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf left tip
+    spriteName: backleaf left tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cff00a43dfd54764aa096ee4037e85ee
+    layerID: 9
+    mosaicPosition: {x: 431, y: 249}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf
+    spriteName: backleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8ebef897ed00caf488f2e277ae627007
+    layerID: 2
+    mosaicPosition: {x: 203, y: 447}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

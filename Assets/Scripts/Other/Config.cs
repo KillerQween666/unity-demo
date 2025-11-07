@@ -9,6 +9,8 @@ public class Config : MonoBehaviour {
     public const string bgm1 = "Audio/Music/bgm1";
     // ±≥æ∞“Ù¿÷¬∑æ∂ (1)
     public const string bgm2 = "Audio/Music/bgm2";
+    // ±≥æ∞“Ù¿÷¬∑æ∂ (1)
+    public const string bgm3 = "Audio/Music/bgm3";
     // ±≥æ∞“Ù¿÷¬∑æ∂ (3)
     public const string prepareBgm = "Audio/Music/prepareBgm";
     // “Ù–ß¬∑æ∂£∫—Ùπ‚ ’ºØ“Ù–ß
@@ -104,4 +106,20 @@ public class Config : MonoBehaviour {
     public const string dance = "Audio/Sound/Dancer";
     public const string spawnGrave = "Audio/Sound/gravestone_rumble";
     public const string busterGrave = "Audio/Sound/gravebusterchomp";
+    public const string jalapeno = "Audio/Sound/jalapeno";
+
+    public const string squashHmm = "Audio/Sound/squash_hmm";
+    public const string squashHmm2 = "Audio/Sound/squash_hmm2";
+    public const string squashThump = "Audio/Sound/gargantuar_thump";
+    public const string plantWater = "Audio/Sound/plant_water";
+
+    public const string dolphinAppear = "Audio/Sound/dolphin_appears";
+    public const string dolphinJumping = "Audio/Sound/dolphin_before_jumping";
+    public const string firepea = "Audio/Sound/firepea";
+    public const string zamboni = "Audio/Sound/zamboni";
+    public const string explosion = "Audio/Sound/explosion";
+    public const string balloon_pop = "Audio/Sound/balloon_pop";
+    public const string enterWater = "Audio/Sound/zombie_entering_water";
+    public const string bonk = "Audio/Sound/bonk";
+    public const string poolCar = "Audio/Sound/pool_cleaner";
 }

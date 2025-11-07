@@ -1,5 +1,7 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 // 豌豆子弹脚本，控制子弹移动、生命周期、碰撞伤害及对象池回收
@@ -20,6 +22,9 @@ public class PeaBullet : MonoBehaviour {
     // 子弹是否已回收的标记（配合对象池，避免重复回收）
     public bool isRelease = false;
 
+    public Tween moveTween;
+    public Vector3 targetPos;
+
     // 固定时间步更新：控制子弹移动（FixedUpdate适合物理相关逻辑，移动更稳定）
     private void FixedUpdate() {
         // 子弹持续向右移动（基于世界坐标，不受旋转影响）
@@ -31,8 +36,12 @@ public class PeaBullet : MonoBehaviour {
         liveTimer += Time.deltaTime;
         // 存活时间超过上限，且未命中、未回收时，回收到对象池
         if (liveTimer > liveTime && isAttack == false && isRelease == false) {
-            ObjectPoolManager.Instance.ReleasePeaBullet(this.gameObject);
+            ReleaseBullet();
         }
+    }
+
+    protected virtual void ReleaseBullet() {
+        ObjectPoolManager.Instance.ReleasePeaBullet(this.gameObject);
     }
 
     // 碰撞触发：子弹命中僵尸时执行伤害逻辑

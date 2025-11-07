@@ -20,8 +20,14 @@ public class CarManager : MonoBehaviour {
     // 显示小车列表：通过DoTween动画将所有小车移动到指定X位置
     public void ShowCarList() {
         foreach (Car car in carList) {
-            // 小车局部X轴移动到-0.2f，动画时长0.5秒
-            car.transform.DOLocalMoveX(-0.2f, 0.5f);
+            if (car.TryGetComponent<PoolCar>(out var poolCar)) {
+                // 小车局部X轴移动到-0.2f，动画时长0.5秒
+                car.transform.DOLocalMoveX(0.2f, 0.5f);
+            } else {
+                // 小车局部X轴移动到-0.2f，动画时长0.5秒
+                car.transform.DOLocalMoveX(-0.4f, 0.5f);
+            }
+
         }
     }
 }

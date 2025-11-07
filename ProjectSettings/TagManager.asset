@@ -10,6 +10,7 @@ TagManager:
   - House
   - Cell
   - CardList
+  - PeaBullet
   layers:
   - Default
   - TransparentFX
@@ -61,6 +62,9 @@ TagManager:
     locked: 0
   - name: Row5
     uniqueID: 2790397785
+    locked: 0
+  - name: Row6
+    uniqueID: 2878170539
     locked: 0
   - name: Game
     uniqueID: 1444100059

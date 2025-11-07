@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour {
 
     // 相机左移完成后执行：显示准备界面
     void OnCameraMoveLeftComplete() {
+        CellManager.Instance.OpenAllCollider2D();
         AudioManager.Instance.PlayClip(Config.prepare); // 播放准备音效
         UIManager.Instance.prepareUI.Show(); // 显示准备界面
     }

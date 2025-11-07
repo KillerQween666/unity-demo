@@ -31,6 +31,17 @@ public enum PlantType {
     DoomShroom,
     HypnoShroom,
     Gravebuster,
+    LilyPad,
+    Squash,
+    ThreePeaShooter,
+    Tanglekelp,
+    Jalapeno,
+    Caltrop,
+    Torchwood,
+    Tallnut,
+    TwinSunflower,
+    GatlingPeaShooter,
+    SpikeRock,
 }
 
 // 植物卡牌核心脚本：控制卡牌状态、UI显示、点击种植及冷却逻辑

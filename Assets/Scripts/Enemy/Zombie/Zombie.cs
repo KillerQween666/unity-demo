@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using Unity.Mathematics;
 using UnityEditor;
-using UnityEditor.ShortcutManagement;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.U2D;
@@ -22,7 +21,7 @@ public class Zombie : Enemy {
    
     public float minSpeed = 0.8f; // 移动速度最小值
     public float maxSpeed = 1.2f; // 移动速度最大值
-    public int atkValue = 10; // 攻击造成的伤害
+    public int atkValue = 12; // 攻击造成的伤害
 
     private Plant currentEatPlant; // 正在攻击的植物
     private Coroutine slowCoroutine; // 控制减速效果的协程
@@ -50,7 +49,7 @@ public class Zombie : Enemy {
     protected bool isCroze = false; // 是否处于减速状态
     protected bool isHypno;
     protected bool isIceCroze = false;
-    private bool isDead = false;
+    protected bool isDead = false;
 
     public GameObject Ice;
 
@@ -62,10 +61,18 @@ public class Zombie : Enemy {
     public Collider2D selfCollider;
     private List<Collider2D> colliderList = new List<Collider2D>();
 
+    private float targetXPosition = 20;
+
+    public Transform bodyTransform;
+
+    public bool isCanCroze = true;
+
+    public bool isCanBoom = false;
+
     // 初始化组件和基础状态
     protected void Awake() {
         if (animator == null)  animator = GetComponent<Animator>();
-        selfCollider = GetComponent<Collider2D>();
+        if (selfCollider == null)   selfCollider = GetComponent<Collider2D>();
 
         // 随机设置初始移动速度
         originSpeed = UnityEngine.Random.Range(minSpeed, maxSpeed);
@@ -79,7 +86,10 @@ public class Zombie : Enemy {
         }
     }
 
-    private void FixedUpdate() {
+    protected virtual void FixedUpdate() {
+        if (transform.position.x > targetXPosition) {
+            Dead();
+        }
         if (isHaveHead == false) {
             HP -= 0.25f;
             if (HP <= 0) {
@@ -112,6 +122,10 @@ public class Zombie : Enemy {
 
     // 碰撞进入时触发（检测到植物或房子）
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.TryGetComponent<Plant>(out var plant) && plant.isCanEat == false) {
+            return;
+        }
+
         if (isHypno) {
             if (collision.CompareTag("Zombie")) {
                 if (!colliderList.Contains(collision)) {
@@ -200,7 +214,7 @@ public class Zombie : Enemy {
 
         if (hurtType == 1 && damage >= HP) {
             Dead();
-            ObjectPoolManager.Instance.PlayZombieBoomSwfIEnumrator(transform, isHaveHead, spriteList[0].sortingOrder + 100);
+            PlayBoomSwf(transform, isHaveHead, spriteList[0].sortingOrder + 100);
         } else if (hurtType == 2 && damage >= HP) {
             Dead();
         } else {
@@ -215,24 +229,17 @@ public class Zombie : Enemy {
         }
     }
 
+    protected virtual void PlayBoomSwf(Transform transform, bool isHaveHead, int sort) {
+        ObjectPoolManager.Instance.PlayZombieBoomSwfIEnumrator(transform, isHaveHead, sort);
+    }
+
     // 被碾压的处理（如被小推车压）
     public void Push() {
         if (isDead) return;
         isDead = true;
 
-        animator.SetBool("isEat", false);
+        DeadPrepare();
 
-        originSpeed = 1;
-        SetAnimatorSpeed(1);
-        if (slowCoroutine != null) StopCoroutine(slowCoroutine);
-        if (isIceCroze) {
-            StopCoroutine(crozeCoroutine);
-            IceCrack();
-        }
-
-        Ice.SetActive(false);
-        shadow.SetActive(false);
-        GetComponent<Collider2D>().enabled = false;
         animator.SetBool("isPush", true); // 播放被碾压动画
         StartCoroutine(PushAnimation());
     }
@@ -241,6 +248,12 @@ public class Zombie : Enemy {
         if (isDead) return;
         isDead = true;
 
+        DeadPrepare();
+
+        animator.SetBool("isDead", true); // 切换到死亡动画
+    }
+
+    public void DeadPrepare() {
         animator.SetBool("isEat", false);
 
         originSpeed = 1;
@@ -249,14 +262,14 @@ public class Zombie : Enemy {
             StopCoroutine(crozeCoroutine);
             IceCrack();
             PlaySlowSpeed();
-        } else {
+        }
+        else {
             SetAnimatorSpeed(1);
         }
 
-        Ice.SetActive(false);
-        shadow.SetActive(false); // 隐藏影子
+        if (Ice != null) Ice.SetActive(false);
+        if (shadow != null) shadow.SetActive(false); // 隐藏影子
         GetComponent<Collider2D>().enabled = false; // 关闭碰撞
-        animator.SetBool("isDead", true); // 切换到死亡动画
     }
 
     // 完全死亡（移除对象并通知管理器）
@@ -267,13 +280,23 @@ public class Zombie : Enemy {
 
     // 受伤闪烁效果的协程
     public virtual IEnumerator PlayFlash() {
-        spriteList.ForEach(s => s.material.SetFloat("_Brightness", flashBright));
+        foreach (var sprite in spriteList) {
+            if (sprite != null) {
+                sprite.material.SetFloat("_Brightness", flashBright);
+            }
+        }
         yield return new WaitForSeconds(0.2f);
-        spriteList.ForEach(s => s.material.SetFloat("_Brightness", originalBright));
+        foreach (var sprite in spriteList) {
+            if (sprite != null) {
+                sprite.material.SetFloat("_Brightness", originalBright);
+            }
+        }
     }
 
     // 触发减速效果（如被冰冻）
     public void PlaySlowSpeed() {
+        if (isCanCroze == false) return;
+
         if (isIceCroze || isDead)   return;
         
         if (slowCoroutine != null) {
@@ -287,6 +310,7 @@ public class Zombie : Enemy {
 
     // 触发减速效果（如被冻结）
     public void PlayCrozeSpeed() {
+        if (isCanCroze == false) return;
         if (isDead) return;
 
         if (crozeCoroutine != null) {
@@ -399,6 +423,8 @@ public class Zombie : Enemy {
         // 对爆炸范围内的僵尸执行伤害逻辑
         foreach (var coll in hitColliders) {
             if (coll != null) { // 避免空引用异常
+                if (coll.TryGetComponent<Plant>(out var plant) && plant.isCanEat == false) return;
+
                 if (!colliderList.Contains(coll)) {
                     colliderList.Add(coll);
                     if (colliderList.Count == 1) {
@@ -476,6 +502,36 @@ public class Zombie : Enemy {
         if (this.gameObject != null) {
             Dead();
         }
+    }
+
+    public void PushDeadIenumrator() {
+        StartCoroutine(PushDead());
+    }
+
+    private IEnumerator PushDead() {
+        if (isDead != true) {
+            animator.SetBool("isEat", false);
+
+            originSpeed = 0;
+            SetAnimatorSpeed(0);
+            if (slowCoroutine != null) StopCoroutine(slowCoroutine);
+            if (isIceCroze) {
+                StopCoroutine(crozeCoroutine);
+                IceCrack();
+            }
+
+            if (Ice != null) Ice.SetActive(false);
+            if (shadow != null) shadow.SetActive(false);
+            GetComponent<Collider2D>().enabled = false;
+        }
+
+        Vector3 currentScale = transform.localScale;
+        Vector3 squashScale = new Vector3(1.04f * currentScale.x, 0.56f * currentScale.y, 0.8f * currentScale.z);
+        transform.localScale = squashScale;
+
+        yield return new WaitForSeconds(1f);
+
+        Dead();
     }
 
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 // 寒冰豌豆子弹类（继承自普通豌豆子弹基类，扩展减速效果）
 public class SnowPeaBullet : PeaBullet {
+
+    protected override void ReleaseBullet() {
+        ObjectPoolManager.Instance.ReleaseSnowPeaBullet(this.gameObject);
+    }
+
     // 重写碰撞检测逻辑（实现寒冰子弹的专属效果）
     public override void OnTriggerEnter2D(Collider2D collision) {
         // 仅对标签为"Zombie"的对象执行逻辑
@@ -24,15 +29,12 @@ public class SnowPeaBullet : PeaBullet {
                         zombie.TakeDamage(atkValue, 3);
                     } else {
                         enemy.TakeDamage(atkValue, 3);
-                    }
-
-
-                        
+                    }  
                 }
             }
 
             // 子弹完成使命，回收到对象池（复用，减少性能消耗）
-            ObjectPoolManager.Instance.ReleaseSnowPeaBullet(this.gameObject);
+            if (isRelease == false) ObjectPoolManager.Instance.ReleaseSnowPeaBullet(this.gameObject);
         }
     }
 }

@@ -1,0 +1,1064 @@
+fileFormatVersion: 2
+guid: 63e7c72230a6e994a90deafde03bfdac
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: ThreePeater mouth2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 210
+      width: 55
+      height: 116
+    spriteID: aaddc4eb1dd9836448f58bd054a66621
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 210}
+    spritePosition: {x: 156, y: 136}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 325
+      width: 32
+      height: 25
+    spriteID: 2949bb5d3c2dcc54a960c0190cea8f78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 325}
+    spritePosition: {x: 132, y: 200}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 358
+      width: 32
+      height: 25
+    spriteID: 65e983dfddc13264d984fc8fa8a289a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 358}
+    spritePosition: {x: 132, y: 200}
+  - name: anim face2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 339
+      width: 87
+      height: 76
+    spriteID: 88045bb28bb4f774888e0b23d07478dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 339}
+    spritePosition: {x: 90, y: 160}
+  - name: ThreePeater head2 leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 287
+      width: 37
+      height: 30
+    spriteID: 23f374891957ce945b2e50fe5517a74f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 287}
+    spritePosition: {x: 71, y: 196}
+  - name: ThreePeater head2 leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 238
+      y: 404
+      width: 30
+      height: 41
+    spriteID: 191dcbe8f616f794a9cc5f88a1625df9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 238, y: 404}
+    spritePosition: {x: 77, y: 171}
+  - name: ThreePeater mouth3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 287
+      width: 48
+      height: 109
+    spriteID: dc6ce902646adb44f9f5a4a190a2f332
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 287}
+    spritePosition: {x: 99, y: 206}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 100
+      width: 32
+      height: 25
+    spriteID: 7d2176f76ea038a469bbbdac7d2dbb52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 100}
+    spritePosition: {x: 64, y: 257}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 133
+      width: 32
+      height: 25
+    spriteID: 337b49f8584568841a86b2c27f70cc9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 133}
+    spritePosition: {x: 64, y: 257}
+  - name: anim face3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 210
+      width: 81
+      height: 69
+    spriteID: 259cfa974687d1041a864ec159a5f031
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 210}
+    spritePosition: {x: 27, y: 218}
+  - name: ThreePeater head3 leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 475
+      width: 38
+      height: 31
+    spriteID: ac7b2488bb0028848890665290dd2f9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 475}
+    spritePosition: {x: 3, y: 249}
+  - name: ThreePeater head3 leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 453
+      width: 31
+      height: 41
+    spriteID: d507e7d78be732f47ab3bbec9e2d8bdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 453}
+    spritePosition: {x: 9, y: 225}
+  - name: ThreePeater head3 leaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 238
+      y: 453
+      width: 28
+      height: 37
+    spriteID: d6d2ecfb95e01704f80e8e47c83d99a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 238, y: 453}
+    spritePosition: {x: 19, y: 214}
+  - name: ThreePeater mouth1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 334
+      width: 55
+      height: 111
+    spriteID: 69b8bb99ba1e78b47ac73bbba97628d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 334}
+    spritePosition: {x: 230, y: 67}
+  - name: Blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 166
+      width: 29
+      height: 25
+    spriteID: 750e25aa234518b4cb1bee0ed09468eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 166}
+    spritePosition: {x: 207, y: 128}
+  - name: Blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 199
+      width: 29
+      height: 25
+    spriteID: 5c25f64a2318eb44ea725119d3febd46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 199}
+    spritePosition: {x: 207, y: 128}
+  - name: anim face1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 423
+      width: 87
+      height: 73
+    spriteID: 8e76e87eabbafc74aab3b792a80ced69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 423}
+    spritePosition: {x: 163, y: 91}
+  - name: ThreePeater head1 leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 61
+      width: 38
+      height: 31
+    spriteID: 46c580a599fe2624abb7c85e026f7dec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 61}
+    spritePosition: {x: 145, y: 125}
+  - name: frontleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 404
+      width: 50
+      height: 63
+    spriteID: 1c73c0f29343eca43b84d03eb32aa482
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 404}
+    spritePosition: {x: 44, y: 0}
+  - name: frontleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 101
+      width: 31
+      height: 65
+    spriteID: c0f25e88f4aae3f49a946ad02f6b53c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 101}
+    spritePosition: {x: 198, y: 21}
+  - name: frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 4
+      width: 156
+      height: 89
+    spriteID: 89a59be180c344146963a2c9aecc8045
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 4}
+    spritePosition: {x: 58, y: 4}
+  - name: ThreePeater stem2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 194
+      width: 88
+      height: 137
+    spriteID: 37a7a8e72ca0b17489014b60e2012398
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 194}
+    spritePosition: {x: 60, y: 44}
+  - name: ThreePeater stem1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 101
+      width: 117
+      height: 101
+    spriteID: 172c3d58d3f866545967e1f1a9fc2cfb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 101}
+    spritePosition: {x: 81, y: 37}
+  - name: ThreePeater stem3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 105
+      height: 182
+    spriteID: f7ab961dae41c8c43b8591268ac466dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 43, y: 51}
+  - name: backleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 232
+      width: 26
+      height: 22
+    spriteID: f890c8732d2de8d438661c5b385adea5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 232}
+    spritePosition: {x: 160, y: 78}
+  - name: backleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 174
+      width: 30
+      height: 26
+    spriteID: dfd3a81aa84bc1049ab1042d203f5117
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 174}
+    spritePosition: {x: 68, y: 69}
+  - name: backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 4
+      width: 96
+      height: 49
+    spriteID: 006fe5576a597d045aaf82a60fc245b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 281, y: 4}
+    spritePosition: {x: 79, y: 50}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Head2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e647cd86211d81f4eae9c854255d08e3
+    layerID: 144
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ThreePeater mouth2
+    spriteName: ThreePeater mouth2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: aaddc4eb1dd9836448f58bd054a66621
+    layerID: 120
+    mosaicPosition: {x: 117, y: 210}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 5e04663f1fe4a514c865fd2ffa10790b
+    layerID: 133
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2949bb5d3c2dcc54a960c0190cea8f78
+    layerID: 139
+    mosaicPosition: {x: 236, y: 325}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 65e983dfddc13264d984fc8fa8a289a1
+    layerID: 138
+    mosaicPosition: {x: 236, y: 358}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face2
+    spriteName: anim face2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 88045bb28bb4f774888e0b23d07478dc
+    layerID: 115
+    mosaicPosition: {x: 4, y: 339}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head2 leaf1
+    spriteName: ThreePeater head2 leaf1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 23f374891957ce945b2e50fe5517a74f
+    layerID: 110
+    mosaicPosition: {x: 236, y: 287}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head2 leaf2
+    spriteName: ThreePeater head2 leaf2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 191dcbe8f616f794a9cc5f88a1625df9
+    layerID: 105
+    mosaicPosition: {x: 238, y: 404}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Head3
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: a9a69cf5898bcdf40b16f04f6c65d8e3
+    layerID: 146
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ThreePeater mouth3
+    spriteName: ThreePeater mouth3
+    isGroup: 0
+    parentIndex: 8
+    spriteID: dc6ce902646adb44f9f5a4a190a2f332
+    layerID: 100
+    mosaicPosition: {x: 180, y: 287}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 8
+    spriteID: f3807af98f6e5824ab7903c3ea2360bc
+    layerID: 136
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 7d2176f76ea038a469bbbdac7d2dbb52
+    layerID: 132
+    mosaicPosition: {x: 281, y: 100}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 337b49f8584568841a86b2c27f70cc9a
+    layerID: 131
+    mosaicPosition: {x: 281, y: 133}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face3
+    spriteName: anim face3
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 259cfa974687d1041a864ec159a5f031
+    layerID: 95
+    mosaicPosition: {x: 180, y: 210}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head3 leaf1
+    spriteName: ThreePeater head3 leaf1
+    isGroup: 0
+    parentIndex: 8
+    spriteID: ac7b2488bb0028848890665290dd2f9e
+    layerID: 90
+    mosaicPosition: {x: 180, y: 475}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head3 leaf2
+    spriteName: ThreePeater head3 leaf2
+    isGroup: 0
+    parentIndex: 8
+    spriteID: d507e7d78be732f47ab3bbec9e2d8bdb
+    layerID: 85
+    mosaicPosition: {x: 117, y: 453}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head3 leaf3
+    spriteName: ThreePeater head3 leaf3
+    isGroup: 0
+    parentIndex: 8
+    spriteID: d6d2ecfb95e01704f80e8e47c83d99a1
+    layerID: 80
+    mosaicPosition: {x: 238, y: 453}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Head1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ac6c53a1a2bc5b7418e2028f80c91821
+    layerID: 148
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ThreePeater mouth1
+    spriteName: ThreePeater mouth1
+    isGroup: 0
+    parentIndex: 17
+    spriteID: 69b8bb99ba1e78b47ac73bbba97628d4
+    layerID: 75
+    mosaicPosition: {x: 117, y: 334}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 17
+    spriteID: edd8c499bb86be9429c84d52c1420b82
+    layerID: 142
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blink2
+    spriteName: Blink2
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 750e25aa234518b4cb1bee0ed09468eb
+    layerID: 141
+    mosaicPosition: {x: 281, y: 166}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blink1
+    spriteName: Blink1
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 5c25f64a2318eb44ea725119d3febd46
+    layerID: 140
+    mosaicPosition: {x: 281, y: 199}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face1
+    spriteName: anim face1
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 8e76e87eabbafc74aab3b792a80ced69
+    layerID: 70
+    mosaicPosition: {x: 4, y: 423}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater head1 leaf1
+    spriteName: ThreePeater head1 leaf1
+    isGroup: 0
+    parentIndex: 17
+    spriteID: 46c580a599fe2624abb7c85e026f7dec
+    layerID: 65
+    mosaicPosition: {x: 281, y: 61}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf left tip
+    spriteName: frontleaf left tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1c73c0f29343eca43b84d03eb32aa482
+    layerID: 58
+    mosaicPosition: {x: 180, y: 404}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf right tip
+    spriteName: frontleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c0f25e88f4aae3f49a946ad02f6b53c0
+    layerID: 51
+    mosaicPosition: {x: 242, y: 101}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf
+    spriteName: frontleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 89a59be180c344146963a2c9aecc8045
+    layerID: 44
+    mosaicPosition: {x: 117, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater stem2
+    spriteName: ThreePeater stem2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 37a7a8e72ca0b17489014b60e2012398
+    layerID: 37
+    mosaicPosition: {x: 4, y: 194}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater stem1
+    spriteName: ThreePeater stem1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 172c3d58d3f866545967e1f1a9fc2cfb
+    layerID: 30
+    mosaicPosition: {x: 117, y: 101}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ThreePeater stem3
+    spriteName: ThreePeater stem3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f7ab961dae41c8c43b8591268ac466dc
+    layerID: 23
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf right tip
+    spriteName: backleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f890c8732d2de8d438661c5b385adea5
+    layerID: 16
+    mosaicPosition: {x: 281, y: 232}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf left tip
+    spriteName: backleaf left tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dfd3a81aa84bc1049ab1042d203f5117
+    layerID: 9
+    mosaicPosition: {x: 242, y: 174}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf
+    spriteName: backleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 006fe5576a597d045aaf82a60fc245b1
+    layerID: 2
+    mosaicPosition: {x: 281, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

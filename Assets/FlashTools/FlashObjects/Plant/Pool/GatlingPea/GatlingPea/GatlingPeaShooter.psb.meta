@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: 403652ddb358e9a47bcf18dd7b19be4a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: GatlingPea helmet
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 214
+      height: 211
+    spriteID: e0533ac0b9bb6ff4ebd633d979fa0ae6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 9, y: 96}
+  - name: PeaShooter eyebrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 133
+      y: 420
+      width: 71
+      height: 38
+    spriteID: 357cc12ecd759884ca932ebc0fac308d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 133, y: 420}
+    spritePosition: {x: 124, y: 207}
+  - name: GatlingPea mouth overlay
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 105
+      width: 88
+      height: 126
+    spriteID: 95a56bcc13128fc4187861f8f5e51e60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 105}
+    spritePosition: {x: 185, y: 137}
+  - name: GatlingPea barrel1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 381
+      width: 99
+      height: 62
+    spriteID: a9b60a98c96b4fc419a31a4363118fe5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 381}
+    spritePosition: {x: 201, y: 180}
+  - name: GatlingPea barrel2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 390
+      y: 4
+      width: 99
+      height: 62
+    spriteID: 21f0d725f74bf7c45b551b70e5ff20e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 390, y: 4}
+    spritePosition: {x: 214, y: 205}
+  - name: GatlingPea barrel4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 239
+      width: 99
+      height: 63
+    spriteID: 5beb79c852286aa4a8a04e9596426432
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 239}
+    spritePosition: {x: 213, y: 155}
+  - name: GatlingPea barrel3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 310
+      width: 99
+      height: 63
+    spriteID: 830b405ec5b050b42a1c999703a8d57e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 310}
+    spritePosition: {x: 222, y: 180}
+  - name: GatlingPea mouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 363
+      width: 121
+      height: 126
+    spriteID: 4233a95c0da053f47a067339750dadf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 363}
+    spritePosition: {x: 185, y: 137}
+  - name: GatlingPea_blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 322
+      y: 181
+      width: 60
+      height: 49
+    spriteID: 08e0c76743d914e4b8b7f3638bd685df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 322, y: 181}
+    spritePosition: {x: 139, y: 180}
+  - name: GatlingPea_blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 133
+      y: 363
+      width: 60
+      height: 49
+    spriteID: c28963e6f7fe5b449b733acc3a7b3f2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 133, y: 363}
+    spritePosition: {x: 139, y: 180}
+  - name: anim face
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 223
+      width: 163
+      height: 132
+    spriteID: 09f3314288cb869498cb319e0b7dfed9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 223}
+    spritePosition: {x: 59, y: 116}
+  - name: frontleaf tip left
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 322
+      y: 105
+      width: 52
+      height: 68
+    spriteID: 711c006002722c143aed28e833f8c0e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 322, y: 105}
+    spritePosition: {x: 62, y: 0}
+  - name: frontleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 175
+      y: 223
+      width: 36
+      height: 70
+    spriteID: 81edc7c70ba69a34e9526e9952fa3d4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 175, y: 223}
+    spritePosition: {x: 216, y: 21}
+  - name: frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 4
+      width: 156
+      height: 93
+    spriteID: 5f2e06829e0ebe14da92bd24a81f2daf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 4}
+    spritePosition: {x: 76, y: 5}
+  - name: stalk top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 336
+      y: 451
+      width: 38
+      height: 31
+    spriteID: c0936b905c8dcd243b3e4f189e4d49d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 336, y: 451}
+    spritePosition: {x: 122, y: 96}
+  - name: stalk bottom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 175
+      y: 301
+      width: 36
+      height: 45
+    spriteID: c59bf5582549df54585a46b8b096e7df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 175, y: 301}
+    spritePosition: {x: 132, y: 61}
+  - name: backleaf right tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 333
+      y: 417
+      width: 28
+      height: 24
+    spriteID: 1b90958826e064a47a7ed4ad805131d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 333, y: 417}
+    spritePosition: {x: 178, y: 81}
+  - name: backleaf left tip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 333
+      y: 381
+      width: 35
+      height: 28
+    spriteID: 9f7bfa6fd67f207418e45c606e7a7b86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 333, y: 381}
+    spritePosition: {x: 86, y: 72}
+  - name: backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 451
+      width: 102
+      height: 51
+    spriteID: a2c0374901210eb47abd74acebe0e253
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 451}
+    spritePosition: {x: 97, y: 53}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: GatlingPea Head
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 61b206ba7f9fabf43a47124784383f31
+    layerID: 127
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: GatlingPea helmet
+    spriteName: GatlingPea helmet
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e0533ac0b9bb6ff4ebd633d979fa0ae6
+    layerID: 114
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter eyebrow
+    spriteName: PeaShooter eyebrow
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 357cc12ecd759884ca932ebc0fac308d
+    layerID: 107
+    mosaicPosition: {x: 133, y: 420}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea mouth overlay
+    spriteName: GatlingPea mouth overlay
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 95a56bcc13128fc4187861f8f5e51e60
+    layerID: 100
+    mosaicPosition: {x: 226, y: 105}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea barrel1
+    spriteName: GatlingPea barrel1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a9b60a98c96b4fc419a31a4363118fe5
+    layerID: 93
+    mosaicPosition: {x: 226, y: 381}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea barrel2
+    spriteName: GatlingPea barrel2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 21f0d725f74bf7c45b551b70e5ff20e9
+    layerID: 86
+    mosaicPosition: {x: 390, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea barrel4
+    spriteName: GatlingPea barrel4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5beb79c852286aa4a8a04e9596426432
+    layerID: 79
+    mosaicPosition: {x: 226, y: 239}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea barrel3
+    spriteName: GatlingPea barrel3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 830b405ec5b050b42a1c999703a8d57e
+    layerID: 72
+    mosaicPosition: {x: 226, y: 310}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GatlingPea mouth
+    spriteName: GatlingPea mouth
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4233a95c0da053f47a067339750dadf9
+    layerID: 65
+    mosaicPosition: {x: 4, y: 363}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: anim face
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: f74d2808ec335bd46ae14cc9e7492a5f
+    layerID: 125
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: GatlingPea_blink2
+    spriteName: GatlingPea_blink2
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 08e0c76743d914e4b8b7f3638bd685df
+    layerID: 124
+    mosaicPosition: {x: 322, y: 181}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: GatlingPea_blink1
+    spriteName: GatlingPea_blink1
+    isGroup: 0
+    parentIndex: 9
+    spriteID: c28963e6f7fe5b449b733acc3a7b3f2c
+    layerID: 123
+    mosaicPosition: {x: 133, y: 363}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: anim face
+    spriteName: anim face
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 09f3314288cb869498cb319e0b7dfed9
+    layerID: 58
+    mosaicPosition: {x: 4, y: 223}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf tip left
+    spriteName: frontleaf tip left
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 711c006002722c143aed28e833f8c0e7
+    layerID: 51
+    mosaicPosition: {x: 322, y: 105}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf right tip
+    spriteName: frontleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 81edc7c70ba69a34e9526e9952fa3d4b
+    layerID: 44
+    mosaicPosition: {x: 175, y: 223}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: frontleaf
+    spriteName: frontleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5f2e06829e0ebe14da92bd24a81f2daf
+    layerID: 37
+    mosaicPosition: {x: 226, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: stalk top
+    spriteName: stalk top
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c0936b905c8dcd243b3e4f189e4d49d2
+    layerID: 30
+    mosaicPosition: {x: 336, y: 451}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: stalk bottom
+    spriteName: stalk bottom
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c59bf5582549df54585a46b8b096e7df
+    layerID: 23
+    mosaicPosition: {x: 175, y: 301}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf right tip
+    spriteName: backleaf right tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1b90958826e064a47a7ed4ad805131d2
+    layerID: 16
+    mosaicPosition: {x: 333, y: 417}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf left tip
+    spriteName: backleaf left tip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9f7bfa6fd67f207418e45c606e7a7b86
+    layerID: 9
+    mosaicPosition: {x: 333, y: 381}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: backleaf
+    spriteName: backleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a2c0374901210eb47abd74acebe0e253
+    layerID: 2
+    mosaicPosition: {x: 226, y: 451}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

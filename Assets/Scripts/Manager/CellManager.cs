@@ -18,11 +18,22 @@ public class CellManager : MonoBehaviour {
     public float spawnTime = 5f;
     private float spawnTimer = 0;
 
+    public List<Cell> allCell = new List<Cell>();
+    private List<Cell> canSpawnZombieCells = new List<Cell>();
+
     private void Awake() {
         Instance = this;
 
         foreach (var cell in FindObjectsOfType<Cell>()) {
+            allCell.Add(cell);
             if (cell.canSpawnBrave) cellList.Add(cell);
+            if (cell.canSpawnWaterZombie) canSpawnZombieCells.Add(cell);
+        }
+    }
+
+    public void OpenAllCollider2D() {
+        foreach (var cell in allCell) {
+            cell.OpenCollider2D();
         }
     }
 
@@ -142,5 +153,9 @@ public class CellManager : MonoBehaviour {
             }
         }
         return tombstonePositions;
+    }
+
+    public List<Cell> GetAllCanSpawnWaterZombieCell() {
+        return canSpawnZombieCells;
     }
 }

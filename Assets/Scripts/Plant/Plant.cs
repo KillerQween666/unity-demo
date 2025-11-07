@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Xml.Schema;
 using UnityEngine;
 
 // 植物状态枚举：定义植物的工作状态
@@ -19,6 +21,14 @@ public class Plant : MonoBehaviour {
     public Collider2D grand2Collider2d;
 
     public Cell selfCell;
+
+    public bool isWaterPlant = false;
+    public bool isLandPlant = false;
+
+    public bool isCoverPlant = false;
+    public PlantType coverPlantType;
+
+    public bool isCanEat = true;
 
     public int HP = 100; // 植物生命值
 
@@ -67,7 +77,7 @@ public class Plant : MonoBehaviour {
         if (grandAnimator != null) grandAnimator.enabled = false; // 停止子物体动画
         if (grandCollider2D != null) grandCollider2D.enabled = false; // 关闭子物体碰撞
         if (grand2Collider2d != null) grand2Collider2d.enabled = false;
-        shadow.SetActive(false); // 隐藏影子
+        if (shadow != null) shadow.SetActive(false); // 隐藏影子
     }
 
     // 切换到启用状态（开始工作、开启交互）
@@ -78,7 +88,7 @@ public class Plant : MonoBehaviour {
         if (grandAnimator != null) grandAnimator.enabled = true; // 启动子物体动画
         if (grandCollider2D != null) grandCollider2D.enabled = true; // 开启子物体碰撞
         if (grand2Collider2d != null) grand2Collider2d.enabled = true;
-        shadow.SetActive(true); // 显示影子
+        if (shadow != null) shadow.SetActive(true); // 显示影子
     }
 
     // 受击处理（扣血、闪烁，血量为0时死亡）
@@ -115,9 +125,24 @@ public class Plant : MonoBehaviour {
 
     // 死亡逻辑（默认销毁对象，子类可重写）
     public virtual void Dead() {
-        Destroy(gameObject);
+        if (this != null && gameObject != null) Destroy(gameObject);
     }
 
     // 植物专属功能方法（虚方法，子类实现具体能力）
     public virtual void PlantFun() { }
+
+    public void PushDeadIenumerator() {
+        StartCoroutine(PushDead());
+    }
+
+    private IEnumerator PushDead() {
+        Vector3 currentScale = transform.localScale;
+        Vector3 squashScale = new Vector3(1.17f * currentScale.x, 0.63f * currentScale.y, 0.9f * currentScale.z);
+        transform.localScale = squashScale;
+        TransitionToDisable();
+
+        yield return new WaitForSeconds(1f);
+
+        Dead();
+    }
 }

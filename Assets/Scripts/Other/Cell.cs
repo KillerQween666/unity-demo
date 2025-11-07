@@ -21,10 +21,35 @@ public class Cell : MonoBehaviour {
     public GameObject nightHole2;
 
     public bool canSpawnBrave;
+    public bool canSpawnWaterZombie = false;
+
     public GameObject bravePrefab;
     public bool isBrave = false;
 
+    private bool isWaterLand = false;
+
+    private bool isHaveIce;
+    public float iceLiveTime = 30;
+    private float iceLiveTimer = 0;
+
+    public Plant topPlant;
+
+    public bool isWater = false;
+
     public int row;
+
+    public Transform waterLandTransform;
+
+    private Collider2D coll;
+
+    private void Awake() {
+        coll = GetComponent<Collider2D>();
+        coll.enabled = false;
+    }
+
+    public void OpenCollider2D() {
+        coll.enabled = true;
+    }
 
     private void Update() {
         if (isHole) {
@@ -40,6 +65,15 @@ public class Cell : MonoBehaviour {
                 isHole = false;
             }
         }
+
+        if (isHaveIce) {
+            iceLiveTimer += Time.deltaTime;
+            if (iceLiveTimer > iceLiveTime) {
+                iceLiveTimer = 0;
+                
+                isHaveIce = false;
+            }
+        }
     }
 
     // 单元格点击事件（种植植物/使用铲子，由HandManager处理）
@@ -52,16 +86,40 @@ public class Cell : MonoBehaviour {
 
     // 鼠标进入单元格时触发（显示植物预览/高亮已有植物）
     public void OnPointerEnter(BaseEventData data) {
-        if (isHole) return;
+        if (isHole || isHaveIce) return;
 
         // 若单元格有植物且选中了铲子，让植物高亮（提示可铲除）
-        if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
-            currentPlant.isBrighten = true;
-            currentPlant.PlayBright();
+        if (HandManager.Instance.shovel.activeSelf) {
+            if (topPlant != null) {
+                topPlant.isBrighten = true;
+                topPlant.PlayBright();
+            } else if (currentPlant != null) {
+                currentPlant.isBrighten = true;
+                currentPlant.PlayBright();
+            }
         }
 
-        // 若没有选中植物，或单元格已有植物，不显示预览
-        if (HandManager.Instance.currentPlant == null || currentPlant != null) return;
+        if (HandManager.Instance.currentPlant == null) return;
+
+        if (!HandManager.Instance.currentPlant.isCoverPlant && isWaterLand == false && currentPlant != null) return;
+
+        if (HandManager.Instance.currentPlant.isCoverPlant) {
+            if (topPlant != null) {
+                if (topPlant.plantType != HandManager.Instance.currentPlant.coverPlantType) return;
+            } else {
+                if (currentPlant == null || currentPlant.plantType != HandManager.Instance.currentPlant.coverPlantType) return;
+            }
+        } else {
+            if (isWaterLand) {
+                if (topPlant != null) return;
+                if (HandManager.Instance.currentPlant.isLandPlant || HandManager.Instance.currentPlant.isWaterPlant) return;
+            }
+            else {
+                if (isWater && !HandManager.Instance.currentPlant.isWaterPlant) return;
+                if (HandManager.Instance.currentPlant.isWaterPlant && !isWater) return;
+            }
+        }
+
         if (isBrave && HandManager.Instance.currentPlant.plantType != PlantType.Gravebuster) return;
         if (HandManager.Instance.currentPlant.plantType == PlantType.Gravebuster && !isBrave) return;
 
@@ -77,16 +135,26 @@ public class Cell : MonoBehaviour {
         }
 
         // 让预览植物跟随单元格位置
-        plantPreview.transform.position = transform.position;
+        if (isWaterLand) {
+            plantPreview.transform.position = waterLandTransform.position;
+        } else {
+            plantPreview.transform.position = transform.position;
+        }
+            
     }
 
     // 鼠标离开单元格时触发（销毁预览/取消植物高亮）
     public void OnPointerExit(BaseEventData data) {
 
         // 若单元格有植物且选中了铲子，取消植物高亮
-        if (currentPlant != null && HandManager.Instance.shovel.activeSelf) {
-            currentPlant.isBrighten = false;
-            currentPlant.StopBright();
+        if (HandManager.Instance.shovel.activeSelf) {
+            if (topPlant != null) {
+                topPlant.isBrighten = false;
+                topPlant.StopBright();
+            } else if (currentPlant != null) {
+                currentPlant.isBrighten = false;
+                currentPlant.StopBright();
+            }
         }
 
         // 销毁预览植物，避免残留
@@ -98,42 +166,106 @@ public class Cell : MonoBehaviour {
     // 移除单元格上的植物（铲子功能）
     public void SubPlant() {
         // 无植物或未选中铲子，不执行移除
-        if (currentPlant == null) return;
+        if (currentPlant == null && topPlant == null) return;
+
+        if (topPlant != null) {
+            topPlant.Dead();
+            topPlant = null;
+        } else if (currentPlant != null) {
+            currentPlant.Dead(); // 销毁植物实例
+            currentPlant = null; // 清空当前植物引用
+        }
 
         HandManager.Instance.ReturnShovel(); // 归还铲子（取消选中状态）
         AudioManager.Instance.PlayClip(Random.value > 0.5f ? Config.plant : Config.plant2); // 播放移除音效
 
-        currentPlant.Dead(); // 销毁植物实例
-        currentPlant = null; // 清空当前植物引用
     }
 
     // 在单元格上种植植物（选中植物后点击单元格触发）
-    public void AddPlant() {
+    public bool AddPlant() {
         Plant plant = HandManager.Instance.currentPlant;
 
-        if (currentPlant != null || HandManager.Instance.currentPlant == null || isHole) return;
+        if (plant == null || isHole || isHaveIce) return false;
 
-        if (plant.plantType == PlantType.Gravebuster && !isBrave ) return;
-        if (isBrave && plant.plantType != PlantType.Gravebuster) return;
+        if (!plant.isCoverPlant && isWaterLand == false && currentPlant != null) return false;
+
+        if (plant.isCoverPlant) {
+            if (topPlant != null) {
+                if (topPlant == null || topPlant.plantType != plant.coverPlantType) return false;
+            } else {
+                if (currentPlant == null || currentPlant.plantType != plant.coverPlantType) return false;
+            }  
+        } else {
+            if (isWaterLand) {
+                if (plant.isLandPlant || plant.isWaterPlant || topPlant != null) return false;
+            }
+            else {
+                if (isWater && !plant.isWaterPlant) return false;
+                if (plant.isWaterPlant && !isWater) return false;
+            }
+        }
+
+        if (plant.plantType == PlantType.Gravebuster && !isBrave ) return false;
+        if (isBrave && plant.plantType != PlantType.Gravebuster) return false;
 
         // 调整植物种植位置（Z轴设为-2，确保显示在正确层级）
         Vector3 position = transform.position;
         position.z = -2;
 
         // 生成植物实例到单元格位置
-        currentPlant = Instantiate(HandManager.Instance.currentPlant, position, Quaternion.identity);
-        currentPlant.selfCell = this;
-
-        // 调整植物渲染层级为"Game"（与游戏场景其他物体一致）
-        SpriteRenderer[] sprites = currentPlant.GetComponentsInChildren<SpriteRenderer>(true);
-        foreach (var sprite in sprites) {
-            sprite.sortingLayerName = ZombieManager.Instance.layerNames[row];
+        if (plant.isCoverPlant) {
+            if (topPlant != null) {
+                topPlant.Dead();
+                topPlant = null;
+            } else {
+                currentPlant.Dead();
+                currentPlant = null;
+            }
         }
 
-        // 激活植物（设置为启用状态，让植物开始工作）
-        currentPlant.TransitionToEnable();
+        if (isWaterLand) {
+            if (topPlant != null) return false;
+            topPlant = Instantiate(HandManager.Instance.currentPlant, waterLandTransform.position, Quaternion.identity);
+            topPlant.selfCell = this;
+        } else {
+            currentPlant = Instantiate(HandManager.Instance.currentPlant, position, Quaternion.identity);
+            currentPlant.selfCell = this;
+        }   
+        
+        if (topPlant != null) {
+            // 调整植物渲染层级为"Game"（与游戏场景其他物体一致）
+            SpriteRenderer[] sprites = topPlant.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = ZombieManager.Instance.layerNames[row];
+            }
+
+            // 激活植物（设置为启用状态，让植物开始工作）
+            topPlant.TransitionToEnable();
+        } else {
+            // 调整植物渲染层级为"Game"（与游戏场景其他物体一致）
+            SpriteRenderer[] sprites = currentPlant.GetComponentsInChildren<SpriteRenderer>(true);
+            foreach (var sprite in sprites) {
+                sprite.sortingLayerName = ZombieManager.Instance.layerNames[row];
+            }
+
+            // 激活植物（设置为启用状态，让植物开始工作）
+            currentPlant.TransitionToEnable();
+        }
+
+        return true;
     }
 
+    public void StartIce() {
+        isHaveIce = true;
+        if (topPlant != null) SubPlant();
+        if (currentPlant != null) SubPlant();
+        iceLiveTimer = 0;
+    }
+
+    public void EndIce() {
+        isHaveIce = false;
+        iceLiveTimer = 0;
+    }
 
     public void StartHole() {
         isHole = true;
@@ -151,5 +283,13 @@ public class Cell : MonoBehaviour {
     public void BusterTombstone() {
         isBrave = false;
         Destroy(bravePrefab);
+    }
+
+    public void OpenWaterLand() {
+        isWaterLand = true;
+    }
+
+    public void CloseWaterLand() {
+        isWaterLand = false;
     }
 }
