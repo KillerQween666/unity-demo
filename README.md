@@ -52,3 +52,15 @@
 ![image-20251017105138200](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251017105138200.png)
 
 ![image-20251017105247533](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251017105247533.png)
+
+## 项目更新（11.8）
+
+1、新增关卡为泳池的1-9，新增11个植物和7个僵尸，格子变成六行并且有水池
+
+2、为了演示将卡片槽提高到13个，刚好为11个新植物以及升级植物要求的两植物
+
+3、泳池关的雪橇僵尸为了方便设定为冰车死了并且没被火爆辣椒烧过就会生成后续会调整
+
+![image-20251108080151436](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251108080151436.png)
+
+![image-20251108080155334](C:\Users\KING\AppData\Roaming\Typora\typora-user-images\image-20251108080155334.png)
